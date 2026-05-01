@@ -12,7 +12,7 @@ jobs:
 
       - name: build archive and ipaify
         run: |
-          wget -O archive.zip "YOURLINKHERE"
+          wget -O archive.zip "https://github.com/Randomstuff300811/MinesweeperPlusiOS.git"
           unzip archive.zip -d .
 
           xcodebuild archive -project Example-Project.xcodeproj -scheme 'Example-Project' -archivePath Example-Project.xcarchive -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
