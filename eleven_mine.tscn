@@ -1,0 +1,513 @@
+[gd_scene load_steps=25 format=3 uid="uid://bnl0dna3s4lq0"]
+
+[ext_resource type="Script" uid="uid://utewbrq4382p" path="res://eleven_mine.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://d0bls67bykm7v" path="res://lone_icon.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://c0e84vmemc04s" path="res://assets/img/Electricity.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://v1bq3ee30fnh" path="res://assets/img/11Ball.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cwivgtb4g3tt5" path="res://assets/img/11Treads.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ca8ohojon3m4j" path="res://assets/img/11Laser.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cypn2wyocxrvr" path="res://assets/img/11Node.png" id="7"]
+[ext_resource type="AudioStream" uid="uid://cvohoejjks32g" path="res://assets/audio/sfx_bonk.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://cw34xuu4jafst" path="res://assets/audio/explosion.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://dkd24xj7iwi58" path="res://assets/audio/sfx_break.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://dnqthwuory2w1" path="res://assets/audio/sfx_close.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://ckenqxwvgrxfv" path="res://assets/audio/sfx_malfunction.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://bq7y2svatjrhg" path="res://assets/audio/sfx_open.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://bjyskn5xvos0r" path="res://assets/audio/sfx_pressure.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://yn2p4rppdqqe" path="res://assets/audio/sfx_teleport.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://c4j3ofdss1cfy" path="res://assets/audio/sfx_zap.ogg" id="16"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_08tse"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qnbqb"]
+radius = 94.3663
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cibib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6m1w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0u3ae"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxgcn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mdkg7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s0o1y"]
+
+[node name="ElevenMine" type="Control" groups=["tiles"]]
+z_index = 11
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1")
+icon = ExtResource("2")
+
+[node name="Electricity" type="CPUParticles2D" parent="."]
+visible = false
+z_index = 2
+material = SubResource("CanvasItemMaterial_08tse")
+amount = 150
+texture = ExtResource("3")
+lifetime = 0.1
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 100.0
+gravity = Vector2(0, 0)
+angular_velocity_min = 720.0
+angular_velocity_max = 720.0
+orbit_velocity_min = 50.0
+orbit_velocity_max = 50.0
+angle_max = 360.0
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+anim_speed_max = 17.35
+
+[node name="Area2D" type="Area2D" parent="Electricity"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricity/Area2D"]
+shape = SubResource("CircleShape2D_qnbqb")
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_bottom = 48.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(48, 48)
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cibib")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v6m1w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0u3ae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hxgcn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mdkg7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s0o1y")
+button_mask = 3
+
+[node name="ElevenLeft" type="Sprite2D" parent="Button1"]
+z_index = 1
+texture_filter = 1
+position = Vector2(22, 48)
+texture = ExtResource("4")
+hframes = 2
+
+[node name="TreadsLeft" type="Sprite2D" parent="Button1/ElevenLeft"]
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+position = Vector2(30, 0)
+texture = ExtResource("5")
+hframes = 4
+
+[node name="LaserControl" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="HalfLaser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(14, 0)
+texture = ExtResource("6")
+hframes = 2
+
+[node name="HalfBall" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+texture = ExtResource("7")
+offset = Vector2(-6, 0)
+hframes = 2
+
+[node name="LaserControl2" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -0.570723
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl2" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl2" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = 0.570723
+texture = ExtResource("7")
+
+[node name="LaserControl3" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.14145
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl3" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl3" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = 1.14145
+texture = ExtResource("7")
+
+[node name="LaserControl4" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.71217
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl4" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl4" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = 1.71217
+texture = ExtResource("7")
+
+[node name="LaserControl5" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -2.28289
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl5" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl5" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = 2.28289
+texture = ExtResource("7")
+
+[node name="LaserControl6" type="Control" parent="Button1/ElevenLeft"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -2.85361
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl6" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button1/ElevenLeft/LaserControl6" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = 2.85361
+texture = ExtResource("7")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_vertical = 2
+pivot_offset = Vector2(48, 48)
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cibib")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v6m1w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0u3ae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hxgcn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mdkg7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s0o1y")
+button_mask = 3
+
+[node name="ElevenRight" type="Sprite2D" parent="Button2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(26, 48)
+texture = ExtResource("4")
+hframes = 2
+frame = 1
+
+[node name="TreadsRight" type="Sprite2D" parent="Button2/ElevenRight"]
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+position = Vector2(-30, 0)
+texture = ExtResource("5")
+hframes = 4
+frame = 2
+
+[node name="LaserControl" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="HalfLaser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(26, 0)
+texture = ExtResource("6")
+hframes = 2
+frame = 1
+
+[node name="HalfBall" type="Sprite2D" parent="Button2/ElevenRight/LaserControl" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+texture = ExtResource("7")
+offset = Vector2(6, 0)
+hframes = 2
+frame = 1
+
+[node name="LaserControl2" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+rotation = 0.570723
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl2" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button2/ElevenRight/LaserControl2" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = -0.570723
+texture = ExtResource("7")
+
+[node name="LaserControl3" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+rotation = 1.14145
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl3" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button2/ElevenRight/LaserControl3" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = -1.14145
+texture = ExtResource("7")
+
+[node name="LaserControl4" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+rotation = 1.71217
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl4" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button2/ElevenRight/LaserControl4" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = -1.71217
+texture = ExtResource("7")
+
+[node name="LaserControl5" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+rotation = 2.28289
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl5" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button2/ElevenRight/LaserControl5" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = -2.28289
+texture = ExtResource("7")
+
+[node name="LaserControl6" type="Control" parent="Button2/ElevenRight"]
+z_index = -2
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -72.0
+offset_right = -6.0
+offset_bottom = -32.0
+grow_vertical = 2
+rotation = 2.85361
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+
+[node name="Laser" type="Sprite2D" parent="Button2/ElevenRight/LaserControl6" groups=["tesla"]]
+show_behind_parent = true
+position = Vector2(20, 0)
+texture = ExtResource("6")
+
+[node name="Ball" type="Sprite2D" parent="Button2/ElevenRight/LaserControl6" groups=["ball"]]
+show_behind_parent = true
+position = Vector2(20, -32)
+rotation = -2.85361
+texture = ExtResource("7")
+
+[node name="WaitTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Bonk" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("8")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("9")
+
+[node name="Break" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("10")
+
+[node name="Close" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("11")
+
+[node name="Malfunction" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("12")
+
+[node name="Open" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("13")
+
+[node name="Pressure" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("14")
+
+[node name="Teleport" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("15")
+
+[node name="Zap" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("16")
+
+[connection signal="button_down" from="Button1" to="." method="_on_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_down"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

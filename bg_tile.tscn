@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0m27pnxdy6a0"]
+
+[ext_resource type="Script" uid="uid://dcjek4jby7yvj" path="res://bg_tile.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://lv38hwe54qb4" path="res://assets/sprite_frames/background.tres" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://i7qm1s6d4uwy" path="res://assets/sprite_frames/background_low.tres" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://bhcwp8x2q1wqk" path="res://assets/sprite_frames/decor.tres" id="4"]
+
+[node name="BGTile" type="Panel" groups=["anim", "tiles"]]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+script = ExtResource("1")
+metadata/_edit_group_ = true
+
+[node name="water" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("2")
+animation = &"waves101"
+centered = false
+
+[node name="waterlow" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(64, 64)
+sprite_frames = ExtResource("3")
+animation = &"red_back"
+centered = false
+
+[node name="decor" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("4")
+animation = &"decor11"
+autoplay = "decor0"
+frame_progress = 0.0481803
+centered = false

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cokina3pngdx8"]
+
+[ext_resource type="Script" uid="uid://cw4vsvepmotb4" path="res://black_nine_scene.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dsqigw68ewqey" path="res://black_nine.tscn" id="2"]
+
+[node name="BlackNineScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+after_image = ExtResource("2")
+
+[node name="BlackNine" parent="." instance=ExtResource("2")]

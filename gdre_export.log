@@ -1,0 +1,36 @@
+GDRE Tools v2.5.0-beta.5
+Windows 10.0.26200, NVIDIA GeForce GTX 1650, vulkan
+Opening file: D:/GDRE_tools-v2.5.0-beta.5-windows/MS+3.0_Windows_x86_32/MS+3.0_Windows_x86_32/MinesweeperPlus.exe
+WARNING: Duplicate IDs found in cache:
+  uid://bjyb2i3w3dho6 -> res://garbage/DeltaSweeper.png
+	Replacing with: res://assets/img/DeltaSweeper.png
+   at: GDRESettings::load_pack_uid_cache (modules\gdsdecomp\utility\gdre_settings.cpp:1999)
+Loaded 373 imported files
+Detected Engine Version: 4.4.0
+Detected Bytecode Revision: 4.3.0-stable (77af6ca)
+Verified 809 files, no errors detected!
+Extracted 809 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     30
+Failed scripts:                         0
+Imported resources for export session:  373
+Successfully converted:                 373
+Lossy:                                  1
+Rewrote metadata:                       291
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.4.0 to edit the project.
+
+*******************************************************************************

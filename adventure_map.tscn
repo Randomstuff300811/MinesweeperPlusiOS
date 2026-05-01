@@ -1,0 +1,913 @@
+[gd_scene load_steps=59 format=3 uid="uid://b414mxjt7cvrk"]
+
+[ext_resource type="Script" uid="uid://bal2k5t4xqcuo" path="res://adventure_map.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c0m27pnxdy6a0" path="res://bg_tile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dqdl76buranlx" path="res://blue_rect.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dyyp1h6su2pfw" path="res://green_circle.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://carmhibc20vqi" path="res://back_ground.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://0dh2wracmurk" path="res://adventure_marker.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://cb2unadx0jvty" path="res://assets/img/shield.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://d33225l71qlsq" path="res://assets/img/boat.png" id="8"]
+[ext_resource type="SpriteFrames" uid="uid://cnpnrdyvchwpa" path="res://assets/sprite_frames/coin.tres" id="9"]
+[ext_resource type="Texture2D" uid="uid://bw072qki0skm6" path="res://assets/img/StartButton.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="11"]
+[ext_resource type="AudioStream" uid="uid://bry3c0j1t4yac" path="res://assets/audio/level_select_1.mp3" id="12"]
+[ext_resource type="AudioStream" uid="uid://pe00hay610ha" path="res://assets/audio/level_select_2.mp3" id="13"]
+[ext_resource type="AudioStream" uid="uid://4ovbovluovuk" path="res://assets/audio/level_select_3.mp3" id="14"]
+[ext_resource type="AudioStream" uid="uid://bobpn5jpxoqob" path="res://assets/audio/level_select_4.mp3" id="15"]
+[ext_resource type="AudioStream" uid="uid://bs7xanvatbnxy" path="res://assets/audio/level_select_5.mp3" id="16"]
+[ext_resource type="AudioStream" uid="uid://dgwe7fp716vix" path="res://assets/audio/level_select_6.mp3" id="17"]
+[ext_resource type="AudioStream" uid="uid://d144454vj4teo" path="res://assets/audio/level_select_7.mp3" id="18"]
+[ext_resource type="AudioStream" uid="uid://b820miu7qx3sa" path="res://assets/audio/level_select_8.mp3" id="19"]
+[ext_resource type="AudioStream" uid="uid://dyu6ggfjr1wuv" path="res://assets/audio/level_select_9.mp3" id="20"]
+[ext_resource type="AudioStream" uid="uid://illcgk30wg5a" path="res://assets/audio/level_select_10.mp3" id="21"]
+[ext_resource type="AudioStream" uid="uid://b0mks3r065ggy" path="res://assets/audio/level_select_11.mp3" id="22"]
+[ext_resource type="AudioStream" uid="uid://blum1xr2cyeng" path="res://assets/audio/sfx_level_click.ogg" id="23"]
+[ext_resource type="AudioStream" uid="uid://dlr6py5jel8b2" path="res://assets/audio/sfx_level_click2.mp3" id="24"]
+[ext_resource type="AudioStream" uid="uid://cvob3q6wk84jd" path="res://assets/audio/blackout.ogg" id="25"]
+[ext_resource type="AudioStream" uid="uid://ceduy056hbklq" path="res://assets/audio/start_sound.mp3" id="26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wjv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f8rf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0xsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqjf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynupq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tfew"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6isv"]
+font_size = 99
+font_color = Color(0, 0, 0, 1)
+outline_size = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avmmc"]
+atlas = ExtResource("7")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qa5l"]
+atlas = ExtResource("7")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvh6q"]
+atlas = ExtResource("7")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5tpi"]
+atlas = ExtResource("7")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fl8lq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avmmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qa5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvh6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5tpi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avmmc"]
+radius = 64.0
+
+[sub_resource type="Curve2D" id="Curve2D_028kx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 352, 0, 0, 0, 0, 408, 352, 0, 0, 0, 0, 568, 352, 0, 0, 0, 0, 728, 352, 0, 0, 0, 0, 816, 352, 0, 0, 0, 0, 816, 600, 0, 0, 0, 0, 816, 760, 0, 0, 0, 0, 816, 840, 0, 0, 0, 0, 568, 840, 0, 0, 0, 0, 408, 840, 0, 0, 0, 0, 320, 840, 0, 0, 0, 0, 320, 600, 0, 0, 0, 0, 320, 512, 0, 0, 0, 0, 568, 512)
+}
+point_count = 15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_028kx"]
+atlas = ExtResource("8")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2kbj"]
+atlas = ExtResource("8")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_647iu"]
+atlas = ExtResource("8")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yguhg"]
+atlas = ExtResource("8")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y58d2"]
+atlas = ExtResource("8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n1u2"]
+atlas = ExtResource("8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40nnh"]
+atlas = ExtResource("8")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2lcu"]
+atlas = ExtResource("8")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wjv1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_028kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2kbj")
+}],
+"loop": true,
+"name": &"boatd",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_647iu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yguhg")
+}],
+"loop": true,
+"name": &"boatl",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y58d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n1u2")
+}],
+"loop": true,
+"name": &"boatr",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40nnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2lcu")
+}],
+"loop": true,
+"name": &"boatu",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qa5l"]
+radius = 17.0294
+
+[sub_resource type="LabelSettings" id="LabelSettings_avmmc"]
+font_color = Color(1, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_s5kdx"]
+font_size = 99
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2n1u2"]
+font_size = 36
+font_color = Color(1, 0, 0, 1)
+outline_size = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_028kx"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0xsl"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqjf4"]
+texture = ExtResource("11")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynupq"]
+texture = ExtResource("10")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1tfew"]
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+outline_size = 6
+
+[node name="AdventureMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+bg_tile = ExtResource("2")
+rect = ExtResource("3")
+circ = ExtResource("4")
+
+[node name="AM10" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+layout_mode = 0
+offset_left = 488.0
+offset_top = 512.0
+offset_right = 648.0
+offset_bottom = 672.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3wjv1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f8rf3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h0xsl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uqjf4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ynupq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1tfew")
+disabled = true
+
+[node name="Stage10Label" type="Label" parent="AM10"]
+z_index = -1
+layout_mode = 0
+offset_left = -443.0
+offset_top = -384.0
+offset_right = 620.0
+offset_bottom = -249.0
+text = "THE DEVIL'S PASSAGE"
+label_settings = SubResource("LabelSettings_a6isv")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AM11" type="Button" parent="."]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = 488.0
+offset_top = 512.0
+offset_right = 648.0
+offset_bottom = 672.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3wjv1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f8rf3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h0xsl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uqjf4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ynupq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1tfew")
+disabled = true
+
+[node name="Stage11Label" type="Label" parent="AM11"]
+z_index = -1
+layout_mode = 0
+offset_left = -443.0
+offset_top = -384.0
+offset_right = 620.0
+offset_bottom = -249.0
+text = "THE DEVIL'S LOCKER"
+label_settings = SubResource("LabelSettings_a6isv")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BackGround" parent="." instance=ExtResource("5")]
+layout_mode = 1
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+columns = 37
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 480)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 960
+limit_smoothed = true
+
+[node name="CameraMoveTimer" type="Timer" parent="Camera"]
+wait_time = 0.01
+
+[node name="Screen2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1152.0
+offset_right = 2304.0
+offset_bottom = 960.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Triangle1" type="Polygon2D" parent="Screen2"]
+position = Vector2(576, 560)
+color = Color(1, 0, 0, 1)
+offset = Vector2(0, 8)
+polygon = PackedVector2Array(-96, 48, 96, 48, 0, -112)
+uv = PackedVector2Array(-96, 48, 96, 48, 0, -112)
+
+[node name="AM9" type="Button" parent="Screen2/Triangle1"]
+offset_left = -96.0
+offset_top = -104.0
+offset_right = 96.0
+offset_bottom = 56.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3wjv1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f8rf3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h0xsl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uqjf4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ynupq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1tfew")
+disabled = true
+
+[node name="Triangle2" type="Polygon2D" parent="Screen2"]
+position = Vector2(576, 552)
+scale = Vector2(2, 2)
+color = Color(1, 0, 0, 0.666667)
+offset = Vector2(0, 12)
+polygon = PackedVector2Array(-96, 48, 96, 48, 0, -112)
+
+[node name="Triangle3" type="Polygon2D" parent="Screen2"]
+position = Vector2(576, 544)
+scale = Vector2(3, 3)
+color = Color(1, 0, 0, 0.333333)
+offset = Vector2(0, 10.6667)
+polygon = PackedVector2Array(-96.5002, 48, 96, 48, 0, -112)
+
+[node name="Level9Label" type="Label" parent="Screen2"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 128.0
+offset_right = 1108.0
+offset_bottom = 263.0
+text = "THE DEVIL'S TRIANGLE"
+label_settings = SubResource("LabelSettings_a6isv")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Markers1" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 72.0
+offset_top = 8.0
+offset_right = 1832.0
+offset_bottom = 200.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 32
+columns = 8
+
+[node name="AM1" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 1
+stage_name = "KIDDIE POOL"
+start_position = Vector2(-136, 456)
+next_position = Vector2(120, 456)
+
+[node name="AM2" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 2
+stage_name = "RAINY PUDDLE"
+start_position = Vector2(120, 456)
+next_position = Vector2(248, 456)
+
+[node name="AM3" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 3
+level_style = 2
+stage_name = "SMALL POND"
+start_position = Vector2(248, 456)
+next_position = Vector2(376, 456)
+
+[node name="AM4" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 4
+level_style = 2
+stage_name = "BLUE LAGOON"
+start_position = Vector2(376, 456)
+next_position = Vector2(504, 456)
+
+[node name="AM5" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 5
+level_style = 3
+stage_name = "LAZY RIVER"
+start_position = Vector2(504, 456)
+next_position = Vector2(632, 456)
+
+[node name="AM6" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 6
+level_style = 3
+stage_name = "GREAT LAKE"
+start_position = Vector2(632, 456)
+next_position = Vector2(760, 456)
+
+[node name="AM7" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 7
+level_style = 4
+stage_name = "OPEN OCEAN"
+start_position = Vector2(760, 456)
+next_position = Vector2(888, 456)
+
+[node name="AM8" parent="Markers1" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 8
+level_style = 4
+stage_name = "DEAD SEA"
+start_position = Vector2(888, 456)
+next_position = Vector2(1016, 456)
+
+[node name="Markers2" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 360.0
+offset_top = -88.0
+offset_right = 872.0
+offset_bottom = 424.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 64
+columns = 3
+
+[node name="AM1" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 1
+level_style = 5
+stage_name = "THE SHALLOW END"
+start_position = Vector2(192, 352)
+next_position = Vector2(408, 352)
+
+[node name="AM2" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 2
+level_style = 5
+stage_name = "FOUNTAIN FLOWS"
+start_position = Vector2(408, 352)
+next_position = Vector2(568, 352)
+
+[node name="AM3" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 3
+level_style = 6
+stage_name = "SILENT MARSH"
+start_position = Vector2(568, 352)
+next_position = Vector2(728, 352)
+
+[node name="AM8" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 8
+level_style = 8
+stage_name = "BLACK WATER"
+start_position = Vector2(320, 840)
+next_position = Vector2(320, 600)
+
+[node name="AM9" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 9
+level_style = 9
+stage_name = "THE DEEP END"
+start_position = Vector2(320, 512)
+next_position = Vector2(568, 512)
+
+[node name="AM4" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 4
+level_style = 6
+stage_name = "MURKY SWAMP"
+start_position = Vector2(816, 352)
+next_position = Vector2(816, 600)
+
+[node name="AM7" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 7
+level_style = 8
+stage_name = "GULF OF MISERY"
+start_position = Vector2(568, 840)
+next_position = Vector2(408, 840)
+
+[node name="AM6" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 6
+level_style = 7
+stage_name = "RAGING RAPIDS"
+start_position = Vector2(816, 840)
+next_position = Vector2(568, 840)
+
+[node name="AM5" parent="Markers2" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 5
+level_style = 7
+stage_name = "CRAZY COVE"
+start_position = Vector2(816, 600)
+next_position = Vector2(816, 760)
+
+[node name="Shield1" type="AnimatedSprite2D" parent="Markers2" groups=["shield"]]
+position = Vector2(288, -40)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.978278
+
+[node name="ShieldArea" type="Area2D" parent="Markers2/Shield1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers2/Shield1/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Shield2" type="AnimatedSprite2D" parent="Markers2" groups=["shield"]]
+position = Vector2(456, 288)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.336496
+
+[node name="ShieldArea" type="Area2D" parent="Markers2/Shield2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers2/Shield2/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Shield3" type="AnimatedSprite2D" parent="Markers2" groups=["shield"]]
+position = Vector2(128, 456)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.421206
+
+[node name="ShieldArea" type="Area2D" parent="Markers2/Shield3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers2/Shield3/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Markers3" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 296.0
+offset_top = -184.0
+offset_right = 1952.0
+offset_bottom = 392.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 64
+columns = 4
+
+[node name="Empty" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="AM4" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 4
+level_style = 6
+stage_name = "HAZARD CANAL"
+start_position = Vector2(304, 248)
+next_position = Vector2(504, 248)
+
+[node name="AM5" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 5
+level_style = 3
+stage_name = "FLOODED FJORD"
+start_position = Vector2(504, 248)
+next_position = Vector2(664, 248)
+
+[node name="Empty2" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="AM3" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 3
+level_style = 2
+stage_name = "DANGER CREEK"
+start_position = Vector2(264, 664)
+next_position = Vector2(264, 504)
+
+[node name="Empty3" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="AM10" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 10
+level_style = 10
+stage_name = "HYDRAULIC SHOCK"
+start_position = Vector2(584, 664)
+next_position = Vector2(584, 504)
+
+[node name="AM6" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 6
+level_style = 7
+stage_name = "WACKY WHIRLPOOL"
+start_position = Vector2(904, 304)
+next_position = Vector2(904, 504)
+
+[node name="AM2" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 2
+level_style = 5
+stage_name = "STEAMY JACUZZI"
+start_position = Vector2(264, 864)
+next_position = Vector2(264, 664)
+
+[node name="AM9" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 9
+level_style = 9
+stage_name = "DELTA P"
+start_position = Vector2(584, 904)
+next_position = Vector2(584, 664)
+
+[node name="Empty4" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="AM7" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 7
+level_style = 4
+stage_name = "BOMB BAY"
+start_position = Vector2(904, 504)
+next_position = Vector2(904, 664)
+
+[node name="Empty5" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="AM1" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 1
+stage_name = "BUBBLY TUB"
+start_position = Vector2(504, 1080)
+next_position = Vector2(504, 904)
+
+[node name="AM8" parent="Markers3" instance=ExtResource("6")]
+layout_mode = 2
+disabled = true
+number = 8
+level_style = 8
+stage_name = "SHIP'S GRAVEYARD"
+start_position = Vector2(864, 904)
+next_position = Vector2(664, 904)
+
+[node name="Empty6" parent="Markers3" instance=ExtResource("6")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+disabled = true
+
+[node name="Shield1" type="AnimatedSprite2D" parent="Markers3" groups=["shield"]]
+position = Vector2(-40, 289)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.978278
+
+[node name="ShieldArea" type="Area2D" parent="Markers3/Shield1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers3/Shield1/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Shield2" type="AnimatedSprite2D" parent="Markers3" groups=["shield"]]
+position = Vector2(288, -39)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.978278
+
+[node name="ShieldArea" type="Area2D" parent="Markers3/Shield2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers3/Shield2/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Shield3" type="AnimatedSprite2D" parent="Markers3" groups=["shield"]]
+position = Vector2(616, 289)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.978278
+
+[node name="ShieldArea" type="Area2D" parent="Markers3/Shield3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers3/Shield3/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="Shield4" type="AnimatedSprite2D" parent="Markers3" groups=["shield"]]
+position = Vector2(288, 617)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fl8lq")
+autoplay = "default"
+frame_progress = 0.978278
+
+[node name="ShieldArea" type="Area2D" parent="Markers3/Shield4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Markers3/Shield4/ShieldArea"]
+shape = SubResource("CircleShape2D_avmmc")
+
+[node name="BoatPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_028kx")
+
+[node name="Boat" type="AnimatedSprite2D" parent="."]
+position = Vector2(-136, 456)
+sprite_frames = SubResource("SpriteFrames_3wjv1")
+animation = &"boatr"
+autoplay = "boatr"
+
+[node name="BoatTimer" type="Timer" parent="Boat"]
+wait_time = 0.01
+
+[node name="BoatArea" type="Area2D" parent="Boat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boat/BoatArea"]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_1qa5l")
+
+[node name="ShieldLabel" type="Label" parent="Boat"]
+visible = false
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 38.0
+offset_bottom = -9.0
+text = "+1 Shield"
+label_settings = SubResource("LabelSettings_avmmc")
+
+[node name="StageLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -512.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 263.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_s5kdx")
+horizontal_alignment = 1
+
+[node name="CoinContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 512.0
+offset_right = 1144.0
+offset_bottom = 48.0
+
+[node name="Coins" type="Label" parent="CoinContainer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_2n1u2")
+horizontal_alignment = 2
+
+[node name="Coin" type="AnimatedSprite2D" parent="CoinContainer/Coins"]
+position = Vector2(-22.5, 24.5)
+scale = Vector2(0.546875, 0.515625)
+sprite_frames = ExtResource("9")
+animation = &"coin"
+autoplay = "coin"
+frame_progress = 0.584648
+
+[node name="BackButton0" type="Button" parent="."]
+layout_mode = 0
+offset_top = 928.0
+offset_right = 256.0
+offset_bottom = 960.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_028kx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h0xsl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uqjf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ynupq")
+
+[node name="ExitLabel" type="Label" parent="BackButton0"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 256.0
+offset_bottom = 33.0
+text = "SAVE & EXIT"
+label_settings = SubResource("LabelSettings_1tfew")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelSelect1" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("12")
+
+[node name="LevelSelect2" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("13")
+
+[node name="LevelSelect3" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("14")
+
+[node name="LevelSelect4" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("15")
+
+[node name="LevelSelect5" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("16")
+parameters/looping = true
+
+[node name="LevelSelect6" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("17")
+parameters/looping = true
+
+[node name="LevelSelect7" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("18")
+parameters/looping = true
+
+[node name="LevelSelect8" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("19")
+parameters/looping = true
+
+[node name="LevelSelect9" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("20")
+parameters/looping = true
+
+[node name="LevelSelect10" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("21")
+parameters/looping = true
+
+[node name="LevelSelect11" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("22")
+parameters/looping = true
+
+[node name="LevelClick1" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("23")
+
+[node name="LevelClick2" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("24")
+
+[node name="Blackout" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("25")
+
+[node name="Exit" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("26")
+
+[node name="Fade" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="AM10" to="." method="_on_am_10_pressed"]
+[connection signal="pressed" from="AM11" to="." method="_on_am_11_pressed"]
+[connection signal="timeout" from="Camera/CameraMoveTimer" to="." method="_on_camera_move_timer_timeout"]
+[connection signal="pressed" from="Screen2/Triangle1/AM9" to="." method="_on_am_9_pressed"]
+[connection signal="area_entered" from="Markers2/Shield1/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers2/Shield2/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers2/Shield3/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers3/Shield1/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers3/Shield2/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers3/Shield3/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="area_entered" from="Markers3/Shield4/ShieldArea" to="." method="_on_shield_area_area_entered"]
+[connection signal="timeout" from="Boat/BoatTimer" to="." method="_on_boat_timer_timeout"]
+[connection signal="area_entered" from="Boat/BoatArea" to="." method="_on_boat_area_area_entered"]
+[connection signal="pressed" from="BackButton0" to="." method="_on_back_button_0_pressed"]

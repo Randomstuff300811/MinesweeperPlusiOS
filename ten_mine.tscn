@@ -1,0 +1,153 @@
+[gd_scene load_steps=18 format=3 uid="uid://bbf2ue3aacw4y"]
+
+[ext_resource type="Script" uid="uid://djff6n22luht2" path="res://ten_mine.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cu8nbvfslw1cb" path="res://assets/img/ten_mine_body.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://deynxmk0ncfbq" path="res://assets/img/Numbers10.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cdk22uim1ka7p" path="res://assets/img/light.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cokryibb7jvvg" path="res://assets/img/ten_mine_piston.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://bt4cwgdxiupvg" path="res://assets/audio/bounce.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://lyagnrxk2ni7" path="res://assets/audio/beep.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://isxfrpolscst" path="res://assets/audio/reset.ogg" id="8"]
+[ext_resource type="PackedScene" uid="uid://d0bls67bykm7v" path="res://lone_icon.tscn" id="9"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1uwd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qvi4b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxou1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yea2a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ra6fa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylakr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1uwd"]
+size = Vector2(96, 96)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ylakr"]
+
+[node name="TenMine" type="RigidBody2D"]
+z_index = 100
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+custom_integrator = true
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(48, 48)
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d1uwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qvi4b")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yxou1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yea2a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ra6fa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ylakr")
+button_mask = 3
+
+[node name="MineBody" type="Sprite2D" parent="Button"]
+position = Vector2(48, 48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2")
+
+[node name="Number" type="Sprite2D" parent="Button/MineBody"]
+light_mask = 0
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = ExtResource("3")
+hframes = 4
+vframes = 3
+frame = 10
+
+[node name="Dial" type="Line2D" parent="Button/MineBody"]
+points = PackedVector2Array(0, 0, 0, -64)
+width = 5.0
+default_color = Color(0.263882, 1, 0, 1)
+
+[node name="Light" type="PointLight2D" parent="Button"]
+position = Vector2(48, 48)
+rotation = -1.5708
+scale = Vector2(50, 50)
+energy = 3.0
+blend_mode = 2
+range_z_min = 100
+range_z_max = 100
+shadow_enabled = true
+texture = ExtResource("4")
+texture_scale = 0.01
+
+[node name="Piston1" type="Sprite2D" parent="Button"]
+show_behind_parent = true
+position = Vector2(48, 48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Piston2" type="Sprite2D" parent="Button"]
+show_behind_parent = true
+position = Vector2(48, 48)
+rotation = 0.628319
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Piston3" type="Sprite2D" parent="Button"]
+show_behind_parent = true
+position = Vector2(48, 48)
+rotation = 1.25664
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Piston4" type="Sprite2D" parent="Button"]
+show_behind_parent = true
+position = Vector2(48, 48)
+rotation = 1.88496
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Piston5" type="Sprite2D" parent="Button"]
+show_behind_parent = true
+position = Vector2(48, 48)
+rotation = 2.51327
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Box" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d1uwd")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Bounce" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("6")
+
+[node name="Beep" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("7")
+
+[node name="Reset" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("8")
+
+[node name="Explosion" parent="." instance=ExtResource("9")]
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+animation = &"explosion"
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_ylakr")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="button_down" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

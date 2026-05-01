@@ -1,0 +1,171 @@
+[gd_scene load_steps=19 format=3 uid="uid://cjcng1gkhplcn"]
+
+[ext_resource type="Script" uid="uid://ysjyvj6rwvuq" path="res://grid_square.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://i7qm1s6d4uwy" path="res://assets/sprite_frames/background_low.tres" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://lv38hwe54qb4" path="res://assets/sprite_frames/background.tres" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://cv8t0ohq1vsec" path="res://assets/sprite_frames/icon.tres" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://bngvqkm1hlfeo" path="res://assets/sprite_frames/flags.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://cyup37ha21aqf" path="res://assets/img/redX.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bj053og1hbx4x" path="res://assets/img/outline_blocks.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cw5whwswlbjwt" path="res://assets/img/outline.png" id="8"]
+[ext_resource type="SpriteFrames" uid="uid://bhcwp8x2q1wqk" path="res://assets/sprite_frames/decor.tres" id="9"]
+[ext_resource type="AudioStream" uid="uid://bw6xn8sje8mj" path="res://assets/audio/flag_sound.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://bafgvojyqyu17" path="res://assets/audio/unflag_sound.mp3" id="11"]
+[ext_resource type="AudioStream" uid="uid://cnokdnq1d5m74" path="res://assets/audio/sfx_radar.mp3" id="12"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4fm8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4v3pj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6yb2q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r3ycr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwtxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1y7lb"]
+
+[node name="GridSquare" type="Button" groups=["anim", "game_tiles", "tiles"]]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4fm8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4v3pj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6yb2q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r3ycr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hwtxm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1y7lb")
+toggle_mode = true
+button_mask = 3
+script = ExtResource("1")
+metadata/_edit_group_ = true
+
+[node name="Background2Low" type="AnimatedSprite2D" parent="." groups=["components", "lq"]]
+visible = false
+position = Vector2(32, 32)
+scale = Vector2(64, 64)
+sprite_frames = ExtResource("2")
+animation = &"waves51"
+
+[node name="Background2" type="AnimatedSprite2D" parent="." groups=["components", "hq"]]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("3")
+animation = &"waves12"
+
+[node name="Icon" type="AnimatedSprite2D" parent="." groups=["components"]]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("4")
+animation = &"?"
+autoplay = "0"
+
+[node name="Background1Low" type="AnimatedSprite2D" parent="." groups=["components", "lq"]]
+visible = false
+position = Vector2(32, 32)
+scale = Vector2(64, 64)
+sprite_frames = ExtResource("2")
+animation = &"waves111"
+
+[node name="Background1" type="AnimatedSprite2D" parent="." groups=["components", "hq"]]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("3")
+animation = &"waves10311"
+
+[node name="Flag" type="AnimatedSprite2D" parent="." groups=["components"]]
+visible = false
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("5")
+animation = &"flag2"
+
+[node name="X" type="Sprite2D" parent="." groups=["components"]]
+visible = false
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("6")
+hframes = 2
+
+[node name="outline" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="r" type="Sprite2D" parent="outline" groups=["components"]]
+position = Vector2(28, -32)
+scale = Vector2(4, 4)
+texture = ExtResource("7")
+centered = false
+hframes = 64
+
+[node name="d" type="Sprite2D" parent="outline" groups=["components"]]
+position = Vector2(32, 28)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("7")
+centered = false
+hframes = 64
+
+[node name="l" type="Sprite2D" parent="outline" groups=["components"]]
+position = Vector2(-28, 32)
+rotation = 3.14159
+scale = Vector2(4, 4)
+texture = ExtResource("7")
+centered = false
+hframes = 64
+
+[node name="u" type="Sprite2D" parent="outline" groups=["components"]]
+position = Vector2(-32, -28)
+rotation = 4.71239
+scale = Vector2(4, 4)
+texture = ExtResource("7")
+centered = false
+hframes = 64
+
+[node name="outline_full" type="Sprite2D" parent="." groups=["components"]]
+visible = false
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("8")
+centered = false
+offset = Vector2(-8, -8)
+hframes = 6
+vframes = 6
+frame = 32
+
+[node name="decor" type="AnimatedSprite2D" parent="." groups=["components"]]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("9")
+animation = &"decor0"
+autoplay = "decor0"
+
+[node name="FlagSound" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("10")
+volume_db = 5.0
+
+[node name="UnflagSound" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("11")
+volume_db = 5.0
+
+[node name="Radar" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("12")
+volume_db = 5.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]

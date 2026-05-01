@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0bls67bykm7v"]
+
+[ext_resource type="SpriteFrames" uid="uid://cv8t0ohq1vsec" path="res://assets/sprite_frames/icon.tres" id="1"]
+
+[node name="LoneIcon" type="AnimatedSprite2D" groups=["explosion"]]
+sprite_frames = ExtResource("1")
+animation = &"mine1"
+autoplay = "0"

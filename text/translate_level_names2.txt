@@ -1,0 +1,11 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+LEVEL_1,THE SHALLOW END,COSTAS SOMERAS,fr,Extremidade rasa,Płytki Koniec,Мелководье,얕은 바다,จุดปลายตึ้น,Sığ Son
+LEVEL_2,FOUNTAIN FLOWS,FUENTE FLUYENTE,fr,Jatos de fonte,Fontannowe Potoki,Потоки Фонтана,분수의 흐름,จุดน้ำพุทะลัก,Akan Şelale
+LEVEL_3,SILENT MARSH,MARISMA SILENCIOSA,fr,Pântano Silencioso,Ciche Mokradło,Тихая Топь,고요한 늪,บึงแห่งความเงียบ,Sessiz Batak
+LEVEL_4,MURKY SWAMP,PANTANO TURBIO,fr,Pântano turvo,Mętne Bagno,Мутное Болото,암울한 늪,บ่อดินขุ่น,Bulanık Bataklık
+LEVEL_5,CRAZY COVE,CALA LOCA,fr,Enseada louca,Szalony Zalew,Безумная Бухта,미친 만,อ่าวอันบ้าคลั่ง,Deli Koy
+LEVEL_6,RAGING RAPIDS,RABIONES RABIOSOS,fr,Corredeiras irritadas,Szalejące Prądy,Бешеные Пороги,사나운 급류,น้ำเชี่ยวแสนพยาบาท,Azgın Akıntılar
+LEVEL_7,GULF OF MISERY,GOLFO DE LA MISERIA,fr,Miséria do golfo,Zatoka Nieszczęścia,Заливы Страдания,비극의 만,อ่าวแห่งความทุกข์,Izdırap Körfezi
+LEVEL_8,BLACK WATER,AGUAS NEGRAS,fr,Águas negras,Czarna Woda,Черные Воды,흑수하천,ทมิฬสมุทร,Karanlık Su
+LEVEL_9,THE DEEP END,LAS PROFUNDIDADES,fr,A PARTE MAIS FUNDA,Głęboki Koniec,Самое Дно,심해,จุดปลายทาง,Derin Son
+LEVEL_10,THE DEVIL'S PASSAGE,EL PASAJE DEL DIABLO,fr,A PASSAGEM DO DIABO,Czarci Przesmyk,Дьявольский Проход,악마의 통로,ทางผ่านปีศาจ,Şeytan'ın Geçidi

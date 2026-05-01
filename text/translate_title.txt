@@ -1,0 +1,231 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+MINESWEEPER,MINESWEEPER,BUSCAMINAS,fr,CAMPO MINADO,Minesweeper,Сапёр,지뢰찾기,ไมน์สวีปเปอร์,Mayın Tarlası
+PLUS,PLUS,PLUS,PLUS,PLUS,Plus,Плюс,플러스,พลัส,Plus
+CLICK,Click anywhere to continue…,Haz clic para continuar...,Cliquez n'importe où pour jouer…,Clique em qualquer lugar pra continuar...,"Kliknij gdziekowiek, by kontynuować...",Нажмите чтобы продолжить…,아무 곳을 눌러 시작...,กดหน้าจอเพื่อดำเนิน...,Devam etmek için herhangi bir yere tıklayın...
+SETTINGS,SETTINGS,AJUSTES,RÉGLAGES,Configurações,Ustawienia,НАСТРОЙКИ,설정,การตั้งค่า,Ayarlar
+BEGIN,BEGIN,COMENZAR,COMMENCER,Iniciar,Rozpocznij,Начать,시작,เริ่ม,Başla
+STATISTICS,STATISTICS,ESTADÍSTICAS,STATISTIQUES,Estatisticas ,Statystyki,Статистики,통계,สถิติ,İstatistikler
+HOW_TO_PLAY,HOW TO PLAY,CÓMO JUGAR,COMMENT JOUER,Como Jogar,POMOC,Как Играть,하는 법,วิธีเล่น,Nasıl Oynanır
+CREDITS,CREDITS,CRÉDITOS,GÉNÉRIQUE,Creditos,Twórcy,ТИТРЫ,크레딧,เครดิต,Emeği Geçenler
+RESET_DATA,RESET DATA,BORRAR DATOS,RÉINITIALISER,Redefinir Dados,Reset danych,Сбросить данные,데이터 삭제,รีเซ็ตข้อมูล,Verileri Sıfırla
+EXIT_GAME,EXIT GAME,SALIR DEL JUEGO,QUITTER,Sair do Jogo,Wyjście z gry,Выйти из Игры,게임 종료,ออกเกม,Oyundan Çık
+WARNING,WARNING!,¡CUIDADO!,fr,AVISO!,UWAGA!,ВНИМАНИЕ,경고!,คำเตือน!,UYARI!
+WARNING_TEXT,Are you sure you want to erase ALL of your data?,¿Estás seguro de que quieres borrar TODO tu progreso?,fr,Tem certeza que quer apga TUDO do seus dados??,Czy na pewno chcesz usunąć WSZYSTKIE swoje dane?,Вы уверены что хотите стереть ВСЕ свои данные?,"정말로 당신의 모든 데이터를 삭제시키겠습니까?","แน่ใจเหรอว่าอยากจะลบข้อมูลทั้งหมด?","BÜTÜN verilerinizi silmek istediğinizden emin misiniz?"
+DO_IT,Do it!,¡Hazlo!,fr,Faz!,Dawaj!,Давай!,하세요!,เอาเลย!,Yap hadi!
+NO_WAIT_DON'T_DO_THAT,"No, wait, don't do that.","No, espera, no lo hagas.",fr,"Pera, não, não faz isso.","Nie, zaczekaj, nie rób tego.","Нет, погоди, не надо.","아니, 잠깐, 하지 마.","เฮ้ย! เดี๋ยว อย่าทำนะ","Bekle, dur, yapma sakın."
+CREDITS_TEXT,"CREDITS: 
+
+Lead Developer:   Jorel Simpson
+Lead Programmer:  Jorel Simpson
+Lead Designer:  Jorel Simpson
+Lead Composer:  Jorel Simpson
+
+Theme of Soukaitei:  Arc System Works
+Für Elise:  Ludwig van Beethoven
+Hungarian Dance No. 5:  Johannes Brahms
+Original '9' Theme:  EnergyPumpkin on YouTube
+Credits for Minesweeper's original conception are reserved for whoever it applies to.
+
+Spanish Translations: AlexSC and Chinō from the Discord server.
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Big thanks to everyone in the official Jorel's Game Studio Discord and the YouTube community who played the game, offered suggestions, pointed out bugs, and patiently awaited Episodes 2 and 3.
+
+Big shoutout to PlanetSat0rn for modding version 1 of the game and inspiring me to add in certain mechanics to version 2!
+
+Very special thanks to the developers of the Godot game engine for making this game possible.
+
+This game is proudly AI-free. No artificial intelligence generation software was used to aid this game's production.","CRÉDITOS:
+
+Desarrollador Principal: Jorel Simpson
+Programador Principal: Jorel Simpson
+Diseñador Principal: Jorel Simpson
+Compositor Principal: Jorel Simpson
+
+Tema de Soukaitei: Arc System Works
+Para Elisa: Ludwig Van Beethoven
+Danza Húngara No. 5: Johannes Brahms
+Tema de '9' Original: EnergyPumpkin en YouTube
+Los créditos por el concepto original de Buscaminas se reservan para quien corresponda.
+
+Traducciones al español: AlexSC y Chinō de el servidor de Discord.
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Muchas gracias a todos en el servidor de Discord Jorel's Game Studio y a la comunidad de YouTube que jugaron el juego, enviaron sugerencias, señalaron errores, y esperaron pacientemente el Episodio 2.
+
+¡Un gran saludo a PlanetSat0rn por modear la versión 1 del juego e inspirarme a añadir ciertas mecánicas a la versión 2!
+
+Agradecimientos muy especiales a los desarrolladores del motor de videojuegos Godot por hacer posible este juego.
+
+Este juego está orgullosamente libre de IA. Ningún programa de inteligencia artificial generativa contribuyó a la producción de este juego.",fr,"CREDITOS:
+
+Desenvolvedor Líder: Jorel Simpson 
+Programador Líder: Jorel Simpson 
+Desinger Líder: Jorel Simpson 
+Compositor Líder: Jorel Simpson
+
+Tema de Soukaitei: Arc System Works
+Für Elise: Ludwig van Beethoven
+Dança Húngara n.° 5: Johannes Brahms
+Tema original do 9: EnergyPumpkin no YouTube
+Os créditos pela concepção original de Campo Minado são reservados a quem quer que seja. A ele se aplica.
+
+Tradução em Espanhol: AlexSC e Chinõ do servidor do Discord.
+Tradução em Português Brasileiro: Peter Dashy, Edoxian e OhHop do servidor de Discord.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Um valeuzão para todo mundo do Estúdio Oficial de Jogos do Jorel do Discord e a comunidade do YouTube por quem jogou o jogo, ofereceu sugestões, avisou sobre bugs, e pacientemente esperou o Episódio 2.
+
+Um grande abraço para PlanetSat0rn por modificar a versão 1 do jogo e me inspirando nas mecânicas do episódio 2!
+
+Um obrigado especial para os desenvolvedores da Godot Game Engine por fazer o jogo possível.
+
+Este jogo é orgulhosamente livre de IA. Nem um software de geração de inteligência artificial foi usado na produção do jogo.","TWÓRCY:
+
+Główny twórca: Jorel Simpson
+Główny programista: Jorel Simpson
+Główny projektant: Jorel Simpson
+Główny kompozytor: Jorel Simpson
+
+Utwór muzyczny dla Soukaitei: Arc System Works
+Für Elise: Ludwig van Beethoven
+Taniec Węgierski Nr 5: Johannes Brahms
+Originalny utwór muzyczny '9': EnergyPumpkin na Youtube
+Autorstwo oryginalnego pomysłu Sapera jest zarezerwowane dla kogokolwiek, kogo ono dotyczy.
+
+Hiszpańskie tłumaczenie: AlexSC i Chino z serwera Discord.
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Podziękowania dla wszystkich na oficjalnym Discordzie Jorel's Game Studio i społeczności na Youtube, która zagrała w tę grę, proponowała zmiany, wytykała błędy i cierpliwie wyczekiwała Epizodu 2.
+
+Pozdrowienia dla PlanetSat0rn za moddowanie wersji 1 gry i zainspirowanie mnie do dodania pewnych mechanik do wersji 2.
+
+Specjalne podziękowania dla twórców silnika Godot za umożliwienie powstania tej gry.
+
+Ta gra jest dziełem z dumą tworzonym bez AI. Żadne oprogramowanie generujące na podstawie sztucznej inteligencji nie zostało użyte w celu wsparcia tworzenia tej gry.","ТИТРЫ:
+
+Ведущий разработчик: Джорел Симпсон
+Ведущий программист: Джорел Симпсон
+Ведущий дизайнер: Джорел Симпсон
+Ведущий композитор: Джорел Симпсон
+
+Трек Soukaitei: Arc System Works
+К Элизе: Людвиг ван Бетховен
+Венгерский танец № 5: Иоганнес Брамс
+Оригинальный трек для '9': EnergyPumpkin на Ютубе
+Права на оригинальную концепцию «Сапёра» принадлежат тому, к кому она относится.
+
+Перевод на испанский язык: AlexSC и Chino с сервера Discord.
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Перевод на русский язык: RetroBunny с сервера Discord.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Огромное спасибо всем участникам официального Discord-сообщества Jorel's Game Studio и YouTube, кто играл в игру, предлагал свои идеи, указывал баги и терпеливо ждал второго эпизода.
+Огромное спасибо PlanetSat0rn за моддинг первой версии игры и за то, что он вдохновил меня добавить некоторые механики во вторую версию!
+
+Особая благодарность разработчикам игрового движка Godot за то, что они сделали эту игру возможной.
+
+В этой игре нет ИИ-контента. Никакое программное обеспечение для генерации ИИ не использовалось при её разработке.","크레딧:
+	
+수석 개발자: 조렐 심슨
+수석 프로그래머: 조렐 심슨
+수석 디자이너: 조렐 심슨
+수석 작곡가: 조렐 심슨
+
+테마: Arc System Works
+Für Elise: 루트비히 판 베토벤
+헝가리 무곡 5번: 요하네스 브람스
+원본 '9' 테마: 유튜브 EnergyPumpkin
+지뢰찾기의 원래 구상에 대한 크레딧은 해당하는 사람에게 귀속됩니다.
+
+스페인어 번역 : 디스코드 서버의 AlexSC와 Chino
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+공식 Jorel의 게임 스튜디오 디스코드의 모든 분들, 유튜브 커뮤니티에서 플레이한 사람들, 의견을 제공해 주신 사람들, 버그를 찾은 사람들과 에피소드 2를 끈기 있게 기다려 주신 모든 분들에게 큰 감사를 전합니다.
+
+게임 버전 1을 개조해 주고, 버전 2에 넣을 게임 시스템에 영감을 준 PlanetSat0rn에게 특별히 감사를 드립니다.
+
+이 게임을 만들 수 있도록 해 준 Godot 게임 엔진의 제작자들에게 특별히 감사를 드립니다.
+
+이 게임은 자랑스럽게도 AI 없이 만들어진 게임입니다. 게임 제작 동안 인공지능 생성 소프트웨어가 전혀 사용되지 않았습니다.","เครดิต:
+	
+ผู้พัฒนาหลัก: โจเรล ซิมป์สัน
+นักโปรแกรมหลัก: โจเรล ซิมป์สัน
+นักออกแบบหลัก: โจเรล ซิมป์สัน
+ผู้ประพันธ์หลัก: โจเรล ซิมป์สัน
+
+เพลงของโซกาอิเต: อาร์ก ซิสเต้ม เวิร์ก
+เฟือร์เอลิเซอ:  ลูทวิช ฟัน เบทโฮเฟิน
+ฮังกาเรียน แดนซ์ No.5 :โยฮันเนิส บรามส์
+พลงเดิมของ '9': EnergyPumpkin บนยูทูบ
+เครดิตจากแนวคิดทั้งหมดกับไมน์สวีปเปอร์มาจากเจ้าของงานทุก ๆ ท่านที่อยู่บนนี้
+
+ผู้แปลภาษาสเปน: AlexSC และ Chino จากช่องทางเซิร์ฟเวอร์ดิสคอร์ต
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+ขอขอบคุณอย่างยิ่งจากช่องทางเซิร์ฟเวอร์ดิสคอร์ตและยูทูบที่ได้ให้ความคิดเห็นและได้ทดสอบการเล่นสังเกตบัคต่าง ๆ ในเกมและอดทนตั้งตารอตอนที่ 2 อย่างยิ่ง
+
+สุดท้ายนี้ ขอส่งเสียงคุณ PlanetSat0rn ที่ได้ทดลองเล่นเวอร์ชันที่ 1 จนได้แรงบันดาลใจที่จะเพิ่มเมแคนิคส์เล็กน้อยให้กับเวอร์ชัน 2 นี้นะครับ!
+
+ขอขอบคุณเป็นพิเศษให้กับผู้พัฒนาของ Godot game engine สำหรับการให้เกมนี้สำเร็จโดยดี
+
+เกมนี้ปราศจาก AI ได้อย่างมั่นใจแน่นอน ไม่มีการใช้ปัญญาประดิษฐ์ในการสร้างพัฒนาเกมนี้","Emeği Geçenler:
+
+Baş Geliştirici: Jorel Simpson
+Baş Programcı: Jorel Simpson
+Baş Tasarımcı: Jorel Simpson
+Baş Besteci: Jorel Simpson
+
+Soukaitei'nin Müziği: Arc System Works
+Für Elise: Ludwig van Beethoven
+Macar Dansı No.5: Johannes Brahms
+Orjinal '9' Müziği: Youtube'da EnergyPumpkin
+Mayın Tarlası'nın orijinal konseptinin atıfları, ilgili kişilere aittir.
+
+İspanyolca Çeviri: Discord sunucusundan AlexSC ve Chino
+Brazilian Portuguese Translations: Edoxian, Peter Dashy, and OhHop from the Discord server.
+Polish Translations: czapla1024 and ChrisAnimates from the Discord server.
+Russian Translations: RetroBunny from the Discord server.
+Korean Translations: red guy from the Discord server.
+Thai Translations: YoSweet and AshWagon from the Discord server.
+Turkish Translations: Delimele from the Discord server.
+
+Discord'da Jorel'ın Oyun Stüdyosu'ndaki herkese ve Youtube'daki oyunu oynayan, öneriler sunan, hataları gösteren ve sabırla Bölüm 2'yi bekleyen topluluğa büyük teşekkürler.
+
+Oyunun 1. versiyonunu modlayıp bana 2. versiyonda belirli mekanikleri ilhamını verdiği için PlanetSat0rn'a kocaman selamlar!
+
+Bu oyunu mümkün kıldıkları için Godot oyun motorunun geliştiricilerine çok özel teşekkürler.
+
+Bu oyun gururla yapay zeka içermemektedir. Bu oyunun yapımında yapay zeka üretim yazılımı kullanılmamıştır."

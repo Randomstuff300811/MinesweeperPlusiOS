@@ -1,0 +1,10 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+MINESWEEPER_PLUS,MINESWEEPER PLUS,BUSCAMINAS PLUS,fr,CAMPO MINADO PLUS,MINESWEEPER PLUS,САПЁР ПЛЮС,지뢰찾기 플러스,ไมน์สวีปเปอร์ พลัส,MAYIN TARLASI PLUS
+GAME_BY,A GAME BY JOREL SIMPSON,UN JUEGO DE JOREL SIMPSON,fr,Um jogo por Jorel Simpson,GRA AUTORSTWA JORELA SIMPSONA,ИГРА ОТ ДЖОРЕЛА СИМПСОНА,조렐 심슨의 게임,เกมโดย โจเรล ซิมป์สัน,JOREL SIMPSON'DAN BİR OYUN
+FINAL_RANK,FINAL RANK,RANGO FINAL,fr,Rank final,OSTATECZNA OCENA,ФИНАЛЬНАЯ ОЦЕНКА,최종 평가,อันดับของคุณ,SON RÜTBE
+TOTAL_TIME,TOTAL TIME,TIEMPO TOTAL,fr,Tempo total,ŁĄCZNY CZAS,ОБЩЕЕ ВРЕМЯ,소요 시간,เวลาทั้งหมด,TOPLAM ZAMAN
+NEW_RECORD,NEW RECORD!,¡NUEVO RÉCORD!,fr,NEW_RECORD!,nowy rekord!,Новый рекорд!,신기록!,สถิติใหม่!,yeni rekor!
+COINS_EARNED,COINS EARNED,MONEDAS GANADAS,fr,Moedas coletadas,ZDOBYTE MONETY,МОНЕТОК ЗАРАБОТАНО,받은 코인,เหรียญที่ได้,KAZANILAN PARALAR
+MISTAKES,MISTAKES,ERRORES,fr,Erros cometidos,POPEŁNIONE BŁĘDY,ОШИБОК СДЕЛАНО,실수한 횟수,จำนวนที่พลาด,YAPILAN HATALAR
+THANKS_FOR_PLAYING,THANKS FOR PLAYING!,¡GRACIAS POR JUGAR!,fr,Obrigado por jogar,DZIĘKI ZA GRĘ!,СПАСИБО ЗА ИГРУ!,플레이해 주어서 감사합니다.,ขอบคุณที่ได้เล่นเกมนี้!,OYNADIĞINIZ İÇİN TEŞEKKÜRLER!
+NICE_SWEEPING,NICE SWEEPING!,¡BUEN BARRIDA!,fr,BOM TRABALHO!,Niezły z Ciebie Saper!,NICE SWEEPING!,잘 찾네요!,เก็บจนเรียบ!,İyi Tarama!

@@ -1,0 +1,12 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+LEVEL_1,en,es,fr,pt,pl,ru,ko,th
+LEVEL_2,en,es,fr,pt,pl,ru,ko,th
+LEVEL_3,en,es,fr,pt,pl,ru,ko,th
+LEVEL_4,en,es,fr,pt,pl,ru,ko,th
+LEVEL_5,en,es,fr,pt,pl,ru,ko,th
+LEVEL_6,en,es,fr,pt,pl,ru,ko,th
+LEVEL_7,en,es,fr,pt,pl,ru,ko,th
+LEVEL_8,en,es,fr,pt,pl,ru,ko,th
+LEVEL_9,en,es,fr,pt,pl,ru,ko,th
+LEVEL_10,en,es,fr,pt,pl,ru,ko,th
+LEVEL_11,en,es,fr,pt,pl,ru,ko,th

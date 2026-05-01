@@ -1,0 +1,477 @@
+[gd_scene load_steps=37 format=3 uid="uid://thwsfbwsca4a"]
+
+[ext_resource type="Script" uid="uid://bfuau3e37y7mh" path="res://main.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://cilxws8l5rpxi" path="res://assets/audio/title_screen.mp3" id="2"]
+[ext_resource type="Texture2D" uid="uid://bb811tbb3qswq" path="res://assets/img/titlescreen_anim.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://dkf0ptgsdyhqy" path="res://fancy_label.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://bw072qki0skm6" path="res://assets/img/StartButton.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://ma7psj3ym82r" path="res://how_to_play.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://ukjoyokfqiy3" path="res://records.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bwfx8acvhehbr" path="res://settings.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://cwst5wpxo8ndp" path="res://assets/img/mine_icon1.png" id="10"]
+[ext_resource type="SpriteFrames" uid="uid://cv8t0ohq1vsec" path="res://assets/sprite_frames/icon.tres" id="11"]
+[ext_resource type="AudioStream" uid="uid://b8bcshwnrhie2" path="res://assets/audio/mine_sound.mp3" id="12"]
+[ext_resource type="AudioStream" uid="uid://c1w5tp4lwipte" path="res://assets/audio/antimine_sound.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://cw34xuu4jafst" path="res://assets/audio/explosion.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://cuupp76r0j1l0" path="res://assets/audio/implosion.ogg" id="15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+atlas = ExtResource("3")
+region = Rect2(0, 0, 1152, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("3")
+region = Rect2(1152, 0, 1152, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("3")
+region = Rect2(2304, 0, 1152, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("3")
+region = Rect2(3456, 0, 1152, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_272bh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2yge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}],
+"loop": true,
+"name": &"title_screen",
+"speed": 4.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c57u"]
+font_size = 128
+font_color = Color(1, 0, 0, 1)
+outline_size = 32
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.498039)
+shadow_offset = Vector2(16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycdy4"]
+font_size = 24
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_efxa6"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg77c"]
+texture = ExtResource("6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycdy4"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w48qg"]
+texture = ExtResource("6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vivmo"]
+texture = ExtResource("5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2cqfq"]
+font_size = 36
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cqfq"]
+texture = ExtResource("6")
+
+[sub_resource type="LabelSettings" id="LabelSettings_dg77c"]
+line_spacing = 0.0
+font_size = 24
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mycd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_272bh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vw27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kek77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4c57u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efxa6"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Music" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("2")
+parameters/looping = true
+
+[node name="Image" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_272bh")
+animation = &"title_screen"
+autoplay = "title_screen"
+frame = 1
+frame_progress = 0.184703
+centered = false
+
+[node name="Minesweeper" type="Label" parent="Image"]
+offset_left = 128.0
+offset_top = 168.0
+offset_right = 1023.0
+offset_bottom = 343.0
+text = "MINESWEEPER"
+label_settings = SubResource("LabelSettings_4c57u")
+horizontal_alignment = 1
+
+[node name="FancyLabel" parent="Image/Minesweeper" instance=ExtResource("4")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = 95.0
+offset_top = -39.0
+offset_right = 337.0
+offset_bottom = 96.0
+grow_vertical = 0
+
+[node name="VersionLabel" type="Label" parent="Image/Minesweeper"]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 256.0
+offset_right = 783.0
+offset_bottom = 290.0
+text = "v3.0"
+label_settings = SubResource("LabelSettings_ycdy4")
+
+[node name="Label" type="Label" parent="Image"]
+offset_left = 632.0
+offset_top = 568.0
+offset_right = 855.0
+offset_bottom = 591.0
+text = "Click anywhere to continue..."
+
+[node name="StartButton" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 448.0
+offset_top = 680.0
+offset_right = 704.0
+offset_bottom = 808.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/StartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BEGIN"
+label_settings = SubResource("LabelSettings_2cqfq")
+
+[node name="HowToPlay" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 128.0
+offset_top = 848.0
+offset_right = 384.0
+offset_bottom = 912.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/HowToPlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -25.0
+offset_right = 121.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HOW TO PLAY"
+label_settings = SubResource("LabelSettings_2cqfq")
+horizontal_alignment = 1
+
+[node name="Popup" parent="Image/HowToPlay" instance=ExtResource("7")]
+visible = false
+
+[node name="Records" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 768.0
+offset_top = 680.0
+offset_right = 1024.0
+offset_bottom = 808.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/Records"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -25.0
+offset_right = 121.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "STATISTICS"
+label_settings = SubResource("LabelSettings_2cqfq")
+horizontal_alignment = 1
+
+[node name="Popup" parent="Image/Records" instance=ExtResource("8")]
+visible = false
+max_size = Vector2i(896, 640)
+
+[node name="Settings" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 128.0
+offset_top = 680.0
+offset_right = 384.0
+offset_bottom = 808.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -25.0
+offset_right = 121.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_2cqfq")
+horizontal_alignment = 1
+
+[node name="Popup" parent="Image/Settings" instance=ExtResource("9")]
+visible = false
+
+[node name="About" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 448.0
+offset_top = 848.0
+offset_right = 704.0
+offset_bottom = 912.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/About"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_2cqfq")
+
+[node name="Popup" type="PopupPanel" parent="Image/About"]
+initial_position = 1
+size = Vector2i(896, 640)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2cqfq")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Image/About/Popup"]
+offset_right = 896.0
+offset_bottom = 640.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="ILabel" type="Label" parent="Image/About/Popup/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CREDITS: 
+
+Lead Developer:   Jorel Simpson
+Lead Programmer:  Jorel Simpson
+Lead Designer:  Jorel Simpson
+Lead Composer:  Jorel Simpson
+
+Theme of Soukaitei:  Arc System Works
+Für Elise:  Ludwig van Beethoven
+Hungarian Dance No. 5:  Johannes Brahms
+Original '9' Theme:  EnergyPumpkin on YouTube
+Credits for Minesweeper's original conception are reserved for whoever it applies to.
+
+Spanish Translations: AlexSC and Chinō from the Discord server.
+
+Big thanks to everyone in the official Jorel's Game Studio Discord and the YouTube community who played the game, offered suggestions, pointed out bugs, and patiently awaited Episode 2.
+
+Big shoutout to PlanetSat0rn for modding version 1 of the game and inspiring me to add in certain mechanics to version 2!
+
+Very special thanks to the developers of the Godot game engine for making this game possible.
+
+This game is proudly AI-free. No artificial intelligence generation software was used to aid this game's production."
+label_settings = SubResource("LabelSettings_dg77c")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ExitButton" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 368.0
+offset_bottom = 112.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Label" type="Label" parent="Image/ExitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -25.0
+offset_right = 160.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT GAME"
+label_settings = SubResource("LabelSettings_2cqfq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResetGame" type="Button" parent="Image" groups=["buttons"]]
+visible = false
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 768.0
+offset_top = 848.0
+offset_right = 1024.0
+offset_bottom = 912.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_efxa6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ycdy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w48qg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vivmo")
+
+[node name="Mine" type="Sprite2D" parent="Image/ResetGame"]
+position = Vector2(124, 32)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10")
+
+[node name="Label" type="Label" parent="Image/ResetGame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -25.0
+offset_right = 120.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESET DATA"
+label_settings = SubResource("LabelSettings_2cqfq")
+horizontal_alignment = 1
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Image/ResetGame"]
+title = "WARNING!"
+initial_position = 1
+size = Vector2i(391, 100)
+ok_button_text = "Do it!"
+dialog_text = "Are you sure you want to erase ALL of your data?"
+cancel_button_text = "No, wait, don't do that."
+
+[node name="ButtonReady" type="Button" parent="Image"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -48.0
+offset_right = 8.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7mycd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_272bh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5vw27")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kek77")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4c57u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_efxa6")
+button_mask = 3
+
+[node name="Mine" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(584, 488)
+scale = Vector2(32, 32)
+sprite_frames = ExtResource("11")
+animation = &"explosion-"
+
+[node name="MineSound" type="AudioStreamPlayer" parent="Mine" groups=["sfx"]]
+stream = ExtResource("12")
+
+[node name="AntiMineSound" type="AudioStreamPlayer" parent="Mine" groups=["sfx"]]
+stream = ExtResource("13")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="Mine" groups=["sfx"]]
+stream = ExtResource("14")
+
+[node name="Implosion" type="AudioStreamPlayer" parent="Mine" groups=["sfx"]]
+stream = ExtResource("15")
+
+[connection signal="pressed" from="Image/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Image/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="Image/Records" to="." method="_on_records_pressed"]
+[connection signal="pressed" from="Image/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Image/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Image/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Image/ResetGame" to="." method="_on_reset_game_pressed"]
+[connection signal="confirmed" from="Image/ResetGame/ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]
+[connection signal="button_down" from="Image/ButtonReady" to="." method="_on_button_ready_button_down"]

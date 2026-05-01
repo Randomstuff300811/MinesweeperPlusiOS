@@ -1,0 +1,944 @@
+[gd_scene load_steps=82 format=3 uid="uid://ddl58rekdclg4"]
+
+[ext_resource type="Script" uid="uid://42pc8uwe7w6d" path="res://level.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c0m27pnxdy6a0" path="res://bg_tile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://nfsnqdbgi7gi" path="res://game.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://d0bls67bykm7v" path="res://lone_icon.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://pdbjp3ra1kar" path="res://nine_mine.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bbf2ue3aacw4y" path="res://ten_mine.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bnl0dna3s4lq0" path="res://eleven_mine.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://bgnt0s41d226y" path="res://assets/img/Panel.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bw072qki0skm6" path="res://assets/img/StartButton.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cpvvhf4m0e82e" path="res://assets/img/Raindrop.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dxee1uh2cr81a" path="res://assets/img/Snowflake.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bf6iim0f3rwwh" path="res://assets/img/Fogcloud.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://carmhibc20vqi" path="res://back_ground.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://b1fvoaj0ogh6h" path="res://hud.tscn" id="15"]
+[ext_resource type="SpriteFrames" uid="uid://cnpnrdyvchwpa" path="res://assets/sprite_frames/coin.tres" id="16"]
+[ext_resource type="AudioStream" uid="uid://c11i85eioj4l8" path="res://assets/audio/bgm_1.mp3" id="17"]
+[ext_resource type="AudioStream" uid="uid://di8u50rmojfcj" path="res://assets/audio/bgm_2.mp3" id="18"]
+[ext_resource type="AudioStream" uid="uid://cu1ygi2n2kswm" path="res://assets/audio/bgm_3.mp3" id="19"]
+[ext_resource type="AudioStream" uid="uid://7j1a5fm7tyl5" path="res://assets/audio/bgm_4.mp3" id="20"]
+[ext_resource type="AudioStream" uid="uid://cqtfk0pnnxyck" path="res://assets/audio/bgm_5.mp3" id="21"]
+[ext_resource type="AudioStream" uid="uid://corn56vrdwv5x" path="res://assets/audio/bgm_6.mp3" id="22"]
+[ext_resource type="AudioStream" uid="uid://yyuc5wmjd2qi" path="res://assets/audio/bgm_7.mp3" id="23"]
+[ext_resource type="AudioStream" uid="uid://do8qqb58q0jq6" path="res://assets/audio/bgm_8.mp3" id="24"]
+[ext_resource type="AudioStream" uid="uid://d163q0esrm7p" path="res://assets/audio/bgm_9.mp3" id="25"]
+[ext_resource type="AudioStream" uid="uid://bv0w47ep7rkut" path="res://assets/audio/9_boss.mp3" id="26"]
+[ext_resource type="AudioStream" uid="uid://hawhwdkibdwu" path="res://assets/audio/9_intro.mp3" id="27"]
+[ext_resource type="AudioStream" uid="uid://bt615dqya4vjk" path="res://assets/audio/bell.ogg" id="28"]
+[ext_resource type="AudioStream" uid="uid://dek64cq40kw3h" path="res://assets/audio/sfx_defeat.ogg" id="29"]
+[ext_resource type="AudioStream" uid="uid://uv0u1x6n3xn6" path="res://assets/audio/sfx_emerge.ogg" id="30"]
+[ext_resource type="AudioStream" uid="uid://m3mf8i0suplh" path="res://assets/audio/sfx_explosion9.ogg" id="31"]
+[ext_resource type="AudioStream" uid="uid://ccoa50mhjrssa" path="res://assets/audio/sfx_move.ogg" id="32"]
+[ext_resource type="AudioStream" uid="uid://bu0pjnsyd6iet" path="res://assets/audio/sfx_saw.ogg" id="33"]
+[ext_resource type="AudioStream" uid="uid://sdsmciyxl30i" path="res://assets/audio/sfx_spikes.ogg" id="34"]
+[ext_resource type="AudioStream" uid="uid://d3wf4fggmkipf" path="res://assets/audio/sfx_spin.ogg" id="35"]
+[ext_resource type="AudioStream" uid="uid://dhbap7l8ypub7" path="res://assets/audio/sfx_stop.ogg" id="36"]
+[ext_resource type="AudioStream" uid="uid://46eguylc3x1t" path="res://assets/audio/9_fanfare.ogg" id="37"]
+[ext_resource type="AudioStream" uid="uid://bu3f8suwwep6y" path="res://assets/audio/10_boss.mp3" id="38"]
+[ext_resource type="AudioStream" uid="uid://ciqgif2atf58d" path="res://assets/audio/10_intro.mp3" id="39"]
+[ext_resource type="AudioStream" uid="uid://ceovkfe7dg6lv" path="res://assets/audio/10_fanfare.ogg" id="40"]
+[ext_resource type="AudioStream" uid="uid://cl5gjgfdq38t5" path="res://assets/audio/11_boss.mp3" id="41"]
+[ext_resource type="AudioStream" uid="uid://cmxwm56wu02me" path="res://assets/audio/11_intro.mp3" id="42"]
+[ext_resource type="AudioStream" uid="uid://cukw5rhcejf1y" path="res://assets/audio/11_fanfare.ogg" id="43"]
+[ext_resource type="AudioStream" uid="uid://nut7nakkrgi" path="res://assets/audio/11_boss_2.mp3" id="44"]
+[ext_resource type="AudioStream" uid="uid://bpcby6krx45i0" path="res://assets/audio/win_1.mp3" id="45"]
+[ext_resource type="AudioStream" uid="uid://cqeoh6yhrjgqk" path="res://assets/audio/win_2.mp3" id="46"]
+[ext_resource type="AudioStream" uid="uid://7mdlktnsoayp" path="res://assets/audio/win_3.mp3" id="47"]
+[ext_resource type="AudioStream" uid="uid://bkx0lxhixrgiw" path="res://assets/audio/win_4.mp3" id="48"]
+[ext_resource type="AudioStream" uid="uid://dplk6575hmdmu" path="res://assets/audio/win_5.ogg" id="49"]
+[ext_resource type="AudioStream" uid="uid://bn11l36t1htm2" path="res://assets/audio/win_6.ogg" id="50"]
+[ext_resource type="AudioStream" uid="uid://be6guny3am247" path="res://assets/audio/win_7.ogg" id="51"]
+[ext_resource type="AudioStream" uid="uid://51hb3ewuxkyd" path="res://assets/audio/win_8.ogg" id="52"]
+[ext_resource type="AudioStream" uid="uid://cj2mmbfu01i5j" path="res://assets/audio/win_9.mp3" id="53"]
+[ext_resource type="AudioStream" uid="uid://lvy08hudboi2" path="res://assets/audio/sfx_1up.ogg" id="54"]
+[ext_resource type="AudioStream" uid="uid://cil8pfgv5svo8" path="res://assets/audio/BOOM.mp3" id="55"]
+[ext_resource type="AudioStream" uid="uid://ceduy056hbklq" path="res://assets/audio/start_sound.mp3" id="56"]
+[ext_resource type="Texture2D" uid="uid://ddcs2kpbmku4v" path="res://assets/img/Numbers.png" id="57"]
+[ext_resource type="Texture2D" uid="uid://g4ohi5vftre5" path="res://assets/img/coin.png" id="58"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuqa8"]
+texture = ExtResource("9")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aicyk"]
+texture = ExtResource("9")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b0r0"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6smj"]
+texture = ExtResource("9")
+
+[sub_resource type="LabelSettings" id="LabelSettings_km5ld"]
+line_spacing = -10.0
+font_size = 30
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_samc1"]
+texture = ExtResource("9")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i2t4f"]
+texture = ExtResource("9")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8cye3"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2orkt"]
+texture = ExtResource("9")
+
+[sub_resource type="Gradient" id="Gradient_53riq"]
+offsets = PackedFloat32Array(0, 0.16, 0.5, 0.826667, 0.986667)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlbli"]
+size = Vector2(384, 192)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dlbli"]
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(496, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2t4f"]
+size = Vector2(160, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cye3"]
+size = Vector2(160, 160)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f2txt"]
+line_spacing = 0.0
+font_size = 100
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ainy"]
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_na3no"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07udg"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wtct"]
+texture = ExtResource("9")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlbli"]
+texture = ExtResource("10")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5f7e"]
+texture = ExtResource("9")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wp8k7"]
+font_size = 32
+font_color = Color(1, 0, 0, 1)
+outline_size = 8
+
+[node name="Level" type="Control"]
+texture_filter = 5
+layout_mode = 3
+anchor_right = 0.627604
+anchor_bottom = 1.0
+offset_right = 429.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+script = ExtResource("1")
+bg_tile = ExtResource("2")
+game = ExtResource("3")
+ten_explosion = ExtResource("4")
+nine = ExtResource("5")
+ten = ExtResource("6")
+eleven = ExtResource("7")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="PauseMenu" type="Control" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 192.0
+offset_right = 576.0
+offset_bottom = 960.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="PauseBackGround" type="Sprite2D" parent="PauseMenu"]
+position = Vector2(384, -192)
+texture = ExtResource("8")
+centered = false
+
+[node name="Buttons" type="VBoxContainer" parent="PauseMenu/PauseBackGround"]
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 176.0
+mouse_filter = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="PauseMenu/PauseBackGround/Buttons"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uuqa8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_aicyk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8b0r0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h6smj")
+
+[node name="ResetLabel" type="Label" parent="PauseMenu/PauseBackGround/Buttons/ResetButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -32.0
+offset_right = 96.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESET GAME"
+label_settings = SubResource("LabelSettings_km5ld")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ExitButton" type="Button" parent="PauseMenu/PauseBackGround/Buttons"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+theme_override_styles/disabled = SubResource("StyleBoxTexture_samc1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i2t4f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8cye3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2orkt")
+
+[node name="ExitLabel" type="Label" parent="PauseMenu/PauseBackGround/Buttons/ExitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -32.0
+offset_right = 96.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT"
+label_settings = SubResource("LabelSettings_km5ld")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PauseTimer" type="Timer" parent="PauseMenu"]
+wait_time = 0.01
+
+[node name="SVC" type="SubViewportContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = 192.0
+offset_right = 40.0
+offset_bottom = 232.0
+
+[node name="Rain" type="CPUParticles2D" parent="SVC"]
+visible = false
+position = Vector2(576, -192)
+amount = 1000
+texture = ExtResource("11")
+lifetime = 1.4
+preprocess = 1.4
+randomness = 1.0
+fixed_fps = 60
+emission_shape = 3
+emission_rect_extents = Vector2(576, 1)
+
+[node name="Snow" type="CPUParticles2D" parent="SVC"]
+visible = false
+position = Vector2(576, -192)
+amount = 2000
+texture = ExtResource("12")
+lifetime = 4.6
+preprocess = 4.6
+randomness = 1.0
+fixed_fps = 60
+emission_shape = 3
+emission_rect_extents = Vector2(576, 1)
+gravity = Vector2(0, 98)
+angular_velocity_max = 100.0
+radial_accel_min = -50.0
+radial_accel_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+
+[node name="Fog" type="CPUParticles2D" parent="SVC"]
+visible = false
+position = Vector2(576, 384)
+amount = 3000
+texture = ExtResource("13")
+lifetime = 2.0
+preprocess = 2.0
+explosiveness = 0.1
+randomness = 1.0
+fixed_fps = 60
+emission_shape = 3
+emission_rect_extents = Vector2(576, 480)
+gravity = Vector2(0, 0)
+radial_accel_min = -50.0
+radial_accel_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+color = Color(1, 1, 1, 0.0784314)
+color_ramp = SubResource("Gradient_53riq")
+
+[node name="SV" type="SubViewport" parent="SVC"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 768)
+render_target_update_mode = 4
+
+[node name="Game" parent="SVC/SV" instance=ExtResource("3")]
+offset_right = 1152.0
+offset_bottom = 768.0
+
+[node name="Camera" type="Camera2D" parent="SVC/SV/Game"]
+position = Vector2(576, 384)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 768
+limit_smoothed = true
+position_smoothing_speed = 2.0
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
+
+[node name="BGContainer" type="CenterContainer" parent="SVC/SV"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -384.0
+offset_right = 576.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BackGround" parent="SVC/SV/BGContainer" instance=ExtResource("14")]
+layout_mode = 2
+
+[node name="HUD" parent="." instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="IntroMineControl" type="Control" parent="HUD"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="IntroMine1" parent="HUD/IntroMineControl" groups=["nine_intro_mines"] instance=ExtResource("4")]
+position = Vector2(192, 96)
+scale = Vector2(4, 4)
+
+[node name="IntroMine2" parent="HUD/IntroMineControl" groups=["nine_intro_mines"] instance=ExtResource("4")]
+position = Vector2(440, 96)
+scale = Vector2(4, 4)
+
+[node name="IntroMine3" parent="HUD/IntroMineControl" groups=["nine_intro_mines"] instance=ExtResource("4")]
+position = Vector2(712, 96)
+scale = Vector2(4, 4)
+
+[node name="IntroMine4" parent="HUD/IntroMineControl" groups=["nine_intro_mines"] instance=ExtResource("4")]
+position = Vector2(960, 96)
+scale = Vector2(4, 4)
+
+[node name="TouchScreenZoomIn" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(16, 16)
+scale = Vector2(0.367187, 0.415)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "zoom_in"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenZoomIn"]
+offset_right = 383.0
+offset_bottom = 193.0
+text = "ZOOM IN"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenZoomOut" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(16, 96)
+scale = Vector2(0.367188, 0.415)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "zoom_out"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenZoomOut"]
+offset_right = 383.0
+offset_bottom = 193.0
+text = "ZOOM OUT"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenScrubUp" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(784, 16)
+scale = Vector2(0.36, 0.255)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "camera_up"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenScrubUp"]
+offset_right = 383.0
+offset_bottom = 193.0
+text = "^"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenScrubLeft" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(784, 64)
+scale = Vector2(0.18, 0.333)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "camera_left"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenScrubLeft"]
+offset_right = 383.0
+offset_bottom = 193.0
+text = "<"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenScrubRight" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(853, 64)
+scale = Vector2(0.18, 0.333)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "camera_right"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenScrubRight"]
+offset_right = 383.0
+offset_bottom = 193.0
+text = ">"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenScrubDown" type="TouchScreenButton" parent="HUD" groups=["touch_screen_buttons"]]
+visible = false
+position = Vector2(784, 128)
+scale = Vector2(0.36, 0.255)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+shape = SubResource("RectangleShape2D_dlbli")
+passby_press = true
+action = "camera_down"
+
+[node name="Label" type="Label" parent="HUD/TouchScreenScrubDown"]
+offset_left = 383.334
+offset_top = 192.157
+offset_right = 766.334
+offset_bottom = 385.157
+rotation = 3.14159
+text = "^"
+label_settings = SubResource("LabelSettings_dlbli")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 480)
+
+[node name="LeftArea" type="Area2D" parent="." groups=["mouse_areas"]]
+modulate = Color(0, 0, 0, 0)
+z_index = 1
+position = Vector2(512, 192)
+
+[node name="LeftShape" type="CollisionPolygon2D" parent="LeftArea"]
+polygon = PackedVector2Array(0, 0, -256, 768, -512, 768, -512, 0)
+
+[node name="LeftPolygon" type="Polygon2D" parent="LeftArea/LeftShape" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, -256, 768, -512, 768, -512, 0)
+
+[node name="CenterArea" type="Area2D" parent="." groups=["mouse_areas"]]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(640, 192)
+
+[node name="CenterShape" type="CollisionPolygon2D" parent="CenterArea"]
+polygon = PackedVector2Array(0, 0, -128, 0, -384, 768, 256, 768)
+
+[node name="CenterPolygon" type="Polygon2D" parent="CenterArea/CenterShape" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 256, 768, -384, 768, -128, 0)
+
+[node name="RightArea" type="Area2D" parent="." groups=["mouse_areas"]]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(640, 192)
+
+[node name="RightShape" type="CollisionPolygon2D" parent="RightArea"]
+polygon = PackedVector2Array(0, 0, 256, 768, 512, 768, 512, 0)
+
+[node name="RightPolygon" type="Polygon2D" parent="RightArea/RightShape" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 256, 768, 512, 768, 512, 0)
+
+[node name="HUDArea" type="Area2D" parent="." groups=["mouse_areas"]]
+modulate = Color(0, 0, 0, 0)
+z_index = 1
+
+[node name="HUDRectangle" type="CollisionShape2D" parent="HUDArea"]
+position = Vector2(248, 96)
+shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="HUDPolygon" type="Polygon2D" parent="HUDArea/HUDRectangle" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-248, -96, 248, -96, 248, 96, -248, 96)
+
+[node name="HUDRectangle2" type="CollisionShape2D" parent="HUDArea"]
+position = Vector2(904, 96)
+shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="HUDPolygon2" type="Polygon2D" parent="HUDArea/HUDRectangle2" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-248, -96, 248, -96, 248, 96, -248, 96)
+
+[node name="HUDRectangle3" type="CollisionShape2D" parent="HUDArea"]
+position = Vector2(576, 8)
+shape = SubResource("RectangleShape2D_i2t4f")
+
+[node name="HUDPolygon3" type="Polygon2D" parent="HUDArea/HUDRectangle3" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-80, -8, -80, 8, 80, 8, 80, -8)
+
+[node name="HUDRectangle4" type="CollisionShape2D" parent="HUDArea"]
+position = Vector2(576, 184)
+shape = SubResource("RectangleShape2D_i2t4f")
+
+[node name="HUDPolygon4" type="Polygon2D" parent="HUDArea/HUDRectangle4" groups=["polygons"]]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-80, -8, -80, 8, 80, 8, 80, -8)
+
+[node name="HUDRectangle5" type="CollisionShape2D" parent="HUDArea"]
+position = Vector2(576, 96)
+shape = SubResource("RectangleShape2D_8cye3")
+
+[node name="HUDPolygon5" type="Polygon2D" parent="HUDArea/HUDRectangle5"]
+position = Vector2(-80, -80)
+polygon = PackedVector2Array(0, 0, 160, 0, 160, 160, 0, 160)
+
+[node name="MessageLabel" type="Label" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "PAUSED"
+label_settings = SubResource("LabelSettings_f2txt")
+horizontal_alignment = 1
+
+[node name="MessageBox" type="ColorRect" parent="MessageLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.431373)
+
+[node name="YesButton" type="Button" parent="MessageLabel/MessageBox"]
+visible = false
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 288.0
+offset_right = 96.0
+offset_bottom = 352.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_aicyk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8b0r0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h6smj")
+
+[node name="YesLabel" type="Label" parent="MessageLabel/MessageBox/YesButton"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+text = "YES"
+label_settings = SubResource("LabelSettings_km5ld")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoButton" type="Button" parent="MessageLabel/MessageBox"]
+visible = false
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 384.0
+offset_right = 96.0
+offset_bottom = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_aicyk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8b0r0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h6smj")
+
+[node name="NoLabel" type="Label" parent="MessageLabel/MessageBox/NoButton"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+text = "NO"
+label_settings = SubResource("LabelSettings_km5ld")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="MessageLabel/MessageBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 69.5
+offset_bottom = 138.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_1ainy")
+horizontal_alignment = 1
+
+[node name="TimeBox" type="ColorRect" parent="MessageLabel/MessageBox/TimeLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Coin" type="AnimatedSprite2D" parent="MessageLabel/MessageBox/TimeLabel"]
+visible = false
+position = Vector2(-64, 0)
+sprite_frames = ExtResource("16")
+animation = &"coin"
+autoplay = "coin"
+centered = false
+
+[node name="RewardLabel" type="Label" parent="MessageLabel/MessageBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 146.5
+offset_bottom = 215.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_1ainy")
+horizontal_alignment = 1
+
+[node name="RewardBox" type="ColorRect" parent="MessageLabel/MessageBox/RewardLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Coin" type="AnimatedSprite2D" parent="MessageLabel/MessageBox/RewardLabel"]
+position = Vector2(-64, -7)
+sprite_frames = ExtResource("16")
+animation = &"coin"
+autoplay = "coin"
+centered = false
+
+[node name="BGM1" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("17")
+parameters/looping = true
+
+[node name="BGM2" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("18")
+parameters/looping = true
+
+[node name="BGM3" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("19")
+
+[node name="BGM4" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("20")
+
+[node name="BGM5" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("21")
+parameters/looping = true
+
+[node name="BGM6" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("22")
+parameters/looping = true
+
+[node name="BGM7" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("23")
+parameters/looping = true
+
+[node name="BGM8" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("24")
+parameters/looping = true
+
+[node name="BGM12" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("25")
+parameters/looping = true
+
+[node name="9" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("26")
+
+[node name="9Intro" type="AudioStreamPlayer" parent="9" groups=["music"]]
+stream = ExtResource("27")
+
+[node name="Bell" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("28")
+volume_db = 12.0
+
+[node name="Defeat" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("29")
+
+[node name="Emerge" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("30")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("31")
+
+[node name="Move" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("32")
+
+[node name="Saw" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("33")
+
+[node name="Spikes" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("34")
+
+[node name="Spin" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("35")
+
+[node name="Stop" type="AudioStreamPlayer" parent="9" groups=["sfx"]]
+stream = ExtResource("36")
+
+[node name="Win9" type="AudioStreamPlayer" parent="9" groups=["music"]]
+stream = ExtResource("37")
+
+[node name="10" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("38")
+parameters/looping = true
+
+[node name="10Intro" type="AudioStreamPlayer" parent="10" groups=["music"]]
+stream = ExtResource("39")
+parameters/looping = true
+
+[node name="Win10" type="AudioStreamPlayer" parent="10" groups=["music"]]
+stream = ExtResource("40")
+
+[node name="11" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("41")
+parameters/looping = true
+
+[node name="11Intro" type="AudioStreamPlayer" parent="11" groups=["music"]]
+stream = ExtResource("42")
+parameters/looping = true
+
+[node name="Win11" type="AudioStreamPlayer" parent="11" groups=["music"]]
+stream = ExtResource("43")
+
+[node name="11_2" type="AudioStreamPlayer" parent="11" groups=["music"]]
+stream = ExtResource("44")
+
+[node name="Win1" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("45")
+
+[node name="Win2" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("46")
+
+[node name="Win3" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("47")
+
+[node name="Win4" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("48")
+
+[node name="Win5" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("49")
+
+[node name="Win6" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("50")
+
+[node name="Win7" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("51")
+
+[node name="Win8" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("52")
+
+[node name="Win12" type="AudioStreamPlayer" parent="." groups=["music"]]
+stream = ExtResource("53")
+
+[node name="OneUp" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("54")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("55")
+
+[node name="Exit" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("56")
+
+[node name="NineMineTemp" parent="." instance=ExtResource("5")]
+z_index = 1
+layout_mode = 0
+offset_left = -128.0
+offset_top = 64.0
+offset_right = -64.0
+offset_bottom = 128.0
+
+[node name="NineMineTemp2" parent="." instance=ExtResource("5")]
+z_index = 1
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 64.0
+offset_right = 1280.0
+offset_bottom = 128.0
+
+[node name="Fade" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="NineMoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="NineQuickSetTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="BackDrop" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(192, 192)
+scale = Vector2(48, 48)
+texture = ExtResource("57")
+centered = false
+hframes = 4
+vframes = 7
+frame = 9
+
+[node name="SkipButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 896.0
+offset_right = 192.0
+offset_bottom = 960.0
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("StyleBoxTexture_na3no")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_07udg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4wtct")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dlbli")
+theme_override_styles/normal = SubResource("StyleBoxTexture_r5f7e")
+
+[node name="Label" type="Label" parent="SkipButton"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+text = "SKIP INTRO"
+label_settings = SubResource("LabelSettings_wp8k7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CameraFollow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 384)
+texture = ExtResource("58")
+
+[connection signal="pressed" from="PauseMenu/PauseBackGround/Buttons/ResetButton" to="." method="_reset_game"]
+[connection signal="pressed" from="PauseMenu/PauseBackGround/Buttons/ExitButton" to="." method="_exit_game"]
+[connection signal="timeout" from="PauseMenu/PauseTimer" to="." method="_on_pause_timer_timeout"]
+[connection signal="pressed" from="HUD/TouchScreenZoomIn" to="." method="_on_touch_screen_zoom_in_pressed"]
+[connection signal="released" from="HUD/TouchScreenZoomIn" to="." method="_on_touch_screen_zoom_in_released"]
+[connection signal="pressed" from="HUD/TouchScreenZoomOut" to="." method="_on_touch_screen_zoom_out_pressed"]
+[connection signal="released" from="HUD/TouchScreenZoomOut" to="." method="_on_touch_screen_zoom_out_released"]
+[connection signal="pressed" from="HUD/TouchScreenScrubUp" to="." method="_on_touch_screen_scrub_up_pressed"]
+[connection signal="released" from="HUD/TouchScreenScrubUp" to="." method="_on_touch_screen_scrub_up_released"]
+[connection signal="pressed" from="HUD/TouchScreenScrubLeft" to="." method="_on_touch_screen_scrub_left_pressed"]
+[connection signal="released" from="HUD/TouchScreenScrubLeft" to="." method="_on_touch_screen_scrub_left_released"]
+[connection signal="pressed" from="HUD/TouchScreenScrubRight" to="." method="_on_touch_screen_scrub_right_pressed"]
+[connection signal="released" from="HUD/TouchScreenScrubRight" to="." method="_on_touch_screen_scrub_right_released"]
+[connection signal="pressed" from="HUD/TouchScreenScrubDown" to="." method="_on_touch_screen_scrub_down_pressed"]
+[connection signal="released" from="HUD/TouchScreenScrubDown" to="." method="_on_touch_screen_scrub_down_released"]
+[connection signal="mouse_entered" from="LeftArea" to="." method="_on_left_area_mouse_entered"]
+[connection signal="mouse_entered" from="CenterArea" to="." method="_on_center_area_mouse_entered"]
+[connection signal="mouse_entered" from="RightArea" to="." method="_on_right_area_mouse_entered"]
+[connection signal="mouse_entered" from="HUDArea" to="." method="_on_hud_area_mouse_entered"]
+[connection signal="pressed" from="MessageLabel/MessageBox/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="MessageLabel/MessageBox/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="timeout" from="NineQuickSetTimer" to="." method="_on_nine_quick_set_timer_timeout"]
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

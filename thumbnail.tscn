@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3lxt5ik10xdc"]
+
+[ext_resource type="Texture2D" uid="uid://bx4yu30aeb31l" path="res://assets/img/ButtonA2.png" id="1"]
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(576, 301.714)
+scale = Vector2(2.57143, 2.57143)
+texture = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15.9444, -109.278)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 16)

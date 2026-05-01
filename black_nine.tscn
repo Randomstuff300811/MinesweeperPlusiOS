@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsqigw68ewqey"]
+
+[ext_resource type="Texture2D" uid="uid://b81qj6gejbsjx" path="res://garbage/blacknine.png" id="1"]
+[ext_resource type="Script" uid="uid://duaf1tmj4bukp" path="res://black_nine.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://ckb6ku4palemu" path="res://garbage/blacksword.png" id="3"]
+
+[node name="BlackNine" type="Sprite2D"]
+z_index = 999
+position = Vector2(576, 416)
+texture = ExtResource("1")
+script = ExtResource("2")
+
+[node name="Wheel" type="Control" parent="."]
+show_behind_parent = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sword1" type="Sprite2D" parent="Wheel"]
+position = Vector2(0, -79)
+rotation = -3.14159
+texture = ExtResource("3")
+
+[node name="Sword2" type="Sprite2D" parent="Wheel"]
+position = Vector2(52, -60)
+rotation = -2.44346
+texture = ExtResource("3")
+
+[node name="Sword3" type="Sprite2D" parent="Wheel"]
+position = Vector2(79, -11)
+rotation = -1.74533
+texture = ExtResource("3")
+
+[node name="Sword4" type="Sprite2D" parent="Wheel"]
+position = Vector2(69, 39)
+rotation = -1.0472
+texture = ExtResource("3")
+
+[node name="Sword5" type="Sprite2D" parent="Wheel"]
+position = Vector2(27, 74)
+rotation = -0.349066
+texture = ExtResource("3")
+
+[node name="Sword6" type="Sprite2D" parent="Wheel"]
+position = Vector2(-27, 74)
+rotation = 0.349066
+texture = ExtResource("3")
+
+[node name="Sword7" type="Sprite2D" parent="Wheel"]
+position = Vector2(-68, 39)
+rotation = 1.0472
+texture = ExtResource("3")
+
+[node name="Sword8" type="Sprite2D" parent="Wheel"]
+position = Vector2(-78, -11)
+rotation = 1.74533
+texture = ExtResource("3")
+
+[node name="Sword9" type="Sprite2D" parent="Wheel"]
+position = Vector2(-50, -60)
+rotation = 2.44346
+texture = ExtResource("3")

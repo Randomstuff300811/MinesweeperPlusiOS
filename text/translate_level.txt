@@ -1,0 +1,15 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+CLEAR_TEXT,CLEAR!,¡COMPLETADO!,fr,VITÓRIA!,Ukończono!,Победа!,성공!,สำเร็จ!,Temizlendi!
+PAUSE_TEXT,PAUSED,PAUSADO,fr,PAUSADO,PAUSED,PAUSED,PAUSED,PAUSED,PAUSED
+MISS_TEXT,MISS...,PERDER...,fr,DERROTA…,Pudło...,Проигрыш...,실수...,พลาดซะแล้ว…,Kayıp...
+READY_TEXT,READY...,PREPARAR...,fr,Preparado...,Gotowy...,Приготовиться...,준비...,เตรียมตัว…,Hazır...
+RESET_TEXT,RESET GAME,REINICIAR,fr,RESET GAME,RESET GAME,RESET GAME,RESET GAME,RESET GAME,RESET GAME
+EXIT_TEXT,EXIT,SALIDA,fr,SAIR,EXIT,Выйти,EXIT,EXIT,EXIT
+SAVE_EXIT_TEXT,SAVE AND EXIT,GUARDAR Y SALIR,fr,SALVAR E SAIR,Zapisz i wyjdź,Сохранить И Выйти,저장하고 나가기,บันทึกและออก,Kaydet Ve Çık
+CONTINUE_TEXT,CONTINUE,CONTINUAR,fr,CONTINUAR,Kontynuuj,Продолджить,계속,ดำเนินการต่อ,Devam Et
+ONE_UP,1-UP!,¡VIDA EXTRA!,fr,VIDA EXTRA,1-UP!,Дополнительная Жизнь!,한 번 더!,1-UP!,Extra Can!
+GAME_OVER_TEXT,GAME OVER,FIN DEL JUEGO,fr,VOCÊ PERDEU,GAME OVER,Конец Игры,GAME OVER,GAME OVER,GAME OVER
+YES_TEXT,YES,SÍ,fr,SIM,Tak,да,예,แน่นอน,Evet
+NO_TEXT,NO,NO,fr,NÃO,Nie,нет,아니요,ไม่อ่ะ,Hayır
+SKIPPING,SKIPPING...,SALTANDO...,fr,Pulando...,Pomijanie,Пропускаем,건너뛰는 중,กำลังข้าม,Atlanıyor
+SKIP_INTRO,SKIP INTRO,SALTAR,fr,Pular intro,Pomiń wstęp,Пропустить Интро,인트로 건너뛰기,ข้ามตัวเปิด,Girişi Atla

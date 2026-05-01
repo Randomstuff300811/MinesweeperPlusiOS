@@ -1,0 +1,154 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0kihl7k570ji"]
+
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="1"]
+[ext_resource type="Script" uid="uid://daqn51r2baew2" path="res://9_warning.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://ddcs2kpbmku4v" path="res://assets/img/Numbers.png" id="3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ye7cg"]
+texture = ExtResource("1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ye7cg"]
+font_size = 24
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="9Warning" type="AcceptDialog"]
+title = "WARNING!"
+initial_position = 1
+size = Vector2i(896, 640)
+visible = true
+wrap_controls = false
+borderless = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_ye7cg")
+ok_button_text = "Got it!"
+script = ExtResource("2")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+top_level = true
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 896.0
+offset_bottom = 599.0
+
+[node name="9" type="Sprite2D" parent="Control"]
+modulate = Color(1, 1, 1, 0.498039)
+position = Vector2(448, 320)
+scale = Vector2(40, 40)
+texture = ExtResource("3")
+hframes = 4
+vframes = 7
+frame = 9
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_right = 896.0
+offset_bottom = 599.0
+text = "There is a boss battle in this game. The battle works the same as normal Minesweeper, but with some key distinctions: you won't know the number of mines hidden on the grid, you have limited time to complete the level, and you won't be able to use the sonar or pause the game. Clicking on a mine will make the time run out faster. To win, you must click on the boss ONLY AFTER revealing all the tiles that don't contain mines. If the timer hits 0, or you click on the boss before revealing the entire grid, it's game over. These instructions have now been added to the 'Special Rules' in the 'How To Play' guide accessible from the Title Screen."
+label_settings = SubResource("LabelSettings_ye7cg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CheckBox" type="CheckBox" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 472.0
+offset_right = 134.0
+offset_bottom = 503.0
+grow_horizontal = 2
+text = "Don't show this warning again."
+alignment = 1
+autowrap_mode = 3
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 896.0
+offset_bottom = 599.0
+
+[node name="10" type="Sprite2D" parent="Control2"]
+modulate = Color(1, 1, 1, 0.498039)
+position = Vector2(448, 320)
+scale = Vector2(40, 40)
+texture = ExtResource("3")
+hframes = 4
+vframes = 7
+frame = 10
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 2
+offset_right = 896.0
+offset_bottom = 599.0
+text = "There is another boss battle in this game. As soon as the game starts, this boss will start counting down from 10. If it counts all the way down to 0, it's game over. Click on the boss to reset the countdown back to 10, but be careful. The boss will move faster and faster every time you click on it. Clicking on a mine will cause the boss to count down more quickly. To win, reveal the entire grid before the boss is able to finish its countdown. These instructions have now been added to the 'Special Rules' in the 'How To Play' guide accessible from the Title Screen."
+label_settings = SubResource("LabelSettings_ye7cg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CheckBox" type="CheckBox" parent="Control2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 472.0
+offset_right = 134.0
+offset_bottom = 503.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Don't show this warning again."
+alignment = 1
+autowrap_mode = 3
+
+[node name="Control3" type="Control" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 896.0
+offset_bottom = 599.0
+
+[node name="11" type="Sprite2D" parent="Control3"]
+modulate = Color(1, 1, 1, 0.498039)
+position = Vector2(448, 320)
+scale = Vector2(40, 40)
+texture = ExtResource("3")
+hframes = 4
+vframes = 7
+frame = 11
+
+[node name="Label" type="Label" parent="Control3"]
+layout_mode = 2
+offset_right = 896.0
+offset_bottom = 599.0
+text = "There is yet another boss battle in this game. The top left number now shows how many more tiles are allowed to be flagged before it's game over. The boss will teleport around the grid placing flags. If you can click the boss before it materializes, you can prevent it from placing a flag, but don't click the boss when its electrical coils are active or you will receive a penalty. Unflagging tiles before the game starts will also result in a penalty. Furthermore, the mines in this boss's grid are pressure mines. Do not remove flags from tiles that contain pressure mines. The boss will place many flags in quick succession if a mine is revealed. To win, reveal the entire grid before the flag counter reaches 0, or before no more flags can be placed on the grid. These instructions have now been added to the 'Special Rules' in the 'How To Play' guide accessible from the Title Screen."
+label_settings = SubResource("LabelSettings_ye7cg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CheckBox" type="CheckBox" parent="Control3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 524.0
+offset_right = 134.0
+offset_bottom = 555.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Don't show this warning again."
+alignment = 1
+autowrap_mode = 3
+
+[connection signal="toggled" from="Control/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Control2/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Control3/CheckBox" to="." method="_on_check_box_toggled"]

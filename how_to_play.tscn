@@ -1,0 +1,332 @@
+[gd_scene load_steps=37 format=3 uid="uid://ma7psj3ym82r"]
+
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="1"]
+[ext_resource type="Script" uid="uid://cfu2e84ewlqr7" path="res://how_to_play.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://3dx3yo2v32r4" path="res://assets/img/basic_tutorial.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dgesek4acyfc1" path="res://assets/img/special_tutorial.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bw072qki0skm6" path="res://assets/img/StartButton.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dc5b5as0fippe" path="res://assets/img/backarrows.png" id="6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ad62"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvb5p"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg7y5"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hqcg"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjb65"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7wbn"]
+texture = ExtResource("5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_s68b3"]
+font_size = 36
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0446"]
+line_spacing = 0.0
+font_size = 24
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvb5p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_720xi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irh3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvbo7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pftie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkspx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hknw7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nub7o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hr05"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xipl"]
+atlas = ExtResource("6")
+region = Rect2(0, 0, 64, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wte0o"]
+atlas = ExtResource("6")
+region = Rect2(64, 0, 64, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8a0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xipl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wte0o")
+}],
+"loop": true,
+"name": &"arrows",
+"speed": 4.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pg7y5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hqcg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjb65"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7wbn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s68b3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1860"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuiup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqjcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxfv5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_720xi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xipl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wte0o")
+}],
+"loop": true,
+"name": &"arrows",
+"speed": 4.0
+}]
+
+[node name="HowToPlay" type="PopupPanel"]
+initial_position = 1
+size = Vector2i(896, 640)
+visible = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ad62")
+script = ExtResource("2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 896.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Image0" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(448, 196)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3")
+hframes = 4
+vframes = 2
+
+[node name="Image1" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(448, 196)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4")
+hframes = 6
+vframes = 2
+
+[node name="BasicButton" type="Button" parent="Control" groups=["buttons"]]
+layout_mode = 1
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 416.0
+offset_bottom = 352.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+
+[node name="Label" type="Label" parent="Control/BasicButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BASIC 
+GAMEPLAY"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpecialButton" type="Button" parent="Control" groups=["buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -416.0
+offset_top = 96.0
+offset_right = -96.0
+offset_bottom = 352.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+
+[node name="Label" type="Label" parent="Control/SpecialButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SPECIAL 
+RULES"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ILabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -288.0
+offset_right = 354.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "How to play Minesweeper Plus:
+
+Click 'Basic Gameplay' to learn how Minesweeper is played.
+Click 'Special Rules' to see how Minesweeper Plus differs from the classic game.
+Click outside this window at any time to close it."
+label_settings = SubResource("LabelSettings_g0446")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = -32.0
+offset_bottom = 96.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uvb5p")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_720xi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_irh3y")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uvbo7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pftie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nkspx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_hknw7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nub7o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6hr05")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Control/NextButton"]
+self_modulate = Color(0, 0, 0, 1)
+sprite_frames = SubResource("SpriteFrames_v8a0o")
+animation = &"arrows"
+autoplay = "arrows"
+centered = false
+
+[node name="BackButton" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pg7y5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3hqcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kjb65")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_n7wbn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_s68b3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v1860")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wuiup")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_yqjcd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dxfv5")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Control/BackButton"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(32, 96)
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_720xi")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Back" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+offset_right = 118.0
+offset_bottom = 59.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+
+[node name="Label" type="Label" parent="Control/Back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -28.5
+offset_right = 100.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BACK"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="pressed" from="Control/BasicButton" to="." method="_on_basic_button_pressed"]
+[connection signal="pressed" from="Control/SpecialButton" to="." method="_on_special_button_pressed"]
+[connection signal="pressed" from="Control/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Control/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,53 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+WINDOW,WINDOW,VENTANA,FENÊTRE,Janela,OKNO,ОКНА,창,หน้าต่าง,Pencere
+VOLUME,VOLUME,VOLUMEN,VOLUME,Volume,GŁOŚNOŚCI,ЗВУКА,볼륨,ระดับเสียง,Ses
+CONTROL,CONTROL,CONTROLES,COMMANDES,Controle,STEROWANIA,УПРАВЛЕНИЯ,조작,การควบคุม,Kontrol
+GAMEPLAY,GAMEPLAY,JUEGO,JEU,Gameplay,ROZGRYWKI,ГЕЙМПЛЕЯ,게임플레이,การเล่น,Oynanış
+LANGUAGE,LANGUAGE,LENGUA,LANGUE,LANGUAGE,JĘZYKA,ЯЗЫКА,LANGUAGE,ภาษา,LANGUAGE
+OTHER,OTHER,OTROS,DIVERS,Outros,INNE,ПРОЧИЕ,기타,อื่น ๆ,Diğer
+WINDOW_MODE,WINDOW MODE,MODO DE VENTANA,MODE DE FENÊTRE,Modo Janela,Tryb okna,Режим Окна,창 모드,ปรับหน้าต่าง,Pencere Modu
+WINDOWED,WINDOWED,VENTANA,FENÊTRE,Janela,W okienku,Окно,창,แบ่ง,Pencere
+FULLSCREEN,FULLSCREEN,PANTALLA,PLEIN ÉCRAN,Tela cheia,Pełen ekran,На Весь Экран,전체화면,เต็มจอ,Tam Ekran
+STRETCH,STRETCH,ESTIRAMIENTO,ÉTIREMENT,Esticado,Rozciąganie,Растяжение,늘리기,ยืดจอ,Genişletme
+ENABLED,ENABLED,SÍ,OUI,Ativado,Włączone,Включено,활성화,เปิด,Açık
+DISABLED,DISABLED,NO,NON,Desativado,Wyłączone,Выключено,비활성화,ปิด,Kapalı
+SCALE,SCALE,ESCALA,PIXELS,Tamanho,Skalowanie,Масштаб,크기,ขนาด,Büyüklük
+FRACTION,FRACTION,FRACCIONARIA,FRACTION,Fração,Ułamkowe,Дробный,분수,เศษส่วน,Oransal
+INTEGER,INTEGER,ENTERA,ENTIER,Inteiro,Całkowite,Целочисленный,정수,จำนวนเต็ม,Tam
+ASPECT,ASPECT,RELACÍON DE ASPECTO,ASPECT,Aspecto,Proporcje,Разрешение,화면 비율,มุมมองทิศทาง,En-Boy
+KEEP,KEEP,MANTENER,GARDER,Deixar,Zachowaj,Включить,유지,เปิด,Olsun
+IGNORE,IGNORE,IGNORAR,IGNORER,Ignorar ,Ignoruj,Отключить,무시,ปิด,Olmasın
+MASTER_VOLUME,MASTER VOLUME,GENERAL,GÉNÉRALE,Volume Principal,Głośność ogólna,Основная Громкость,전체 볼륨,เสียงหลัก,Ana
+MUSIC_VOLUME,MUSIC VOLUME,MÚSICA,MUSIQUE,Volume da Música,Głośność muzyki,Музыка,음악 볼륨,เสียงดนตรี,Müzik
+SFX_VOLUME,SFX VOLUME,EFECTOS DE SONIDO,EFFETS SONORES,Volume de Efeitos Sonoros,Głośność efektów,Звуковые Эффекты,효과음 볼륨,เสียงประกอบ,Ses Efekti
+REVERSE_CONTROLS,REVERSE CONTROLS,CONTROLES INVERTIDOS,COMMANDES INVERSÉES,Inverter Controles,Odwrócone sterowanie,Обратное Управление,반대로 조작,สลับการควบคุม,Ters Kontroller
+REVERSE_CONTROLS_CAPTION_FALSE,Left-click to open. Right-click to flag.,Click izquierdo para despejar. Click derecho para marcar.,Clique Gauche pour couvrir. Clique Droit pour Marquer.,Botão-esquerdo para revelar. Botão-direito para marcar.,Lewy przycisk myszy odkrywa. Prawy przycisk myszy stawia flagę.,ЛКМ - открыть. ПКМ - поставить флаг.,좌클릭으로 열고. 우클릭으로 깃발 꽂기,คลิกซ้ายเพื่อเปิด คลิกขวาเพื่อปักธง,Açmak için Sol-Tık. İşaretlemek için Sağ-Tık.
+REVERSE_CONTROLS_CAPTION_TRUE,Right-click to open. Left-click to flag.,Click derecho para despejar. Click izquierdo para marcar.,Clique Droit pour couvrir. Clique Gauche pour Marquer.,Botão-direito para revelar. Botão-esquerdo para marcar.,Prawy przycisk myszy odkrywa. Lewy przycisk myszy stawia flagę.,ПКМ - открыть. ЛКМ - поставить флаг.,우클릭으로 열고. 좌클릭으로 깃발 꽂기,คลิกขวาเพื่อเปิด คลิกซ้ายเพื่อปักธง,Açmak için Sağ-Tık. İşaretlemek için Sol-Tık.
+HOLD_TO_FLAG,HOLD TO FLAG,MANTENER PARA MARCAR,MAINTENIR POUR MARQUER,Segure Para Marcar,Stawianie flag przytrzymaniem,Флаг При Зажиме,꾹 눌러서 깃발 꽂기,กดค้างเพื่อปักธง,İşaretlemek İçin Basılı Tutuş
+HOLD_TIME,HOLD TIME,TIEMPO DE MANTENCIÓN,TEMPS DE MAINTIEN,Tempo pra marcar,Czas przytrzymania,HOLD TIME,꾹 누르는 시간,เวลาค้าง,Basılı Tutma Süresi
+SECONDS,seconds,segundos,secondes,Segundos,sekund,seconds,초,วินาที,saniye
+CHORD_STYLE,CHORD STYLE,ESTILO DE DESPEJE RÁPIDO,STYLE DE DÉGAGEMENT,Estilo de Chord,Styl akordowania,Стиль Отметок,화음 스타일,คลิกเปิดรวม,Hızlı Açış Stili
+LEFT_CLICK,Left-click,Clic izquierdo,Clique Gauche,Botão-esquerdo,Lewy przycisk myszy,ЛКМ,좌클릭,ซ้าย,Sol-Tık
+RIGHT_CLICK,Right-click,Clic derecho,Clique Droit,Botão-direito,Prawy przycisk myszy,ПКМ,우클릭,ขวา,Sağ-Tık
+LEFT_RIGHT_CLICK,Left+Right-click,Clic izq+derecho,Clique Gauche+Droit,Botão-esquerdo e direito,Lewy+Prawy przycisk myszy,ЛКМ+ПКМ,좌+우클릭,Left+Right-click,Left+Right-click
+SAFE_FIRST_CLICK,SAFE FIRST CLICK,PRIMER CLIC SEGURO,PREMIER CLIQUE SAUF,Segurança Garantida,Bezpieczne pierwsze kliknięcie,Первое Нажатие,처음 클릭 안전 보장,คลิกครั้งเเรกปลอดภัยเสมอ,Güvenli İlk Tıklama
+3_BY_3_GUARANTEE,3 by 3 Guarantee,Garantía de 3×3,3 x 3 Garantie,3 Por 3 Garantido,Gwarancja 3x3,Гарантированно 3 на 3,3x3 구역 안전 보장,ระยะ 3 คูณ 3,Garanti 3'e 3
+1_TILE_GUARANTEED,1 tile Guaranteed,Garantía de 1 casilla,1 Case Garantie,1 Quadradinho Garantido,Jednopolowa gwarancja,Гарантирована 1 Клетка,1칸 안전 보장,1 ช่อง,1 Karo Garanti
+NO_GUARANTEE,No Guarantee,Sin garantía,Aucune Garantie,Sem Garantia,Bez gwarancji,Без Гарантий,안전 보장 없음,ไม่มี,Garanti Yok
+CHORDING,CHORDING,DESPEJE RÁPIDO,DÉGAGEMENT,Chording ,Akordowanie,Отметки,화음,เปิดรวม,Hızlı Açış
+AUTO_SONAR,AUTO-SONAR,AUTO-RADAR,AUTO-SONAR,Auto-Radar,Autosonar,Авто-сонар,지뢰탐지기 자동 반영,ออโต้ โซนาร์,Oto-Sonar
+BOSS_LEGACY_TIME,BOSS LEGACY TIME,TIEMPO DE JEFE ANTIGUO,ANCIENNE TEMPS DE BOSS,Tempo Original do Boss,Dawny czas bossa,Оригинальный Таймер Босса,예전 보스 시간,เวลาเปิดบอสเก่า,Eski Boss Zamanlayıcısı
+BOSS_LEGACY_TIME_CAPTION,"When turned on, the Episode 1 boss timer will always be set to 99 seconds.","Si está habilitado, el temporizador del jefe del Episodio 1 siempre empezará en 99 segundos.","Le temps du boss de l'Épisode 1 sera toujours réglé à 99 secondes.","Quando ligado, o tempo do boss do Episódio 1 sempre será de 99 segundos.","Po włączeniu, zegar bossa Epizodu 1. będzie zawsze ustawiony na 99 sekund.","При включении, таймер босса в Первом Эпизоде всегда будет поставлен на 99 секунд.","만약 켜져 있다면, 에피소드 1의 보스 시간이 항상 99초로 설정됩니다.","เมื่อเปิด เวลาเปิดบอสของตอนที่ 1 จะตั้งเป็น 99 วินาที","Açıldığında Bölüm 1 bossu zamanlayıcısı her zaman 99 saniye olarak ayarlanır."
+BOSS_LEGACY_SPEED,BOSS LEGACY SPEED,VELOCIDAD DE JEFE ANTIGUO,ANCIENNE VITESSE DE BOSS,Velocidade Original do Boss,Dawna szybkość bossa,Оригинальная Скорость Босса,예전 보스 속도,ความเร็วเวลาเปิดบอส,Eski Boss Hızı
+BOSS_LEGACY_SPEED_CAPTION,"When turned on, the Episode 2 boss will move as fast as it did before the 2.1 update","Si está habilitado, el jefe del Episodio 2 se moverá tan rápido como lo hacía antes de la actualización 2.1.","Le boss de l'Épisode 2 se déplacera aussi rapidement qu'avant la mise à jour 2.1.","Quando ligado, o boss do Episódio 2 irá ter a mesma velocidade que teve antes da atualização 2.1.","Po włączeniu, boss Epizodu 2. będzie poruszał się z tą samą prędkością jak przed łatką 2.1.","При включении, босс Второго Эпизода будет ускоряться также, как до обновления 2.1.","만약 켜져 있다면, 에피소드 2의 보스가 2.1 업데이트 이전만큼 속도가 빨라집니다.","เมื่อเปิด บอสของตอนที่ 2 จะเคลื่อนที่ได้เร็วเท่า ๆ กันก่อน อัปเดต 2.1","Açıldığında Bölüm 2 bossu 2.1 güncellemesi öncesi kadar hızlı hareket eder."
+LANGUAGE_CAPTION,Some translations may not be complete.,Algunas traducciones pueden no estar completas.,Les traductions peuvent ne pas être complètes.,Algumas traduções talvez não estão finalizadas,Niektóre tłumaczenia mogą być niekompletne.,Над некоторыми переводами мы ещё работаем.,일부 번역이 완전하지 않을 수 있습니다.,การแปลอาจจะยังไม่เสร็จ,Bazı çeviriler tamamlanmamış olabilir.
+EXPLODING_MINES,EXPLODING MINES,LAS MINAS EXPLOTAN,MINES EXPLOSIVES,Minas Explosivas,Wybuchające miny,Взрывающиеся Мины,터지는 지뢰,กับดักระเบิด ระเบิด,Patlayan Mayınlar
+DECORATIONS,DECORATIONS,DECORACIONES,DÉCORATIONS,Decorações,Ozdoby,Декорации,장식,สิ่งตกแต่ง,Dekorasyonlar
+NONE,None,Nada,Quelques,Nenhum,Brak,Нет,없음,ไม่มี,Yok
+FEW,Few,Pocas,Peu,Poucos,Mało,Немного,조금,น้อย,Az
+SOME,Some,Algunas,Aucune,Alguns,Trochę,Несколько,일부,ปานกลาง,Biraz
+MANY,Many,Muchas,Beaucoup,Muitos,Dużo,Много,많이,มาก,Fazla
+ZERO_SPREAD_ALGORITHM,ZERO SPREAD ALGORITHM,ALGORITMO DE EXTENSIÓN DE CEROS,ALGORITHME ANTI-PROPOGATION,Algoritmo de propagação zero,Algorytm dystrybucji zer,Алгоритм нулевого распространения,제로 확산 알고리즘,อัลกอริทึมการแพร่กระจายเป็นศูนย์,Boş Karo Açılma Algoritması
+ITERATIVE,ITERATIVE,ITERATIVO,ITÉRATIF,Interativo,Iteratywny,Итеративный,반복적,วนซ้ำ,Tekrarlı
+RECURSIVE,RECURSIVE,RECURSIVO,RÉCURSIF,Recursivo,Rekurencyjny,Рекурсивный,재귀적,เรียกซ้ำ,Öztekrarlı
+ZERO_SPREAD_ALGORITHM_CAPTION,Warning: The recursive algorithm is prone to causing a stack overflow error on very large grids with very few mines.,Advertencia: el algoritmo recursivo es propenso a causar un error de desbordamiento de pila en tableros muy grandes con muy pocas minas.,Avertissement: L'algorithme récursif est susceptible de causer une erreur de débordement de pile dans les très grandes grilles avec très peu de mines.,Atenção: O algoritmo recursivo,Uwaga: Algorytm rekurencyjny potrafi wywołać błąd przepełnienia stosu na bardzo dużych planszach z bardzo małą liczbą min.,Внимание: рекурсивный алгоритм подвержен возникновению ошибки переполнения стека на очень больших сетках с очень малым количеством мин.,주의: 재귀적 알고리즘은 매우 넓은 판과 매우 적은 지뢰에서 스택 오버플로우 오류를 일으킬 수 있습니다.,คำเตือน: อัลกอริทึมแบบเรียกซ้ำมีแนวโน้มที่จะทำให้เกิดข้อผิดพลาดการล้นสแต็กบนกริดขนาดใหญ่ที่มีระเบิดน้อย ๆ ได้,Uyarı: Öztekrarlı algoritmalar çok az mayını olup çok büyük olan oyun tahtalarında yığılım taşması hatası vermeye eğilimlidir.

@@ -1,0 +1,13 @@
+res://main.tscn
+res://assets/sprite_frames/icon.tres
+res://assets/sprite_frames/background.tres
+res://assets/sprite_frames/background_low.tres
+res://assets/sprite_frames/decor.tres
+res://assets/sprite_frames/flags.tres
+res://assets/sprite_frames/coin.tres
+res://assets/sprite_frames/face.tres
+res://assets/sprite_frames/hat.tres
+res://game_select_screen.tscn
+res://edge.tscn
+res://main.gd
+res://game.tscn

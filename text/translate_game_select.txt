@@ -1,0 +1,151 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+SETTINGS,SETTINGS,AJUSTES,RÉGLAGES,Configurações,Ustawienia,НАСТРОЙКИ,설정,การตั้งค่า,Ayarlar
+STATISTICS,STATISTICS,ESTADÍSTICAS,STATISTIQUES,Estatisticas ,Statystyki,Статистики,통계,สถิติ,İstatistikler
+MASTER_ON,Master Mode: On,Modo Maestro: Sí,fr,Master Mode: On,TRYB MISTRZOWSKI: WŁĄCZONY,РЕЖИМ МАСТЕРА: ВКЛ,마스터 모드: 켬,โหมดมาสเตอร์: เปิด,USTA MODU: AÇIK
+MASTER_OFF,Master Mode: Off,Modo Maestro: No,fr,Master Mode: Off,TRYB MISTRZOWSKI: WYŁĄCZONY,РЕЖИМ МАСТЕРА: ВЫКЛ,마스터 모드: 끔,โหมดมาสเตอร์: ปิด,USTA MODU: KAPALI
+ACCEPT,OK,Aceptar,fr,OK,OK,OK,OK,OK,OK
+CANCEL,Cancel,Cancelar,fr,Cancel,Cancel,Отмена,Cancel,Cancel,Cancel
+TITLE_SCREEN,TITLE SCREEN,PANTALLA DE TÍTULO,fr,TITLE SCREEN,EKRAN TYTUŁOWY,ТИТУЛЬНЫЙ ЭКРАН,메인 화면,หน้าหลัก,ANA EKRAN
+EXIT_GAME,EXIT GAME,SALIR DEL JUEGO,fr,EXIT GAME,WYJŚCIE Z GRY,ВЫЙТИ ИЗ ИГРЫ,게임 종료,ออกเกม,OYUNDAN ÇIK
+BEGINNER_SWEEPER,BEGINNER SWEEPER,BUSCADOR PRINCIPIANTE,fr,VARREDOR INICIANTE,POCZĄTKUJĄCY SAPER,САПЁР-НОВИЧОК,초급자,สวีปเปอร์มือใหม่,YENİ MAYIN TARAYICI
+NOVICE_SWEEPER,NOVICE SWEEPER,BUSCADOR AFICIONADO,fr,VARREDOR NOVATO,SAPER-NOWICJUSZ,САПЁР-НАЧИНАЮЩИЙ,중급자,สวีปเปอร์เพิ่งฝึก,ACEMİ MAYIN TARAYICI
+VETERAN_SWEEPER,VETERAN SWEEPER,BUSCADOR VETERANO,fr,VARREDOR VETERANO,SAPER-WETERAN,САПЁР-ВЕТЕРАН,숙련자,สวีปเปอร์พอกลาง,GAZİ MAYIN TARAYICI
+EXPERT_SWEEPER,EXPERT SWEEPER,BUSCADOR EXPERTO,fr,VARREDOR ESPECIALISTA,EKSPERCKI SAPER,САПЁР-ПРОФЕССИОНАЛ,전문가,สวีปเปอร์ปรมาจารณ์,UZMAN MAYIN TARAYICI
+BEGINNER,BEGINNER,PRINCIPIANTE,fr,INICIANTE,POCZĄTKUJĄCY,НОВИЧОК,초보자,มือใหม่,YENİ BAŞLAYAN
+NOVICE,NOVICE,AFICIONADO,fr,NOVATO,NOWICJUSZ,НАЧИНАЮЩИЙ,증급자,เพิ่งฝึก,ACEMİ
+VETERAN,VETERAN,VETERANO,fr,VETERANO,WETERAN,ВЕТЕРАН,숙련자,พอกลาง,GAZİ
+EXPERT,EXPERT,EXPERTO,fr,ESPECIALISTA,EKSPERT,ПРОФЕССИОНАЛ,전문가,ปรมาจารณ์,UZMAN
+EPISODE,EPISODE,EPISODIO,fr,EPISÓDIO ,EPIZOD,ЭПИЗОД,에피소드,ตอนที่,BÖLÜM
+CASUAL,CASUAL,INFORMAL,fr,CASUAL,NIEDZIELNY,КАЗУАЛ,캐주얼,โหมดพิเศษ,RAHAT
+NORMAL,NORMAL,NORMAL,fr,NORMAL,NORMALNY,ОБЫЧНЫЙ,일반,โหมดปกติ,Normal
+BOSS_PURSUIT,BOSS PURSUIT,PERSECUCIÓN,fr,PERSEGUIÇÃO DO CHEFE,POŚCIG BOSSÓW,БОСС РАШ,보스 추격전,โหมดท้าทายบอส,BOSS KOVALAMACASI
+BEGINNER_DESC,"Smooth sailing! Perfect difficulty for those who are new to the job of Minesweeping. Mines are sparse, so the challenge is minimal.","¡Viento en popa! La dificultad perfecta para aquellos que son nuevos en la búsqueda de minas. Las minas escasean, así que el desafío es mínimo.",fr,"Smooth sailing! Perfect difficulty for those who are new to the job of Minesweeping. Mines are sparse, so the challenge is minimal. – Navegação suave! Dificuldade perfeita para aqueles que são novos no trabalho de caçar minas.","Płyń z wiatrem! Idealny poziom trudności dla tych dopiero zaczynających pracę Sapera. Min jest niewiele, więc wyzwanie jest minimalne.","Легко и приятно! Идеальная сложность для новичков в работе сапёра. Мины редки, так что сложность минимальна.","순조롭게 항해! 이 난이도는 지뢰찾기를 처음 접하는 사람에게 딱 맞는 난이도입니다. 지뢰 개수는 희박하여, 그리 어렵지 않습니다.","ออกเรือได้สบาย! เหมาะสำหรับมือใหม่ที่อยากกวาดระเบิด ระเบิดน้อยไปหน่อยจนการท้าทายดูน้อยนิดซะเหลือเกิน","Yolun açık olsun! Mayın tarama işinde yeni olanlar için mükemmel zorluk. Mayınlar az, yani zorluğu düşük."
+NOVICE_DESC,"Steady as she goes! The perfect difficulty for players familiar with minesweeping who don't want the work to be too easy.","¡Mantenga el rumbo! La dificultad perfecta para los jugadores familiarizados con la búsqueda de minas que no quieren que el trabajo sea muy fácil.",fr,"Steady as she goes! The perfect difficulty for players familiar with minesweeping who don't want the work to be too easy. –  Com firmeza e precisão! A dificuldade perfeita para jogadores familiares com campo minado que não querem o jogo fácil demais.","Utrzymaj kurs! Idealny poziom trudności dla graczy obeznanych z oznaczaniem min, którzy nie chcą sobie przesadnie ułatwiać.","Идеальный уровень сложности для игроков, знакомых с тралением мин, которые не хотят, чтобы работа была слишком лёгкой.","침착하게 항해! 이 난이도는 지뢰찾기에 적응한 사람이 매우 쉽지 않은 난이도를 원할 때 딱 맞는 난이도입니다.","พอทนก็พออยู่! เหมาะอย่างที่สุดกับผู้เล่นที่คุ้นเคยกับไมน์สวีปเปอร์แล้วไม่อยากให้การท้าทายดูน่าเบื่อกว่าเดิม","Yelkenler fora! Mayın taramayla haşır neşir olup işin çok da kolay olmasını istemeyen oyuncular için ideal zorluk."
+VETERAN_DESC,"Tread carefully! This difficulty is for those who know a thing or two about minesweeping who want somewhat of a challenge.","¡Navegue con cuidado! Esta dificultad es para aquellos con experiencia en la búsqueda de minas y que desean algún desafío.",fr,"Tread carefully! This difficulty is for those who know a thing or two about minesweeping who want somewhat of a challenge. – Pise com cuidado! Essa dificuldade e pra aqueles que sabem uma ou duas coisas de Campo Minado que querem um desafio.","Żegluj ostrożnie! Ten poziom trudności jest dla tych obeznanych z oznaczaniem min i pragnących konkretnego wyzwania.","Осторожно! Этот уровень сложности для тех, кто немного разбирается в тралении мин и хочет испытать себя.","조심스럽게 항해! 이 난이도는 지뢰찾기에 대해 조금은 알고 있지만 도전하고 싶은 사람들을 위한 난이도입니다.","ระวังตัวด้วยล่ะ! ระดับนี้เหมาะสำหรับผู้รู้มากน้อยกับไมน์สวีปเปอร์ที่อยากจะท้าทายซะเพียงเล็กน้อยบ้าง","Aman dikkat! Bu zorluk mayın taramayla ilgili bir iki şey bilip kendine bir meydan okuma isteyenler için."
+EXPERT_DESC,"Batten down the hatches! This difficulty mode is only for the most battle-hardened minesweeping warriors. Can you survive these mine-riddled waters?","¡Atranquen las escotillas! Esta dificultad es sólo para los buscadores de minas más aguerridos. ¿Puedes sobrevivir a esas aguas repletas de minas?",fr,"Batten down the hatches! This difficulty mode is only for the most battle-hardened minesweeping warriors. Can you survive these mine-riddled waters? - Preparem-se para o pior! Essa dificuldade é para os guerreiros caçadores de mina mais corajosos. Você consegue sobreviver nestas águas infestada de minas?","Trzymaj się burty! Ten poziom trudności jest tylko najbardziej zaprawionych w bojach z minami wojowników. Czy sprostasz tym zaminowanym wodom?","Задраить люки! Этот уровень сложности только для самых закалённых в боях сапёров. Сможете ли вы выжить в этих заминированных водах?","이악물고 항해! 이 난이도는 오직 전투로 단련된 지뢰찾기 전사들을 위한 난이도입니다. 지뢰로 낙서가 된 바다에서 살아남을 수 있나요?","เตรียมตัวหรือยังล่ะ? ระดับนี้เหมาะสำหรับผู้ที่เคยผ่านสึกกับระเบิดมาร้อยครั้ง จะผ่านทางน้ำทุ่งระเบิดได้หรือ?","Güverteyi hazırlayın! Bu zorluk modu sadece savaşta sertleşen mayın tarayıcı savaşçıları içindir. Mayın dolu bu sulardan sağ kurtulabilir misin?"
+START_ADVENTURE,START ADVENTURE,COMENZAR AVENTURA,fr,START ADVENTURE,ROZPOCZNIJ PRZYGODĘ,НАЧАТЬ ПРИКЛЮЧЕНИЕ,모험 시작,เริ่มการผจญภัย,MACERAYA BAŞLA
+THEME,THEME,TEMA,fr,TEMA,KLIMAT,ФОН,테마,ธีม,TEMA
+MUSIC,MUSIC,MUSICA,fr,MÚSICA,MUZYKA,МУЗЫКА,음악,เพลง,MÜZİK
+GRID_X,GRID X,ANCHO,fr,GRADE X,SZER. PLANSZY,СЕТКА X,X축 판,แนวนอน,X IZGARASI
+GRID_Y,GRID Y,ALTO,fr,GRADE Y,WYS. PLANSZY,СЕТКА Y,Y축 판,แนวตั้ง,Y IZGARASI
+MINES,MINES,MINAS,fr,MINAS,MINY,МИН,지뢰,ระเบิด,MAYINLAR
+MINE_PERCENT,MINE %,MINA %,fr,MINAS %,% MIN,МИНА %,지뢰 %,ระเบิด %,MAYIN YÜZDESİ
+START_GAME,START GAME,COMENZAR JUEGO,fr,COMECAR O JOGO,ROZPOCZNIJ GRĘ,НАЧАТЬ ИГРУ,게임 시작,เริ่มเกม,OYUNU BAŞLAT
+TILES,TILES,CASILLAS,fr,QUADRADOS,POLA,КЛЕТОК,칸 수,จำนวนช่อง,KAROLAR
+PRACTICE,PRACTICE,PRÁCTICA,fr,PRÁTICA,TRENING,ПРАКТИКА,연습,โหมดฝึกหัด,PRATİK
+CLASSIC_PRESETS,CLASSIC PRESETS,PREAJUSTES CLÁSICOS,fr,PREDEFINIÇÕES CLÁSSICAS,KLASYCZNE USTAWIENIA,КЛАССИЧЕСКИЕ ПРЕСЕТЫ,클래식 판,พรีเซ็ตดั้งเดิม,KLASİK ÖNAYARLAR
+INTERMEDIATE,INTERMEDIATE,INTERMEDIO,fr,INTERMEDIARIO,ŚREDNIOZAAWANSOWANY,ЛЮБИТЕЛЬ,중급,ปานกลาง,ORTA
+CHALLENGE,CHALLENGE,DESAFÍO,fr,DESAFIO,Wyzwanie,Испытание,도전,การท้าทาย,Meydan Okuma
+MINESWEEPER_ADVENTURE,"MINESWEEPER
+ADVENTURE","AVENTURA
+BUSCAMINAS",fr,"Modo 
+Aventura","SAPERSKA 
+PRZYGODA","ПРИКЛЮЧЕНИЯ 
+САПЁРА","지뢰찾기 
+모험","โหมดผจญภัย","MAYIN TARLASI 
+MACERASI"
+ADVENTURE_DESC,"Test your minesweeping skills in a sequence of progressively difficult Minesweeper stages.","Pon a prueba tus habilidades de Buscaminas a lo largo de 8 niveles progresivamente difíciles.",fr,"Teste suas habilidades de caçar minas em níveis progressivamente difícil de Campo Minado.","Wystaw na próbę swoje saperskie zdolności w ciągu coraz trudniejszych etapów Sapera.","Проверьте свои навыки сапера, пройдя последовательность этапов игры «Сапер» возрастающей сложности.","점점 더 어려워지는 지뢰찾기 레벨을 풀어서 지뢰찾기 실력을 테스트해보세요.","มาทดสอบสักยภาพการเล่นไมน์สวีปเปอร์ในด่านที่เพิ่มความยากไปเรื่อย ๆ ตามลำดับด่าน","Gittikçe zorlaşan Mayın Tarlası seviyeleriyle mayın temizleme yeteneklerini test et."
+CONTINUE,CONTINUE,CONTINUAR,fr,CONTINUAR,KONTYNUUJ,ПРОДОЛЖТЬ,계속,ดำเนิน,DEVAM ET
+PURSUIT,PURSUIT,PERSECUCIÓN,fr,PERSEGUIÇÃO,POŚCIG,РАШ,보스 추격전,โหมดท้าทายบอส,KOVALAMACASI
+FREE_PLAY,FREE PLAY,JUEGO LIBRE,fr,Jogo Livre,GRA DOWOLNA,СВОБОДНАЯ ИГРА,자유 플레이,โหมดอิสระ,SERBEST OYUN
+FREEPLAY_DESC,"Create your own custom Minesweeper stages and sweep mines to your heart's content!","¡Crea tus propios niveles de Buscaminas y juega como más te guste!",fr,"Faça o seu próprio nível de Campo Minado e caça minas até a satisfação do seu coração!","Twórz własne etapy Sapera i saperuj do upadłego!","Создавайте собственные уровни для игры «Сапер» и уничтожайте мины так, как душе угодно!","나만의 커스텀 지뢰찾기 레벨을 만들어서 마음껏 지뢰를 찾아보세요!","สร้างสรรค์การเล่นไมน์สวีปเปอร์ได้อย่างอิสระและกวาดระเบิดอย่างตามใจได้เลย!","Kendi Mayın Tarlası bölümlerini oluştur ve içinden geldiği gibi mayın temizle!"
+THE_BIG_ONE,THE BIG ONE,EL MASIVO,fr,O GRANDÃO,KOLOS,ЗДОРОВЯК,더 큰 거,ตารางใหญ่มาก,BÜYÜK OLAN
+BEST,BEST,RÉCORD,fr,MELHOR,REKORD,ЛУЧШИЙ РЕЗУЛЬТАТ,최고기록,ดีสุด,EN İYİ
+CHALLENGE_DESC,"THE BIG ONE
+
+A humongous 72 by 48 Minesweeper grid with hundreds of mines! How fast can you complete it?
+
+You start with 0 Minecoins and earn them as you play. You get to keep all the minecoins you collect if you win, but you'll only get a percentage of them if you lose.
+
+Select one of the 9 difficulties below and press the button to start the challenge.","EL MASIVO
+
+Un enorme tablero de Buscaminas de 72 por 48 con cientos de minas! ¿Qué tan rápido puedes completarlo?
+
+Comienzas con 0 Buscamonedas y las consigues mientras juegas. Te quedas con todos las monedas que recojas si ganas, pero solo recibirás un porcentaje de ellos si pierdes.
+
+Selecciona una de las 9 dificultades abajo y presiona el botón para comenzar el desafío.",fr,"O GRANDÃO
+
+Uma grade 72 por 48 Enorme com centenas de minas! O quão rápido você pode completá-lo? 
+
+Você começa com 0 Mina-moedas e você ganha enquanto você joga. Você pode ficar com todas as Mina-moedas que você coletou se você vencer. Mas você apenas consegue uma porcentagem delas se você perder. 
+
+Selecione umas das 9 dificuldades abaixo e aperte o botão pra começar o desafio.","KOLOS
+
+Gigantyczna plansza Sapera o wymiarach 72x48 z setkami min! Jak szybko dasz radę ją ukończyć?
+
+Zaczynasz 0 Minomonetami i zdobywasz je w trakcie gry. Jeśli wygrasz, możesz zachować wszystkie zdobyte minomonety, ale w razie przegranej dostaniesz tylko ich część.
+
+Wybierz jeden z 9 poziomów trudności i kliknij przycisk, aby rozpocząć wyzwanie.","ЗДОРОВЯК
+
+Огромная сетка «Сапёр» размером 72 на 48 клеток с сотнями мин! Как быстро вы сможете её пройти?
+
+Вы начинаете с 0 Минеркоинов и зарабатываете их по мере игры. В случае победы вы сохраняете все собранные Минеркоины, но в случае проигрыша получаете лишь определённый процент от них.
+
+Выберите один из 9 уровней сложности ниже и нажмите кнопку, чтобы начать испытание.","더 큰 거
+
+터무니없이 거대한 72x48 지뢰찾기 판에 수백 개의 지뢰가 숨겨져 있습니다! 얼마나 빨리 완수할 수 있나요?
+
+0개의 지뢰코인을 가지고 시작하고 플레이하는 동안 얻을 수 있습니다. 만약 완수할 경우 지금까지 받았던 모든 지뢰코인을 가질 수 있지만, 실패한다면 그중 일부만 받을 수 있습니다.
+
+아래의 9가지 난이도 중 하나를 고르고 버튼을 눌러 도전을 시작하세요.","ตารางใหญ่มาก
+
+ตารางขนาดมหึมาที่มีความกว้างและยาว 72 และ 48 ด้วยระเบิดที่มีเป็นร้อย ๆ ลูก! คุณจะสำเร็จได้เร็วแค่ไหนกัน? 
+
+คุณจะเริ่มด้วยเหรียญ 0 อันและจะเพิ่มไปเรื่อย ๆ เมื่อเล่นไป คุณจะได้มันหมดเลยถ้าชนะ แต่จะได้ต่ำกว่าร้อยละร้อยหนึ่งถ้าแพ้ระหว่างเล่น
+
+สามารถเลือกความยากทั้งหมด 9 ข้างใต้ปุ่มเพื่อเริ่มท้าทายได้เลย","BÜYÜK OLAN
+
+Yüzlerce mayını olan devasa 72'ye 48'lik bir Mayın Tarlası tahtası! Ne kadar hızlı tamamlayabilirsin?
+
+0 Minecoinle başlayıp oynadıkça kazanırsın. Kazanırsan topladığın her Minecoin senin olur, ama kaybedersen yalnızca bir miktarını alabilirsin.
+
+Aşağıdaki 9 zorluktan birini seç ve meydan okumayı başlatmak için butona tıkla"
+HELP_TEXT,"GAMEPLAY MODES:
+
+Normal: The way the game was meant to be played. Three mistakes allowed, continues double in price for every defeat, and sonar costs increase every time it is used per level. Gameplay is ranked.
+
+Casual: For players who want a less stressful minesweeping experience. Three mistakes are allowed per level, and health is restored after every level. Continue costs are free, and continuing grants you shields (3 max). The first sonar use per level is free, and then stays at its base price for the rest of the level. Gameplay is not ranked.
+
+Boss Pursuit: An experimental new game mode that is not for the faint of heart. Unlocks after winning an episode on Normal mode for each difficulty. Your foes have returned, and they want revenge. Gameplay is ranked.","MODOS DE JUEGO:
+
+Partida Normal: La manera que el juego estaba destinado a ser jugado. Se permiten tres errores. El precio de "los Continues" se ira mulktiplicando por cada derrota. Los Costos del radar aumentaran cada vez que se usa por cada nivel. Esta partida puede ser clasificada
+
+Partida Informal: Diseñada para jugadores que desen una experiencia menos estresante. Se permiten tres errores por nivel y la salud del jugador se restaurara al ganar en cada nivel. Los "Continues" son gratuitos y al revivir se te sera ortagado un escudo (Maximo 3 escudos). Al activar por primera vez el radar no tendra ningun costo, despues se mantiene su presio base durante el resto del nivel. Esta partida no sera clasificada
+
+Persecusión: Un modo de juego totalmente experimental que no es para los pusilánimes! Se desbloquea despues de ganar un episodio en la aventura normal y en cada dificultad. Tus enemigos han regresado y con sed de venganza! Esta jugabilidad puede ser clasificada",fr,"Modos de jogo:
+
+Normal: A forma que o jogo foi pensado pra ser jogado. Três erros permitidos, reviver dobra de preço cada derrota, e o custo do radar aumenta cada vez usada em um nível. A gameplay é ranqueada.
+
+Casual: Para jogadores que querem jogar Campo Minado sem muito estresse. Três erros são permitidos por nível, e a vida recupera a cada nível. Reviver é de graça, e reviver vai te dar 3 escudos (3 no máximo). O primeiro uso do radar de cada nível é grátis, e então permanece com seu preço base pelo resto do nível. Gameplay não é ranqueada.
+
+Perseguição do Chefe: Um novo modo de jogo experimental, não recomendado para os fracos de coração. Desbloqueia após vencer um episódio no modo Normal em cada dificuldade. Seus inimigos retornaram e querem vingança. O jogo é ranqueado.","TRYBY ROZGRYWKI:
+
+Normalny: Zamierzony sposób grania. Dopuszczalne trzy błędy, koszt kontynuacji wzrasta dwukrotnie za każdą porażkę, a cena sonaru rośnie przy każdym jego użyciu na poziom. Rozgrywka jest oceniana.
+
+Niedzielny: Dla graczy pragnących mniej stresującego saperskiego doświadczenia. Można popełnić trzy błędy na poziom, a zdrowie odnawia się po każdym poziomie. Kontynuacje są darmowe i zapewniają tarcze (do trzech). Pierwsze użycie sonaru na poziom jest darmowe, a następne utrzymują bazową cenę do końca poziomu. Rozgrywka nie jest oceniana.
+
+Pościg Bossów: Eksperymentalny nowy tryb gry dla ludzi z zimną krwią. Dostępny po wygraniu epizodu w Trybie normalnym na każdym poziomie trudności. Twoi wrogowie powrócili i łakną zemsty. Rozgrywka jest oceniana.","РЕЖИМЫ ИГРЫ:
+
+Нормальный: игра идёт по задуманному сценарию. Допускается три ошибки, стоимость продолжения удваивается за каждое поражение, а стоимость использования сонара увеличивается с каждым уровнем. Игровой процесс оценивается.
+
+Казуальный: для игроков, которые хотят менее напряжённого прохождения саперных работ. На каждом уровне разрешено три ошибки, а здоровье восстанавливается после каждого уровня. Продолжение бесплатно, и продолжение даёт вам щиты (максимум 3). Первое использование сонара на каждом уровне бесплатно, а затем действует базовая стоимость до конца уровня. Игровой процесс не имеет оценок.
+
+Босс Раш: новый экспериментальный игровой режим, который не для слабонервных. Открывается после победы в эпизоде ​​на нормальном уровне сложности. Ваши враги вернулись и жаждут мести. Игровой процесс оценивается.","게임플레이 모드:
+
+일반: 게임을 원래 의도된 방식으로 플레이하는 모드입니다. 세 번의 실수가 허용되고, 실패할 때마다 계속하기 비용이 두 배로 증가하고, 한 레벨당 지뢰탐지기를 쓸 때마다 지뢰탐지기 비용이 올라가는 방식입니다. 게임플레이는 평가가 됩니다.
+
+캐주얼: 지뢰찾기 하는 동안 스트레스를 덜 받고 싶은 사람들을 위한 모드입니다. 한 레벨당 세 번의 실수가 허용되고, 한 레벨을 완수하면 체력이 회복됩니다. 계속하기 비용은 무료이고, 계속하기를 사용하면 방패를 받습니다 (3개 최대). 한 레벨당 첫 번째 지뢰탐지기의 비용은 무료이고, 나머지 레벨 동안 기본 가격을 유지합니다. 게임플레이는 평가가 되지 않습니다.
+
+보스 추격전: 마음이 단단한 사람들을 위한 새로운 실험적인 게임 모드입니다. 잠금 해제하려면 각 난이도에서 일반 모드의 에피소드를 완료해야 합니다. 당신의 적들이 돌아왔고, 그들은 복수를 노리고 있습니다. 게임플레이는 평가가 됩니다.","โหมดเกม:
+
+โหมดปกติ: เป็นแบบที่เกมควรจะต้องเล่น พลาดมากสุดได้สามครั้ง การไปต่อเมื่ตายคูณสองให้ทุกการพ่ายแพ้ และราคาโซนาร์จะเพิ่มขึ้นเรื่อย ๆ ตามปริมาณการใช้ในเลเวล การเล่นจะมีการตั้งระดับความเก่ง
+
+โหมดพิเศษ: เหมาะสำหรับผู้ที่ไม่อยากจะเล่นอะไรเครียด ๆ พลาดมาสุดได้สามครั้งต่อด่าน กำลังชีวิตจะเต็มเติมทุก ๆ ด่านถัดไป การดำเนินต่อหลังแพ้จะไม่มีค่าใช้จ่าย และเมื่ออยากดำเนินจะมอบโล่ให้ (3 โดยมาก) ใช้โซนาร์ฟรีได้ครั้งแรกต่อด่าน และจะเปลี่ยนเป็นราคาเดิมสำหรับที่เหลือ การเล่นจะไม่มีการตั้งระดับความเก่ง
+
+โหมดท้าทายบอส: การทดลองเกมโหมดใหม่ที่หมดใจไม่ได้เลย จะปลดล็อกได้เมื่อผ่านตอนใดตอนหนึ่งในโหมดปกติสำหรับความยากต่าง ๆ ศัตรูผู้อาฆาตแค้นได้กลับมาแล้ว และพวกมัน ต้องการ แก้แค้น การเล่นจะมีการตั้งระดับความเก่ง","OYUN MODLARI:
+
+Normal: Oyunun aslen oynanılması istenen biçim. Üç hata hakkı var, devam haklarının fiyatları her kayıpta ikiye katlanır, ve sonarın kullanıldığı her seviyede fiyatı artar. Oyun sonu derecelendirilir.
+
+Rahat: Daha az stresli bir mayın tarama deneyimi isteyen oyuncular içindir. Her seviyede 3 hata hakkı var, ve sağlık her seviyeden sonra yenilenir. Devam hakları bedava, ve devam etmek sana bir kalkan kazandırır (en fazla 3). Her seviyede ilk sonar bedava olur, ve seviyenin geri kalanında da ilk fiyatıyla kalır. Oyun sonu derecelendirilme olmaz.
+
+Boss Kovalamacası: Kalbi zayıf olanlar için olmayan deneysel yeni bir oyun modu. Normal modda kazanılan zorlukta açılır. Düşmanların geri döndü, ve intikam istiyorlar. Oyun sonu derecelendirilir."

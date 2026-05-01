@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://nfsnqdbgi7gi"]
+
+[ext_resource type="Script" uid="uid://bh3aglbrpiuc8" path="res://game.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cjcng1gkhplcn" path="res://grid_square.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://c0m27pnxdy6a0" path="res://bg_tile.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b1c5capb2ivrk" path="res://mine_grid.tscn" id="4"]
+[ext_resource type="AudioStream" uid="uid://b8bcshwnrhie2" path="res://assets/audio/mine_sound.mp3" id="5"]
+[ext_resource type="AudioStream" uid="uid://cw34xuu4jafst" path="res://assets/audio/explosion.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://bw6xn8sje8mj" path="res://assets/audio/flag_sound.ogg" id="7"]
+
+[node name="Game" type="CenterContainer"]
+clip_contents = true
+mouse_filter = 2
+script = ExtResource("1")
+grid_tile = ExtResource("2")
+bg_tile = ExtResource("3")
+
+[node name="MineGrid" parent="." instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="MineSound" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("5")
+parameters/looping = false
+
+[node name="ExplosionSound" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("6")
+max_polyphony = 10
+
+[node name="Tick" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("7")
+volume_db = 5.0
+pitch_scale = 2.0

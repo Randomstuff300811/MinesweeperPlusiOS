@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://cod7bgme14b2t"]
+
+[ext_resource type="Script" uid="uid://rthdy03vdvvc" path="res://custom_tile.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cry5p2sy1akpt" path="res://assets/img/custom_tile_outline.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://lqkrjvc44yg6" path="res://edge.tscn" id="3"]
+
+[node name="CustomTile" type="Button" groups=["custom_tiles"]]
+self_modulate = Color(0, 0, 0, 0)
+offset_right = 16.0
+offset_bottom = 16.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+action_mode = 0
+script = ExtResource("1")
+metadata/_edit_group_ = true
+
+[node name="Outline" type="NinePatchRect" parent="."]
+visible = false
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+texture = ExtResource("2")
+draw_center = false
+region_rect = Rect2(0, 0, 4, 4)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+metadata/_edit_group_ = true
+
+[node name="u" parent="ColorRect" instance=ExtResource("3")]
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = 4.0
+offset_top = 0.0
+offset_right = -4.0
+offset_bottom = 0.0
+grow_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="r" parent="ColorRect" instance=ExtResource("3")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 4.0
+offset_right = 0.0
+offset_bottom = -4.0
+grow_horizontal = 0
+metadata/_edit_lock_ = true
+
+[node name="d" parent="ColorRect" instance=ExtResource("3")]
+layout_mode = 1
+anchors_preset = 12
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 0.0
+offset_right = -4.0
+offset_bottom = 8.0
+grow_vertical = 0
+metadata/_edit_lock_ = true
+
+[node name="l" parent="ColorRect" instance=ExtResource("3")]
+layout_mode = 1
+anchors_preset = 9
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 4.0
+offset_right = 0.0
+offset_bottom = -4.0
+grow_horizontal = 1
+metadata/_edit_lock_ = true
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]

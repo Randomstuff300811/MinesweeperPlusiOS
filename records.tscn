@@ -1,0 +1,359 @@
+[gd_scene load_steps=5 format=3 uid="uid://ukjoyokfqiy3"]
+
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="1"]
+[ext_resource type="Script" uid="uid://cr05qpah11bfy" path="res://records.gd" id="2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h4ny4"]
+texture = ExtResource("1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_4mcao"]
+line_spacing = 0.0
+font_size = 24
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Records" type="PopupPanel"]
+initial_position = 1
+size = Vector2i(896, 640)
+visible = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_h4ny4")
+script = ExtResource("2")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 896.0
+offset_bottom = 640.0
+
+[node name="VBox" type="VBoxContainer" parent="ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GamesStarted" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Started: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="GamesWon" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Won: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="GamesLost" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Lost: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="GamesStartedInMasterMode" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Started in Master Mode: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="GamesWonInMasterMode" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Won in Master Mode: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="GamesLostInMasterMode" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Games Lost in Master Mode: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TilesOpened" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Tiles Opened: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TilesFlagged" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Tiles Flagged: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TilesUnflagged" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Tiles Unflagged: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="MinesRevealed" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Mines Revealed: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TotalTimeElapsed" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Total Time Elapsed: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TotalCoinsCollected" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Total Coins Collected: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="TimesUsedSonar" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Times Used Sonar: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="CoinsSpentOnSonar" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Coins Spent on Sonar: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="AdventuresStarted" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Adventures Started: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="AdventureGameOvers" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Adventure Game Overs: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Episode1Completed" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Episode 1 Completions: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Episode2Completed" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Episode 2 Completions: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Episode3Completed" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Episode 3 Completions: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed1" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 1: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed2" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 2: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed3" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 3: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed4" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 4: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed5" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 5: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed6" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 6: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed7" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 7: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed8" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 8: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed9" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 9: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed10" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 10: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed11" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 11: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed12" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 12: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed13" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 13: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed14" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 14: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed15" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 15: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed16" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 16: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed0" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed 0: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_1" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -1: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_2" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -2: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_3" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -3: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_4" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -4: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_5" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -5: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_6" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -6: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_7" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -7: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_8" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -8: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_9" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -9: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_10" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -10: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_11" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -11: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_12" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -12: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_13" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -13: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_14" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -14: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_15" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -15: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Revealed_16" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Revealed -16: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Defeated9" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Defeated 9: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Defeated10" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Defeated 10: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3
+
+[node name="Defeated11" type="Label" parent="ScrollContainer/VBox"]
+layout_mode = 2
+text = "Defeated 11: "
+label_settings = SubResource("LabelSettings_4mcao")
+autowrap_mode = 3

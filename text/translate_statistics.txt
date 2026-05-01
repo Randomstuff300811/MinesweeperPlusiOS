@@ -1,0 +1,56 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+GAMES_STARTED,Games Started,Juegos comenzados,fr,Jogos Iniciados,Rozpoczęte gry,Игр Начато,게임 시작 횟수,เกมที่เริ่มมาเเล้ว,Başlatılan oyunlar
+GAMES_WON,Games Won,Juegos ganados,fr,Jogos Vencidos,Wygrane gry,Игр Выйграно,게임 완수 횟수,เกมที่ชนะ,Kazanılan Oyunlar
+GAMES_LOST,Games Lost,Juegos perdidos,fr,Jogos Perdidos,Przegrane gry,Игр Пройграно,게임 실패 횟수,เกมที่เเพ้,Kaybedilen Oyunlar
+GAMES_STARTED_IN_MASTER_MODE,Games Started in Master Mode,Juegos comenzados en Modo Maestro,fr,Jogos Iniciados No Modo Mestre,Gry rozpoczęte w Trybie mistrzowskim,Игр Начато в Режиме Мастера,마스터 모드 게임 시작 횟수,เเกิมที่เริ่มในโหมดมาสเตอร์,Usta Modunda Başlatılan Oyunlar
+GAMES_WON_IN_MASTER_MODE,Games Won in Master Mode,Juegos ganados en Modo Maestro,fr,Jogos Vencidos No Modo Mestre,Gry wygrane w Trybie mistrzowskim,Игр Выйграно в Режиме Мастера,마스터 모드 게임 완수 횟수,ชนะในโหมดมาสเตอร์,Usta Modunda Kazanılan Oyunlar
+GAMES_LOST_IN_MASTER_MODE,Games Lost in Master Mode,Juegos perdidos en Modo Maestro,fr,Jogos Perdidos no Modo Mestre,Gry przegrane w Trybie mistrzowskim,Игр Пройграно в Режиме Мастера,마스터 모드 게임 실패 횟수,แพ้ในโหมดมาสเตอร์,Usta Modunda Kaybedilen Oyunlar
+TILES_OPENED,Tiles Opened,Casillas abiertas,fr,Quadradinhos Revelados,Odkryte pola,Клеток Открыто,열린 칸 수,ช่องที่เปิด,Açılan Karolar
+TILES_FLAGGED,Tiles Flagged,Casillas marcadas,fr,Quadradinhos Marcados,Postawione flagi,Флагов Поставлено на Клетки,깃발을 꽂은 횟수,ธงที่ปัก,İşaretlenen Karolar
+TILES_UNFLAGGED,Tiles Unflagged,Casillas desmarcadas,fr,Quadradinhos Desmarcados,Usunięte flagi,Флагов Снято с Клеток,깃발을 뺀 횟수,ธงที่ถอน,İşaretlenmesi Kaldırılan Karolar
+MINES_REVEALED,Mines Revealed,Minas reveladas,fr,Minas Reveladas,Odsłonięte miny,Мин Раскрыто,열린 지뢰 수,ระเบิดที่โดน,Açılan Mayınlar
+TOTAL_TIME_ELAPSED,Total Time Elapsed,Tiempo de juego total,fr,Total de Tempo no Jogo,Łączny czas gry,Общее Игровое Время,전체 소요 시간,เวลาโดยรวมทั้งหมด,Toplam Geçen Zaman
+TOTAL_COINS_COLLECTED,Total Coins Collected,Monedas totales conseguidas,fr,Total de Moedas Coletadas,Łącznie zdobyte monety,Всего Монеток Собрано,전체 획득한 코인,เหรียญที่ได้รับ,Toplanan Toplam Para
+TIMES_USED_SONAR,Times Used Sonar,Usos de sonar,fr,Radares Utilizados,Użycia sonaru,Количество Использованных Сонаров,지뢰탐지기를 쓴 횟수,ใช้โซนาร์,Sonarın Kullanıldığı Zamanlar
+COINS_SPENT_ON_SONAR,Coins Spent on Sonar,Monedas gastadas en el sonar,fr,Moedas Gastadas em Radares,Monety wydane na sonar,Монеток Потрачеро на Сонар,지뢰탐지기에 쓴 코인,เหรียญที่ใช้กับโซนาร์,Sonar İçin Harcanan Para
+ADVENTURES_STARTED,Adventures Started,Aventuras comenzadas,fr,Aventuras Iniciadas,Rozpoczęte przygody,Приключений Начато,모험을 시작한 횟수,ผจญภัยที่เริ่ม,Başlatılan Maceralar
+ADVENTURE_GAME_OVERS,Adventure Game Overs,Aventuras perdidas,fr,Aventuras Perdidas,Porażki przygód,Приключений Пройграно,모험 게임 오버 횟수,การผจญภัยที่เเพ้,Macera Kayıpları
+EPISODE_1_COMPLETIONS,Episode 1 Completions,Victorias del Episodio 1,fr,Finalizações do Episódio 1,Ukończenia Epizodu 1.,Завершений Первого Эпизода,에피소드 1을 완수한 횟수,สำเร็จตอนที่ 1,1. Bölüm Bitirişleri
+EPISODE_2_COMPLETIONS,Episode 2 Completions,Victorias del Episodio 2,fr,Finalizações do Episódio 2,Ukończenia Epizodu 2.,Завершений Второго Эпизода,에피소드 2를 완수한 횟수,สำเร็จตอนที่ 2,2. Bölüm Bitirişleri
+EPISODE_3_COMPLETIONS,Episode 3 Completions,Victorias del Episodio 3,fr,Finalizações do Episódio 3,Ukończenia Epizodu 3.,Завершений Второго Эпизода,에피소드 3를 완수한 횟수,สำเร็จตอนที่ 3,3. Bölüm Bitirişleri
+REVEALED_1,Revealed 1,'1's revelados,fr,1's Revelados,Odsłonięte jedynki,"Раскрыто Клеток с '1'",숫자 1을 연 횟수,เปิด 1,Açılan 1'ler
+REVEALED_2,Revealed 2,'2's revelados,fr,2's Revelados,Odsłonięte dwójki,"Раскрыто Клеток с '2'",숫자 2을 연 횟수,เปิด 2,Açılan 2'ler
+REVEALED_3,Revealed 3,'3's revelados,fr,3's Revelados,Odsłonięte trójki,"Раскрыто Клеток с '3'",숫자 3을 연 횟수,เปิด 3,Açılan 3'ler
+REVEALED_4,Revealed 4,'4's revelados,fr,4's Revelados,Odsłonięte czwórki,"Раскрыто Клеток с '4'",숫자 4을 연 횟수,เปิด 4,Açılan 4'ler
+REVEALED_5,Revealed 5,'5's revelados,fr,5's Revelados,Odsłonięte piątki,"Раскрыто Клеток с '5'",숫자 5을 연 횟수,เปิด 5,Açılan 5'ler
+REVEALED_6,Revealed 6,'6's revelados,fr,6's Revelados,Odsłonięte szóstki,"Раскрыто Клеток с '6'",숫자 6을 연 횟수,เปิด 6,Açılan 6'ler
+REVEALED_7,Revealed 7,'7's revelados,fr,7's Revelados,Odsłonięte siódemki,"Раскрыто Клеток с '7'",숫자 7을 연 횟수,เปิด 7,Açılan 7'ler
+REVEALED_8,Revealed 8,'8's revelados,fr,8's Revelados,Odsłonięte ósemki,"Раскрыто Клеток с '8'",숫자 8을 연 횟수,เปิด 8,Açılan 8'ler
+REVEALED_9,Revealed 9,'9's revelados,fr,9's Revelados,Odsłonięte 9,"Раскрыто Клеток с '9'",숫자 9을 연 횟수,เปิด 9,Açılan 9'ler
+REVEALED_10,Revealed 10,'10's revelados,fr,10's Revelados,Odsłonięte 10,"Раскрыто Клеток с '10'",숫자 10을 연 횟수,เปิด 10,Açılan 10'ler
+REVEALED_11,Revealed 11,'11's revelados,fr,11's Revelados,Odsłonięte 11,"Раскрыто Клеток с '11'",숫자 11을 연 횟수,เปิด 11,Açılan 11'ler
+REVEALED_12,Revealed 12,'12's revelados,fr,12's Revelados,Odsłonięte 12,"Раскрыто Клеток с '12'",숫자 12을 연 횟수,เปิด 12,Açılan 12'ler
+REVEALED_13,Revealed 13,'13's revelados,fr,13's Revelados,Odsłonięte 13,"Раскрыто Клеток с '13'",숫자 13을 연 횟수,เปิด 13,Açılan 13'ler
+REVEALED_14,Revealed 14,'14's revelados,fr,14's Revelados,Odsłonięte 14,"Раскрыто Клеток с '14'",숫자 14을 연 횟수,เปิด 14,Açılan 14'ler
+REVEALED_15,Revealed 15,'15's revelados,fr,15's Revelados,Odsłonięte 15,"Раскрыто Клеток с '15'",숫자 15을 연 횟수,เปิด 15,Açılan 15'ler
+REVEALED_16,Revealed 16,'16's revelados,fr,16's Revelados,Odsłonięte 16,"Раскрыто Клеток с '16'",숫자 16을 연 횟수,เปิด 16,Açılan 16'ler
+REVEALED_0,Revealed 0,'0's revelados,fr,0's Revelados,Odsłonięte 0,"Раскрыто Клеток с '0'",숫자 0을 연 횟수,เปิด 0,Açılan 0'ler
+REVEALED_MINUS1,Revealed -1,'-1's revelados,fr,-1's Revelados,Odsłonięte -1,"Раскрыто Клеток с '-1'",숫자 -1을 연 횟수,เปิด -1,Açılan -1'ler
+REVEALED_MINUS2,Revealed -2,'-2's revelados,fr,-2's Revelados,Odsłonięte -2,"Раскрыто Клеток с '-2'",숫자 -2을 연 횟수,เปิด -2,Açılan -2'ler
+REVEALED_MINUS3,Revealed -3,'-3's revelados,fr,-3's Revelados,Odsłonięte -3,"Раскрыто Клеток с '-3'",숫자 -3을 연 횟수,เปิด -3,Açılan -3'ler
+REVEALED_MINUS4,Revealed -4,'-4's revelados,fr,-4's Revelados,Odsłonięte -4,"Раскрыто Клеток с '-4'",숫자 -4을 연 횟수,เปิด -4,Açılan -4'ler
+REVEALED_MINUS5,Revealed -5,'-5's revelados,fr,-5's Revelados,Odsłonięte -5,"Раскрыто Клеток с '-5'",숫자 -5을 연 횟수,เปิด -5,Açılan -5'ler
+REVEALED_MINUS6,Revealed -6,'-6's revelados,fr,-6's Revelados,Odsłonięte -6,"Раскрыто Клеток с '-6'",숫자 -6을 연 횟수,เปิด -6,Açılan -6'ler
+REVEALED_MINUS7,Revealed -7,'-7's revelados,fr,-7's Revelados,Odsłonięte -7,"Раскрыто Клеток с '-7'",숫자 -7을 연 횟수,เปิด -7,Açılan -7'ler
+REVEALED_MINUS8,Revealed -8,'-8's revelados,fr,-8's Revelados,Odsłonięte -8,"Раскрыто Клеток с '-8'",숫자 -8을 연 횟수,เปิด -8,Açılan -8'ler
+REVEALED_MINUS9,Revealed -9,'-9's revelados,fr,-9's Revelados,Odsłonięte -9,"Раскрыто Клеток с '-9'",숫자 -9을 연 횟수,เปิด -9,Açılan -9'ler
+REVEALED_MINUS10,Revealed -10,'-10's revelados,fr,-10's Revelados,Odsłonięte -10,"Раскрыто Клеток с '-10'",숫자 -10을 연 횟수,เปิด -10,Açılan -10'ler
+REVEALED_MINUS11,Revealed -11,'-11's revelados,fr,-11's Revelados,Odsłonięte -11,"Раскрыто Клеток с '-11'",숫자 -11을 연 횟수,เปิด -11,Açılan -11'ler
+REVEALED_MINUS12,Revealed -12,'-12's revelados,fr,-12's Revelados,Odsłonięte -12,"Раскрыто Клеток с '-12'",숫자 -12을 연 횟수,เปิด -12,Açılan -12'ler
+REVEALED_MINUS13,Revealed -13,'-13's revelados,fr,-13's Revelados,Odsłonięte -13,"Раскрыто Клеток с '-13'",숫자 -13을 연 횟수,เปิด -13,Açılan -13'ler
+REVEALED_MINUS14,Revealed -14,'-14's revelados,fr,-14's Revelados,Odsłonięte -14,"Раскрыто Клеток с '-14'",숫자 -14을 연 횟수,เปิด -14,Açılan -14'ler
+REVEALED_MINUS15,Revealed -15,'-15's revelados,fr,-15's Revelados,Odsłonięte -15,"Раскрыто Клеток с '-15'",숫자 -15을 연 횟수,เปิด -15,Açılan -15'ler
+REVEALED_MINUS16,Revealed -16,'-16's revelados,fr,-16's Revelados,Odsłonięte -16,"Раскрыто Клеток с '-16'",숫자 -16을 연 횟수,เปิด -16,Açılan -16'ler
+DEFEATED_9,Defeated 9,'9's derrotados,fr,9's Derrotados,Pokonane Dziewiątki,Одержано побед над "9",숫자 9를 물리친 횟수,ชนะ 9,Yenilen 9'ler
+DEFEATED_10,Defeated 10,'10's derrotados,fr,10's Derrotados,Pokonane Dziesiątki,Одержано побед над "10",숫자 10를 물리친 횟수,ชนะ 10,Yenilen 10'ler
+DEFEATED_11,Defeated 11,'11's derrotados,fr,11's Derrotados,Pokonane 11,Одержано побед над "11",숫자 11를 물리친 횟수,ชนะ 11,Yenilen 11'ler

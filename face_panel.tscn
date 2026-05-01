@@ -1,0 +1,275 @@
+[gd_scene load_steps=30 format=3 uid="uid://6ptke2iskl17"]
+
+[ext_resource type="Texture2D" uid="uid://wj28flfha3r4" path="res://assets/img/Panel2.png" id="1"]
+[ext_resource type="Script" uid="uid://dv3n0k7dps5ja" path="res://face_panel.gd" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://bkysgdr84o6cg" path="res://assets/sprite_frames/face.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://xfqa7t3mh3op" path="res://assets/img/GBCaptain.png" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://dbdemvih7mw6n" path="res://assets/sprite_frames/hat.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://ch4mta1ygxh4" path="res://assets/img/healthmeter.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cb2unadx0jvty" path="res://assets/img/shield.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dygmdevi07f2x" path="res://assets/img/radar.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://busjceu31cmuf" path="res://assets/img/off_on.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://g4ohi5vftre5" path="res://assets/img/coin.png" id="10"]
+[ext_resource type="AudioStream" uid="uid://c4r2myna655hn" path="res://assets/audio/sfx_click.ogg" id="11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3xlj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0usy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1fyqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xak10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnver"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_maob5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lu6v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm1rx"]
+atlas = ExtResource("8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8au2k"]
+atlas = ExtResource("8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocm0a"]
+atlas = ExtResource("8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmqsq"]
+atlas = ExtResource("8")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkaw4"]
+atlas = ExtResource("8")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gtbu"]
+atlas = ExtResource("8")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhy3i"]
+atlas = ExtResource("8")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hd8m"]
+atlas = ExtResource("8")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj1v6"]
+atlas = ExtResource("8")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p5lap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm1rx")
+}],
+"loop": true,
+"name": &"off",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8au2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocm0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmqsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkaw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gtbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhy3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hd8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj1v6")
+}],
+"loop": true,
+"name": &"on",
+"speed": 8.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rsvha"]
+font_size = 20
+
+[node name="FacePanel" type="Sprite2D"]
+texture_repeat = 2
+texture = ExtResource("1")
+centered = false
+script = ExtResource("2")
+
+[node name="FaceButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/line_spacing = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f3xlj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0usy4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1fyqj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xak10")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pnver")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_maob5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lu6v5")
+toggle_mode = true
+metadata/_edit_group_ = true
+
+[node name="Face" type="AnimatedSprite2D" parent="FaceButton"]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("3")
+animation = &"faceE_3"
+autoplay = "blank"
+centered = false
+
+[node name="Face2" type="Sprite2D" parent="FaceButton"]
+visible = false
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("4")
+centered = false
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="Hat" type="AnimatedSprite2D" parent="FaceButton"]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("5")
+animation = &"hat1_f"
+autoplay = "blank"
+centered = false
+
+[node name="HealthGauge" type="Sprite2D" parent="."]
+position = Vector2(328, 96)
+texture = ExtResource("6")
+hframes = 4
+
+[node name="MinePercentLabel" type="Label" parent="HealthGauge"]
+visible = false
+offset_left = -32.0
+offset_top = -56.0
+offset_right = 8.0
+offset_bottom = -33.0
+text = "%"
+visible_characters = 6
+visible_ratio = 6.0
+
+[node name="ShieldGauge" type="Sprite2D" parent="HealthGauge"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7")
+hframes = 4
+vframes = 2
+
+[node name="Radar" type="AnimatedSprite2D" parent="."]
+position = Vector2(56, 96)
+sprite_frames = SubResource("SpriteFrames_p5lap")
+animation = &"on"
+
+[node name="RadarButton" type="Button" parent="Radar"]
+offset_left = -32.0
+offset_top = 40.0
+offset_right = 32.0
+offset_bottom = 72.0
+mouse_default_cursor_shape = 2
+disabled = true
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Radar/RadarButton"]
+texture = ExtResource("9")
+centered = false
+hframes = 2
+
+[node name="CoinLabel" type="Label" parent="Radar"]
+offset_left = -11.0
+offset_top = -79.0
+offset_right = 35.0
+offset_bottom = -51.0
+text = "0000"
+label_settings = SubResource("LabelSettings_rsvha")
+horizontal_alignment = 2
+
+[node name="Coin" type="Sprite2D" parent="Radar/CoinLabel"]
+position = Vector2(-13, 15)
+texture = ExtResource("10")
+
+[node name="CoinChange" type="Label" parent="Radar/CoinLabel"]
+visible = false
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = -23.0
+offset_top = 19.0
+offset_right = 46.0
+offset_bottom = 47.0
+label_settings = SubResource("LabelSettings_rsvha")
+horizontal_alignment = 2
+
+[node name="TimerGauge" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Click" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("11")
+
+[node name="PracticeLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -100.0
+offset_right = 64.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PRACTICE MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PracticeLabel2" type="Label" parent="PracticeLabel"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = 164.5
+offset_right = 63.5
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "PRACTICE MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="FaceButton" to="." method="_on_face_button_down"]
+[connection signal="button_up" from="FaceButton" to="." method="_on_face_button_up"]
+[connection signal="toggled" from="FaceButton" to="." method="_on_face_button_toggled"]
+[connection signal="toggled" from="Radar/RadarButton" to="." method="_on_radar_button_toggled"]
+[connection signal="timeout" from="TimerGauge" to="." method="_on_timer_gauge_timeout"]

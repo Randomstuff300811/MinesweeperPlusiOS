@@ -1,0 +1,1962 @@
+[gd_scene load_steps=38 format=3 uid="uid://bwfx8acvhehbr"]
+
+[ext_resource type="Texture2D" uid="uid://c3hlj404wb8xq" path="res://assets/img/StartButtonPressed.png" id="1"]
+[ext_resource type="Script" uid="uid://d2eq33omujv85" path="res://settings.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bw072qki0skm6" path="res://assets/img/StartButton.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bgnt0s41d226y" path="res://assets/img/Panel.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bp32i2pbkpekh" path="res://assets/img/grabber.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bbx2hjfxnx83u" path="res://assets/img/grabber_focused.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://31lwppuoj2g4" path="res://assets/img/sliderback.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://busjceu31cmuf" path="res://assets/img/off_on.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dc5b5as0fippe" path="res://assets/img/backarrows.png" id="9"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mhpt"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvb5p"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg7y5"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hqcg"]
+texture = ExtResource("3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjb65"]
+texture = ExtResource("1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7wbn"]
+texture = ExtResource("3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_s68b3"]
+font_size = 36
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_gc0em"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohexs"]
+texture = ExtResource("7")
+texture_margin_top = 32.0
+texture_margin_bottom = 32.0
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1k4ii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82xqq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y43lv"]
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mhpt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lj6o"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohexs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y43lv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7eiv2"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tk3m0"]
+texture = ExtResource("6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdp2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e0y8d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6byp"]
+texture = ExtResource("5")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iii5v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xyjnm"]
+texture = ExtResource("6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enj72"]
+texture = ExtResource("5")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xipl"]
+atlas = ExtResource("9")
+region = Rect2(0, 0, 64, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wte0o"]
+atlas = ExtResource("9")
+region = Rect2(64, 0, 64, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ra0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xipl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wte0o")
+}],
+"loop": true,
+"name": &"arrows",
+"speed": 4.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mhpt"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Settings" type="PopupPanel"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(896, 640)
+visible = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_6mhpt")
+script = ExtResource("2")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 896.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 106.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/WindowButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -65.0
+offset_right = 128.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "WINDOW"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_top = 107.0
+offset_right = 256.0
+offset_bottom = 213.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/VolumeButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -67.0
+offset_right = 128.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VOLUME"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_top = 214.0
+offset_right = 256.0
+offset_bottom = 320.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/ControlButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONTROL"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameplayButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_top = 320.0
+offset_right = 256.0
+offset_bottom = 426.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/GameplayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAMEPLAY"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LanguageButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_top = 427.0
+offset_right = 256.0
+offset_bottom = 533.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/LanguageButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "LANGUAGE"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OtherButton" type="Button" parent="Menu" groups=["buttons", "settings"]]
+layout_mode = 0
+offset_top = 534.0
+offset_right = 256.0
+offset_bottom = 640.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="Menu/OtherButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -78.0
+offset_right = 100.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OTHER"
+label_settings = SubResource("LabelSettings_s68b3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowSettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="WindowMode" type="Control" parent="Menu/WindowSettings"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 96.0
+offset_right = 136.0
+offset_bottom = 40.0
+
+[node name="WindowedButton" type="Button" parent="Menu/WindowSettings/WindowMode" groups=["buttons"]]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 416.0
+offset_bottom = 144.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/WindowMode/WindowedButton"]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 48.0
+text = "WINDOWED"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FullscreenButton" type="Button" parent="Menu/WindowSettings/WindowMode" groups=["buttons"]]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 144.0
+offset_right = 416.0
+offset_bottom = 192.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/WindowMode/FullscreenButton"]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 48.0
+text = "FULLSCREEN"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowModeLabel" type="Label" parent="Menu/WindowSettings/WindowMode"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 85.0
+text = "WINDOW MODE"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/WindowSettings/WindowMode/WindowModeLabel"]
+show_behind_parent = true
+position = Vector2(192, 24)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="StretchMode" type="Control" parent="Menu/WindowSettings"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 72.0
+offset_bottom = 232.0
+
+[node name="EnabledButton" type="Button" parent="Menu/WindowSettings/StretchMode" groups=["buttons"]]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 256.0
+offset_bottom = 144.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/StretchMode/EnabledButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+text = "ENABLED"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DisabledButton" type="Button" parent="Menu/WindowSettings/StretchMode" groups=["buttons"]]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 256.0
+offset_bottom = 192.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/StretchMode/DisabledButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+text = "DISABLED"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowModeLabel" type="Label" parent="Menu/WindowSettings/StretchMode"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 256.0
+offset_bottom = 96.0
+text = "STRETCH"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/WindowSettings/StretchMode/WindowModeLabel"]
+show_behind_parent = true
+position = Vector2(128, 32)
+scale = Vector2(0.666667, 0.333333)
+texture = ExtResource("4")
+
+[node name="AspectMode" type="Control" parent="Menu/WindowSettings"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 168.0
+offset_bottom = 424.0
+
+[node name="KeepButton" type="Button" parent="Menu/WindowSettings/AspectMode" groups=["buttons"]]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 384.0
+offset_bottom = 144.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/AspectMode/KeepButton"]
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 48.0
+text = "KEEP"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IgnoreButton" type="Button" parent="Menu/WindowSettings/AspectMode" groups=["buttons"]]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 384.0
+offset_bottom = 192.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/AspectMode/IgnoreButton"]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 48.0
+text = "IGNORE"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowModeLabel" type="Label" parent="Menu/WindowSettings/AspectMode"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 384.0
+offset_bottom = 96.0
+text = "ASPECT"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/WindowSettings/AspectMode/WindowModeLabel"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="ScaleMode" type="Control" parent="Menu/WindowSettings"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 328.0
+offset_bottom = 232.0
+
+[node name="FractionButton" type="Button" parent="Menu/WindowSettings/ScaleMode" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 320.0
+offset_bottom = 144.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/ScaleMode/FractionButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+text = "FRACTION"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IntegerButton" type="Button" parent="Menu/WindowSettings/ScaleMode" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 144.0
+offset_right = 320.0
+offset_bottom = 192.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ModeLabel" type="Label" parent="Menu/WindowSettings/ScaleMode/IntegerButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+text = "INTEGER"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowModeLabel" type="Label" parent="Menu/WindowSettings/ScaleMode"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 320.0
+offset_bottom = 96.0
+text = "SCALE"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/WindowSettings/ScaleMode/WindowModeLabel"]
+show_behind_parent = true
+position = Vector2(128, 32)
+scale = Vector2(0.666667, 0.333333)
+texture = ExtResource("4")
+
+[node name="VolumeSettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Menu/VolumeSettings" groups=["nine_controls", "other_controls"]]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 162.0
+offset_right = 568.0
+offset_bottom = 226.0
+mouse_default_cursor_shape = 2
+theme_override_icons/grabber = ExtResource("5")
+theme_override_icons/grabber_highlight = ExtResource("6")
+theme_override_icons/grabber_disabled = ExtResource("5")
+theme_override_styles/slider = SubResource("StyleBoxTexture_ohexs")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_1k4ii")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_82xqq")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="VolumeLabel" type="Label" parent="Menu/VolumeSettings/MasterVolumeSlider"]
+layout_mode = 0
+offset_right = 505.0
+offset_bottom = 64.0
+text = "100"
+label_settings = SubResource("LabelSettings_y43lv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeLabel" type="Label" parent="Menu/VolumeSettings/MasterVolumeSlider"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 505.0
+text = "MASTER VOLUME"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/VolumeSettings/MasterVolumeSlider/MasterVolumeLabel"]
+show_behind_parent = true
+position = Vector2(256.5, 32)
+scale = Vector2(1.33594, 0.333333)
+texture = ExtResource("4")
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Menu/VolumeSettings" groups=["nine_controls", "other_controls"]]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 322.0
+offset_right = 568.0
+offset_bottom = 386.0
+mouse_default_cursor_shape = 2
+theme_override_icons/grabber = ExtResource("5")
+theme_override_icons/grabber_highlight = ExtResource("6")
+theme_override_icons/grabber_disabled = ExtResource("5")
+theme_override_styles/slider = SubResource("StyleBoxTexture_ohexs")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_1k4ii")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_82xqq")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="VolumeLabel" type="Label" parent="Menu/VolumeSettings/MusicVolumeSlider"]
+layout_mode = 0
+offset_right = 505.0
+offset_bottom = 64.0
+text = "100"
+label_settings = SubResource("LabelSettings_y43lv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeLabel" type="Label" parent="Menu/VolumeSettings/MusicVolumeSlider"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 505.0
+text = "MUSIC VOLUME"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/VolumeSettings/MusicVolumeSlider/MusicVolumeLabel"]
+show_behind_parent = true
+position = Vector2(256.5, 32)
+scale = Vector2(1.33594, 0.333333)
+texture = ExtResource("4")
+
+[node name="SFXVolumeSlider" type="HSlider" parent="Menu/VolumeSettings" groups=["nine_controls", "other_controls"]]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 482.0
+offset_right = 568.0
+offset_bottom = 546.0
+mouse_default_cursor_shape = 2
+theme_override_icons/grabber = ExtResource("5")
+theme_override_icons/grabber_highlight = ExtResource("6")
+theme_override_icons/grabber_disabled = ExtResource("5")
+theme_override_styles/slider = SubResource("StyleBoxTexture_ohexs")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_1k4ii")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_82xqq")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="VolumeLabel" type="Label" parent="Menu/VolumeSettings/SFXVolumeSlider"]
+layout_mode = 0
+offset_right = 505.0
+offset_bottom = 64.0
+text = "100"
+label_settings = SubResource("LabelSettings_y43lv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVolumeLabel" type="Label" parent="Menu/VolumeSettings/SFXVolumeSlider"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 505.0
+text = "SFX VOLUME"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/VolumeSettings/SFXVolumeSlider/SFXVolumeLabel"]
+show_behind_parent = true
+position = Vector2(256.5, 32)
+scale = Vector2(1.33594, 0.333333)
+texture = ExtResource("4")
+
+[node name="ControlSettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="ReverseLabel" type="Label" parent="Menu/ControlSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 480.0
+offset_bottom = 96.0
+text = "REVERSE CONTROLS"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/ControlSettings/ReverseLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="ReverseButton" type="Button" parent="Menu/ControlSettings/ReverseLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/ControlSettings/ReverseLabel/ReverseButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="Label" type="Label" parent="Menu/ControlSettings/ReverseLabel"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 87.0
+text = "Left-click to open. Right-click to flag."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlagClickLabel" type="Label" parent="Menu/ControlSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 192.0
+text = "FLAG CLICK"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/ControlSettings/FlagClickLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="FlagButton" type="Button" parent="Menu/ControlSettings/FlagClickLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/ControlSettings/FlagClickLabel/FlagButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="Label" type="Label" parent="Menu/ControlSettings/FlagClickLabel"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 87.0
+text = "Flag a tile on click."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HoldLabel" type="Label" parent="Menu/ControlSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 224.0
+offset_right = 480.0
+offset_bottom = 288.0
+text = "HOLD TO FLAG"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/ControlSettings/HoldLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="HoldButton" type="Button" parent="Menu/ControlSettings/HoldLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/ControlSettings/HoldLabel/HoldButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="HoldTimeSlider" type="HSlider" parent="Menu/ControlSettings/HoldLabel" groups=["nine_controls", "other_controls"]]
+visible = false
+layout_mode = 0
+offset_left = 235.0
+offset_top = 64.0
+offset_right = 536.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_icons/grabber = ExtResource("5")
+theme_override_icons/grabber_highlight = ExtResource("6")
+theme_override_icons/grabber_disabled = ExtResource("5")
+theme_override_styles/slider = SubResource("StyleBoxTexture_ohexs")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_1k4ii")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_82xqq")
+min_value = 0.1
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="SecondsLabel" type="Label" parent="Menu/ControlSettings/HoldLabel/HoldTimeSlider"]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 64.0
+text = "0.5 seconds"
+label_settings = SubResource("LabelSettings_y43lv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HoldTimeLabel" type="Label" parent="Menu/ControlSettings/HoldLabel/HoldTimeSlider"]
+layout_mode = 0
+offset_left = -203.0
+offset_right = -10.0
+offset_bottom = 118.0
+text = "HOLD TIME"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ChordLabel" type="Label" parent="Menu/ControlSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 480.0
+offset_right = 576.0
+offset_bottom = 544.0
+text = "CHORD STYLE"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/ControlSettings/ChordLabel"]
+show_behind_parent = true
+position = Vector2(256, 32)
+scale = Vector2(1.33333, 0.333333)
+texture = ExtResource("4")
+
+[node name="LeftButton" type="Button" parent="Menu/ControlSettings/ChordLabel" groups=["buttons"]]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/ControlSettings/ChordLabel/LeftButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+rotation = 3.14159
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Label" type="Label" parent="Menu/ControlSettings/ChordLabel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+text = "Left-click"
+label_settings = SubResource("LabelSettings_6mhpt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightButton" type="Button" parent="Menu/ControlSettings/ChordLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 64.0
+offset_right = 512.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/ControlSettings/ChordLabel/RightButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="MouseDragLabel" type="Label" parent="Menu/ControlSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 384.0
+offset_right = 480.0
+offset_bottom = 448.0
+text = "MOUSE DRAG"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/ControlSettings/MouseDragLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="MouseButton" type="Button" parent="Menu/ControlSettings/MouseDragLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/ControlSettings/MouseDragLabel/MouseButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="GameplaySettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="ChordingLabel" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 176.0
+offset_right = 384.0
+offset_bottom = 240.0
+text = "CHORDING"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/ChordingLabel"]
+show_behind_parent = true
+position = Vector2(128, 32)
+scale = Vector2(0.666667, 0.333333)
+texture = ExtResource("4")
+
+[node name="ChordingButton" type="Button" parent="Menu/GameplaySettings/ChordingLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/GameplaySettings/ChordingLabel/ChordingButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="AutoSonarLabel" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 240.0
+offset_right = 384.0
+offset_bottom = 304.0
+text = "AUTO-SONAR"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/AutoSonarLabel"]
+show_behind_parent = true
+position = Vector2(128, 32)
+scale = Vector2(0.666667, 0.333333)
+texture = ExtResource("4")
+
+[node name="AutoSonarButton" type="Button" parent="Menu/GameplaySettings/AutoSonarLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/GameplaySettings/AutoSonarLabel/AutoSonarButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="InstantLabel" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 304.0
+offset_right = 482.0
+offset_bottom = 368.0
+text = "INSTANT ZERO SPREAD"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/InstantLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="InstantButton" type="Button" parent="Menu/GameplaySettings/InstantLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/GameplaySettings/InstantLabel/InstantButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="FirstClickLabel" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 512.0
+offset_bottom = 96.0
+text = "SAFE FIRST CLICK"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/FirstClickLabel"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="SafeLeftButton" type="Button" parent="Menu/GameplaySettings/FirstClickLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 64.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/GameplaySettings/FirstClickLabel/SafeLeftButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+rotation = 3.14159
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Label" type="Label" parent="Menu/GameplaySettings/FirstClickLabel"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+text = "3 by 3 Guarantee"
+label_settings = SubResource("LabelSettings_6mhpt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SafeRightButton" type="Button" parent="Menu/GameplaySettings/FirstClickLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/GameplaySettings/FirstClickLabel/SafeRightButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="LegacyLabel" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 384.0
+offset_right = 480.0
+offset_bottom = 448.0
+text = "BOSS LEGACY TIME"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/LegacyLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="LegacyButton" type="Button" parent="Menu/GameplaySettings/LegacyLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/GameplaySettings/LegacyLabel/LegacyButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="Label" type="Label" parent="Menu/GameplaySettings/LegacyLabel"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 113.0
+text = "When turned on, the Episode 1 boss timer will 
+always be set to 99 seconds."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LegacyLabel2" type="Label" parent="Menu/GameplaySettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 512.0
+offset_right = 480.0
+offset_bottom = 576.0
+text = "BOSS LEGACY SPEED"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/GameplaySettings/LegacyLabel2"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="Legacy2Button" type="Button" parent="Menu/GameplaySettings/LegacyLabel2"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 448.0
+offset_top = -1.0
+offset_right = 576.0
+offset_bottom = 63.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/GameplaySettings/LegacyLabel2/Legacy2Button"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="Label" type="Label" parent="Menu/GameplaySettings/LegacyLabel2"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 113.0
+text = "When turned on, the Episode 2 boss will speed up
+as quickly as it did before the 2.1 update."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LanguageSettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="EnglishButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 320.0
+offset_bottom = 160.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="EnglishLabel" type="Label" parent="Menu/LanguageSettings/EnglishButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "ENGLISH"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpanishButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 96.0
+offset_right = 576.0
+offset_bottom = 160.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="SpanishLabel" type="Label" parent="Menu/LanguageSettings/SpanishButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "ESPAÑOL"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FrenchButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 160.0
+offset_right = 320.0
+offset_bottom = 224.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="FrenchLabel" type="Label" parent="Menu/LanguageSettings/FrenchButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "FRANÇAIS"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PortugueseButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 160.0
+offset_right = 320.0
+offset_bottom = 224.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="PortugueseLabel" type="Label" parent="Menu/LanguageSettings/PortugueseButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "Português "
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PolishButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 160.0
+offset_right = 576.0
+offset_bottom = 224.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="PolishLabel" type="Label" parent="Menu/LanguageSettings/PolishButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "Polski "
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RussianButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 224.0
+offset_right = 320.0
+offset_bottom = 288.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="RussianLabel" type="Label" parent="Menu/LanguageSettings/RussianButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "русский язык"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KoreanButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 224.0
+offset_right = 576.0
+offset_bottom = 288.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="KoreanLabel" type="Label" parent="Menu/LanguageSettings/KoreanButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "한국어"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ThaiButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 288.0
+offset_right = 320.0
+offset_bottom = 352.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="ThaiLabel" type="Label" parent="Menu/LanguageSettings/ThaiButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "ภาษาไทย"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurkishButton" type="Button" parent="Menu/LanguageSettings" groups=["buttons"]]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 288.0
+offset_right = 576.0
+offset_bottom = 352.0
+size_flags_horizontal = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uvb5p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pg7y5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hqcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjb65")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7wbn")
+keep_pressed_outside = true
+
+[node name="TurkishLabel" type="Label" parent="Menu/LanguageSettings/TurkishButton"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "	Türkçe"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Menu/LanguageSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 352.0
+offset_right = 576.0
+offset_bottom = 401.0
+text = "Some translations may not be complete."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OtherSettings" type="Control" parent="Menu" groups=["windows"]]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 640.0
+grow_horizontal = 0
+
+[node name="ExplodingLabel" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 448.0
+offset_bottom = 72.0
+text = "EXPLODING MINES"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/ExplodingLabel"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="ExplodingButton" type="Button" parent="Menu/OtherSettings/ExplodingLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 385.0
+offset_right = 513.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/ExplodingLabel/ExplodingButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="ClassicGrid" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 448.0
+offset_bottom = 136.0
+text = "CLASSIC GRID"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/ClassicGrid"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="ClassicButton" type="Button" parent="Menu/OtherSettings/ClassicGrid"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 385.0
+offset_right = 513.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/ClassicGrid/ClassicButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="ScreenShake" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 136.0
+offset_right = 448.0
+offset_bottom = 200.0
+text = "SCREEN SHAKE"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/ScreenShake"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="ShakeButton" type="Button" parent="Menu/OtherSettings/ScreenShake"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 385.0
+offset_right = 513.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/ScreenShake/ShakeButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="FlashingLights" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 200.0
+offset_right = 448.0
+offset_bottom = 264.0
+text = "FLASHING LIGHTS"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/FlashingLights"]
+show_behind_parent = true
+position = Vector2(192, 32)
+scale = Vector2(1, 0.333333)
+texture = ExtResource("4")
+
+[node name="FlashButton" type="Button" parent="Menu/OtherSettings/FlashingLights"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 385.0
+offset_right = 513.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/FlashingLights/FlashButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="InstantBoatLabel" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 264.0
+offset_right = 480.0
+offset_bottom = 328.0
+text = "INSTANT BOAT TRAVEL"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/InstantBoatLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="InstantBoatButton" type="Button" parent="Menu/OtherSettings/InstantBoatLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 449.0
+offset_right = 577.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/InstantBoatLabel/InstantBoatButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+
+[node name="GraphicsLabel" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 328.0
+offset_right = 480.0
+offset_bottom = 392.0
+text = "HIGH QUALITY GRAPHICS"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/GraphicsLabel"]
+show_behind_parent = true
+position = Vector2(224, 32)
+scale = Vector2(1.16667, 0.333333)
+texture = ExtResource("4")
+
+[node name="GraphicsButton" type="Button" parent="Menu/OtherSettings/GraphicsLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 449.0
+offset_right = 577.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mhpt")
+toggle_mode = true
+
+[node name="OffOn" type="Sprite2D" parent="Menu/OtherSettings/GraphicsLabel/GraphicsButton"]
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+centered = false
+hframes = 2
+frame = 1
+
+[node name="SpreadLabel" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_top = 456.0
+offset_right = 640.0
+offset_bottom = 520.0
+text = "ZERO SPREAD ALGORITHM"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/SpreadLabel"]
+show_behind_parent = true
+position = Vector2(320, 32)
+scale = Vector2(1.66666, 0.333333)
+texture = ExtResource("4")
+
+[node name="SpreadLeftButton" type="Button" parent="Menu/OtherSettings/SpreadLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/OtherSettings/SpreadLabel/SpreadLeftButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+rotation = 3.14159
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Label" type="Label" parent="Menu/OtherSettings/SpreadLabel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 512.0
+offset_bottom = 128.0
+text = "ITERATIVE"
+label_settings = SubResource("LabelSettings_6mhpt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpreadRightButton" type="Button" parent="Menu/OtherSettings/SpreadLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/OtherSettings/SpreadLabel/SpreadRightButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Label2" type="Label" parent="Menu/OtherSettings/SpreadLabel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 177.0
+text = "Warning: The recursive algorithm is prone to causing a stack overflow error on very large grids with very few mines."
+label_settings = SubResource("LabelSettings_3lj6o")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DecorLabel" type="Label" parent="Menu/OtherSettings"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 392.0
+offset_right = 288.0
+offset_bottom = 456.0
+text = "DECORATIONS"
+label_settings = SubResource("LabelSettings_gc0em")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Sprite2D" parent="Menu/OtherSettings/DecorLabel"]
+show_behind_parent = true
+position = Vector2(128, 32)
+scale = Vector2(0.666665, 0.333333)
+texture = ExtResource("4")
+
+[node name="DecorLeftButton" type="Button" parent="Menu/OtherSettings/DecorLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 320.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/OtherSettings/DecorLabel/DecorLeftButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+rotation = 3.14159
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[node name="Label" type="Label" parent="Menu/OtherSettings/DecorLabel"]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 512.0
+offset_bottom = 64.0
+text = "Many"
+label_settings = SubResource("LabelSettings_6mhpt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DecorRightButton" type="Button" parent="Menu/OtherSettings/DecorLabel" groups=["buttons"]]
+layout_mode = 0
+offset_left = 512.0
+offset_right = 576.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohexs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y43lv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7eiv2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tk3m0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fdp2d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_e0y8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6byp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iii5v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyjnm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_enj72")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Menu/OtherSettings/DecorLabel/DecorRightButton"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32.025, 32.0381)
+scale = Vector2(0.750781, 0.250084)
+sprite_frames = SubResource("SpriteFrames_5ra0u")
+animation = &"arrows"
+autoplay = "arrows"
+
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="pressed" from="Menu/WindowButton" to="." method="_on_window_button_pressed"]
+[connection signal="pressed" from="Menu/VolumeButton" to="." method="_on_volume_button_pressed"]
+[connection signal="pressed" from="Menu/ControlButton" to="." method="_on_control_button_pressed"]
+[connection signal="pressed" from="Menu/GameplayButton" to="." method="_on_gameplay_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageButton" to="." method="_on_language_button_pressed"]
+[connection signal="pressed" from="Menu/OtherButton" to="." method="_on_other_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/WindowMode/WindowedButton" to="." method="_on_windowed_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/WindowMode/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/WindowMode/FullscreenButton" to="." method="_on_basic_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/StretchMode/EnabledButton" to="." method="_on_enabled_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/StretchMode/DisabledButton" to="." method="_on_disabled_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/AspectMode/KeepButton" to="." method="_on_keep_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/AspectMode/IgnoreButton" to="." method="_on_ignore_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/ScaleMode/FractionButton" to="." method="_on_fraction_button_pressed"]
+[connection signal="pressed" from="Menu/WindowSettings/ScaleMode/IntegerButton" to="." method="_on_integer_button_pressed"]
+[connection signal="value_changed" from="Menu/VolumeSettings/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="Menu/VolumeSettings/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="Menu/VolumeSettings/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_value_changed"]
+[connection signal="pressed" from="Menu/ControlSettings/ReverseLabel/ReverseButton" to="." method="_on_reverse_button_pressed"]
+[connection signal="pressed" from="Menu/ControlSettings/FlagClickLabel/FlagButton" to="." method="_on_flag_button_pressed"]
+[connection signal="pressed" from="Menu/ControlSettings/HoldLabel/HoldButton" to="." method="_on_hold_button_pressed"]
+[connection signal="value_changed" from="Menu/ControlSettings/HoldLabel/HoldTimeSlider" to="." method="_on_hold_time_slider_value_changed"]
+[connection signal="pressed" from="Menu/ControlSettings/ChordLabel/LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Menu/ControlSettings/ChordLabel/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="Menu/ControlSettings/MouseDragLabel/MouseButton" to="." method="_on_mouse_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/ChordingLabel/ChordingButton" to="." method="_on_chording_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/AutoSonarLabel/AutoSonarButton" to="." method="_on_auto_sonar_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/InstantLabel/InstantButton" to="." method="_on_instant_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/FirstClickLabel/SafeLeftButton" to="." method="_on_safe_left_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/FirstClickLabel/SafeRightButton" to="." method="_on_safe_right_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/LegacyLabel/LegacyButton" to="." method="_on_legacy_button_pressed"]
+[connection signal="pressed" from="Menu/GameplaySettings/LegacyLabel2/Legacy2Button" to="." method="_on_legacy_2_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/EnglishButton" to="." method="_on_english_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/SpanishButton" to="." method="_on_spanish_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/FrenchButton" to="." method="_on_french_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/PortugueseButton" to="." method="_on_portuguese_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/PolishButton" to="." method="_on_polish_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/RussianButton" to="." method="_on_russian_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/KoreanButton" to="." method="_on_korean_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/ThaiButton" to="." method="_on_thai_button_pressed"]
+[connection signal="pressed" from="Menu/LanguageSettings/TurkishButton" to="." method="_on_turkish_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/ExplodingLabel/ExplodingButton" to="." method="_on_exploding_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/ClassicGrid/ClassicButton" to="." method="_on_classic_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/ScreenShake/ShakeButton" to="." method="_on_shake_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/FlashingLights/FlashButton" to="." method="_on_flash_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/InstantBoatLabel/InstantBoatButton" to="." method="_on_instant_boat_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/GraphicsLabel/GraphicsButton" to="." method="_on_graphics_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/SpreadLabel/SpreadLeftButton" to="." method="_on_spread_left_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/SpreadLabel/SpreadRightButton" to="." method="_on_spread_right_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/DecorLabel/DecorLeftButton" to="." method="_on_decor_left_button_pressed"]
+[connection signal="pressed" from="Menu/OtherSettings/DecorLabel/DecorRightButton" to="." method="_on_decor_right_button_pressed"]

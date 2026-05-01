@@ -1,0 +1,12 @@
+keys,en,es,fr,pt,pl,ru,ko,th,tr
+LEVEL_1,KIDDIE POOL,CHAPOTEADERO,fr,Piscina de criança,Dziecięcy Basenik,Детский Бассейн,어린이 수영장,สระเด็กน้อย,Çocuk Havuzu
+LEVEL_2,RAINY PUDDLE,CHARCO LLUVIOSO,fr,Pocinha de chuva,Deszczowa Kałuża,Дождевая Лужа,비 내리는 웅덩이,แอ่งน้ำฝน,Yağmurlu Göletçik
+LEVEL_3,SMALL POND,PEQUEÑO ESTANQUE,fr,Lago pequeno,Mały Stawik,Маленький Пруд,작은 연못,บ่อน้ำแคระ,Küçük Gölet
+LEVEL_4,BLUE LAGOON,LAGUNA AZUL,fr,Lagoa azul,Błękitna Laguna,Голубая Лагуна,푸른 석호,บึงสีคราม,Mavi Lagün
+LEVEL_5,LAZY RIVER,RÍO LENTO,fr,Rio preguiçoso,Leniwa Rzeka,Ленивая Река,느긋한 강,แม่น้ำเกียจคร้าน,Tembel Irmak
+LEVEL_6,GREAT LAKE,GRAN LAGO,fr,Grande vazamento,Wielkie Jezioro,Большое Озеро,오대호,ทะเลสาบอันยิ่งใหญ่,Yüce Göl
+LEVEL_7,OPEN OCEAN,OCÉANO ABIERTO,fr,Mar aberto,Otwarty Ocean,Открытый Океан,대양,ทางเปิดมหาสมุทร,Açık Okyanus
+LEVEL_8,DEAD SEA,MAR MUERTO,fr,Oceano morto,Morze Martwe,Мертвое Море,사해,ทะเลแห่งความตาย,Ölü Deniz
+LEVEL_9,THE DEVIL'S TRIANGLE,es,fr,O TRIÂNGULO DO DIABO,Czarci Trójkąt,Дьявольский Треугольник,마의 삼각지대,สามเหลี่ยมปีศาจ,Şeytan'ın Üçgeni
+SHIELD,Shield,EL TRIÁNGULO DEL DIABLO,fr,Shield,Shield,Shield,방패,โล่,Shield
+SAVE_AND_EXIT,SAVE AND EXIT,GUARDAR Y SALIR,fr,Shield,Shield,Shield,저장 & 나가기,บันทึกและออก,SAVE AND EXIT

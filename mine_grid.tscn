@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1c5capb2ivrk"]
+
+[ext_resource type="Script" uid="uid://d380hp65cdjcj" path="res://mine_grid.gd" id="1"]
+
+[node name="MineGrid" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+script = ExtResource("1")
