@@ -6,14 +6,6 @@ branding:
   color: blue
   icon: upload-cloud
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
 inputs:
   godot-version:
     description: 'Godot Engine version. Supported are 4.x versions'
