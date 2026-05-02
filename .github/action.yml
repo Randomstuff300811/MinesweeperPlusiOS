@@ -1,5 +1,10 @@
 
 name: 'Godot 4 iOS Export'
+description: 'Export a Godot Engine 4 project to iOS'
+author: 'Simon Dalvai @dulvui'
+branding:
+  color: blue
+  icon: upload-cloud
 
 on:
   push:
@@ -8,12 +13,6 @@ on:
   pull_request:
     branches:
       - main
-
-description: 'Export a Godot Engine 4 project to iOS'
-author: 'Simon Dalvai @dulvui'
-branding:
-  color: blue
-  icon: upload-cloud
 
 inputs:
   godot-version:
