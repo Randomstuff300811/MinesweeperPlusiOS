@@ -1,9 +1,5 @@
 
 name: 'Godot 4 iOS Export'
-
-on:
-  pull_request:
-
 description: 'Export a Godot Engine 4 project to iOS'
 author: 'Simon Dalvai @dulvui'
 branding:
