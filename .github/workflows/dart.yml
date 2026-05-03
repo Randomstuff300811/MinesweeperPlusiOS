@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Godot
         run: |
@@ -22,7 +22,7 @@ jobs:
       - name: Download Export Templates
         run: |
           curl -L https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_export_templates.tpz -o templates.tpz
-          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.3.stable/
+          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.4.stable/
           tar -xf templates.tpz -C ~/Library/Application\ Support/Godot/export_templates/
 
       - name: Move iOS Export Template to Correct Directory
