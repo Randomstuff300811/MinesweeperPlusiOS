@@ -14,21 +14,21 @@ jobs:
 
       - name: Install Godot
         run: |
-          curl -L https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_macos.universal.zip -o godot.zip
+          curl -L https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_macos.universal.zip -o godot.zip
           unzip godot.zip -d godot
           chmod +x godot/Godot.app/Contents/MacOS/Godot
         id: godot
 
       - name: Download Export Templates
         run: |
-          curl -L https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz -o templates.tpz
+          curl -L https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_export_templates.tpz -o templates.tpz
           mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.3.stable/
           tar -xf templates.tpz -C ~/Library/Application\ Support/Godot/export_templates/
 
       - name: Move iOS Export Template to Correct Directory
         run: |
-          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.3.stable/
-          mv ~/Library/Application\ Support/Godot/export_templates/templates/ios.zip ~/Library/Application\ Support/Godot/export_templates/4.3.stable/
+          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.4.stable/
+          mv ~/Library/Application\ Support/Godot/export_templates/templates/ios.zip ~/Library/Application\ Support/Godot/export_templates/4.4.stable/
           
       - name: Export Godot Project for iOS
         run: |
@@ -49,7 +49,7 @@ jobs:
           zip -r ../ios_project.ipa Payload
 
       - name: Upload IPA Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ios_project.ipa
           path: build/ios_project.xcarchive/Products/ios_project.ipa
